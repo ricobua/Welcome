@@ -1,0 +1,26 @@
+installation ->
+C:\Program Files (x86)\scala\bin\scala.bat
+
+command-line ->
+scala -version
+scala -> interactive
+
+Eclipse plugin ->
+http://scala-ide.org/download/current.html
+-> download via Eclipse or zip
+-> zip -> 
+1) move everythin from sub-folder "site" up one level -> site.zip
+2) Elipse -> Help -> Install -> Archive -> C:\exe\scala\site.zip
+http://stackoverflow.com/questions/5482554/how-to-install-plugin-for-eclipse-from-zip
+
+eclipse.ini
+
+
+SBT ->
+build via scala file (not XML)
+tutorial -> https://www.youtube.com/watch?v=V2rl62CZPVc
+
+Description	Resource	Path	Location	Type
+The container 'Persisted container [org.scala-ide.sdt.launching.SCALA_CONTAINER for project [scala]]' references non existing library 'C:\exe\eclipse_kepler_64\configuration\org.eclipse.osgi\1098\0\.cp\lib\scala-library.jar'	scala		Build path	Build Path Problem
+
+

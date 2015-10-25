@@ -1,0 +1,17 @@
+the best?
+http://www.researchgate.net/post/What_is_the_best_open_source_finite_element_software_for_mechanical_problems
+
+Multiphysics
+multiple simultaneous physical phenomena
+electric & magnetic, mechanical & thermal
+http://en.wikipedia.org/wiki/Multiphysics
+
+most widely used
+was EDF inhouse -> GNU
+http://www.code-aster.org/
+
+open source
+http://mooseframework.com/
+
+list
+http://en.wikipedia.org/wiki/List_of_finite_element_software_packages

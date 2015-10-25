@@ -1,0 +1,35 @@
+Resin
+http://www.caucho.com/resin-4.0/admin/clustering-overview.xtp#ClusterHeartbeat
+each triad server -> send heartbeat to all others
+------------
+Camel Failover Ideas
+http://java.dzone.com/articles/masterslave-failover-camel
+------------
+fail-over scenarios -> leader election
+http://camel.apache.org/zookeeper.html
+http://camel.apache.org/routepolicy.html
+http://www.systemmobile.com/?p=399
+------------
+web app camel auto-deploy
+http://camel.apache.org/tutorial-on-using-camel-in-a-web-application.html
+------------
+Camel SOA
+http://camel.apache.org/tutorial-osgi-camel-part1.html
+http://camel.apache.org/tutorial-osgi-camel-part2.html
+------------
+ZooKeeper
+heartbeat & replicated:
+http://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html 
+leader election
+http://zookeeper.apache.org/doc/r3.4.2/recipes.html#sc_leaderElection
+------------
+Google -> camel failover controller
+http://www.liquid-reality.de/display/liquid/2011/11/11/Hot+Standby+failover+for+Apache+Camel+routes
+------------
+hadoop usage (see printout)
+http://hadoop.apache.org/docs/r2.3.0/hadoop-yarn/hadoop-yarn-site/HDFSHighAvailabilityWithQJM.html
+------------
+Camel JMS transaction (complete read || complete write)
+http://www.enterpriseintegrationpatterns.com/TransactionalClient.html
+http://camel.apache.org/transactional-client.html
+http://camel.apache.org/what-is-a-camel-toe.html

@@ -1,0 +1,176 @@
+Cryptography 
+kryptos gr "hidden" graphein gr "writing"
+
+hash function -> data arbitrary size -> fixed size
+cryptographic hash function -> practically impossible to invert
+
+passwords as cleartext -> password file compromised ->
+repeated invocations
+-> key stretching 
+-> rainbow tables (see wiki) -> reduce storage of precomputed hash values 
+  -> store only first and last of repeats <-> use random, non-secret salt 
+
+PBKDF2 -> Password-Based Key Derivation Function 2
+password & salt -> pseudorandom function -> 1000 times
+-> not recursive <-> XOR
+-> output prev -> salt of next (!!)
+-> TRICK: salt -> no rainbow & iteration -> takes long -> SAFE! (safer)
+
+WPA2 -> Wi-Fi Protected Access -> IEEE 802.11i ->
+parameters  -> DK = PBKDF2(HMAC-SHA1, passphrase, ssid, 4096, 256)
+http://en.wikipedia.org/wiki/PBKDF2
+
+crypto problems:
+http://en.wikipedia.org/wiki/Preimage_attack
+preimage -> get hash value -> find original value (i.e. password)
+preimage resistance -> can not be done
+second-preimage resistance -> can not find different password with same hash
+
+----------
+pseudorandom function -> e.g. HMAC
+
+MAC -> message authentication code -> 
+accidental or intentional message changes -> integrity assurances
+affirm origin -> authenticity assurances 
+one possible way -> keyed (cryptographic) hash function 
+
+MAC problem 1:
+digital signature forgery -> 3 types -> existential, selective, universal
+http://en.wikipedia.org/wiki/Digital_signature_forgery
+
+MAC problem 2:
+CPA -> chosen-plaintext attack ->
+obtain the ciphertexts for arbitrary plaintexts -> cryptanalysis
+
+MAC + hash:
+HMAC -> keyed-hash message authentication code ->
+message + key (+hash function) -> MAC (-> integrity & authentication)
+
+hash example:
+cryptographic hash function -> MD5 and SHA-1 (-> both based on MD4)
+
+SHA -> secure hash algorithm 
+
+--------------
+http://www.jsptutorial.org/content/session
+statusloses Protokoll HTTP -> Anfrageparameter -> Erkennungsmerkmal
+Session -> aufeinanderfolgend -> Konten & Speicherbereich
+
+1) Session-ID -> URL- bzw. Form-Parameter -> Servlet-Spek nicht
+2) Session-ID Cookie -> 
+Server -> erste Anfrage -> Set-Cookie-Header
+Browser -> mit jedem Request -> Cookie-Header
+session-cookies ("nonpersistent cookies") -> Schließen des Browsers
+<-> persistent cookies -> e.g. Amazon
+
+Servlet-Spezifikation -> Cookie-Name für Session-ID -> JSESSIONID
+3) Session-ID per URL-Rewriting
+Pfad + Semikolon + Request-Parametern
+http://www.mycompany.com/;jsessionid=someUniqueSessionID?param1=value1
+"/" abtrennt -> ID wie Unterverzeichnis
+-> beim ersten Request URL-Rewriting -> noch kein Session-Cookie
+4) SSL (HTTPS) -> gemeinsame Schlüssel -> Session-Trackings per SSL-Keys.
+
+meist nur (2) + (3)
+
+Cookies -> Werbe-Anbieter -> meist im Browser blockiert
+HttpServletResponse -> URL Rewrite -> encodeURL(String)
+--------------
+HttpServletRequest -> getSession() -> javax.servlet.http.HttpSession
+-> noch keine -> null
+serialisierbare Objekte -> setAttribute(String, Object)
+logout -> invalidate()
+künstlich am Leben halten -> (bspw. über Ajax-Heartbeats) -> danger
+
+mehrer Fenster -> Session-Token
+Seiten-Aufbau -> Zufalls-Token (Nonce) -> nur aktueller Nonce von Server
+Token -> in Request & Session 
+-> Struts oder Spring Webflow
+String token = request.getParameter(Constants.ATTRIBUTE_TOKEN);
+if (!TokenUtils.isValid(request, token)) {
+
+Timeout -> Ressourcenverbrauch Sicherheitsrisiko Nutzungsfreundlichkeit
+----------------
+gültigen Session-ID -> wertvolle Daten & erweiterte Rechte
+Server
+-> ID-Prediction -> Schema -> ausrechnen
+-> Brute-Force-Attacken -> wiederholtes Absenden
+
+Applikation
+-> Session-Fixation 
+a) Angreifer holt session-id & schickt Opfer link mit dieser ID
+b) verwundbares System wechselt nach dem Einloggen eine bereits bestehende Session-ID nicht durch eine neue ab
+c) "gemeinsame" Nutzung der Session
+-> Login == session.invalidate()
+
+Session-Hijacking
+-> unbeabsichtigt per URL-Rewriting
+-> XSS -> Session-ID als Request-Parameter -> Image-Tag src
+-> Mitlesen des Netzwerkverkehrs <-> SSL (HTTPS)
+
+Session-Riding
+a) ohne zuvor explitzit auszuloggen
+b) Webseite der Angreifer
+c) link zurück und session Nutzung durch Angreifer
+<-> immer ausloggen
+<-> vor kritischen Aktionen nochmals Eingabe (TAN)
+<-> Prüfen Referer-Header
+
+XSS -> Cross-Site-Scripting -> Schadcode (e.g. Javascript) in secure site
+-> e.g. Wiedergabe Feld-Inhalt -> "<script></script>" Eingabe
+<-> Prüfung Nutzer Eingabe
+<-> Ausschalten JavaScript
+
+Ursprungsserver-Regel -> cookies <-> URL rewriting
+--------------
+cookies -> 4 Kilobyte 
+-> Werte im Header
+-> lokal im Browser (für Java-Script)
+
+Client-Browser -> alle Cookies der Domain & Verzeichnispfad -> Header 
+
+Werbebanner -> Third-Party-Cookies -> immer wieder gleiche Domain
+HttpOnly -> nicht per JavaScript zugegriffen -> möglichen Schutz XSS
+
+Name
+Nutzdaten -> Base64 kodiert
+Ablaufdatum (expires) / Maximalalter (Max-Age)
+Teilbereich der Webseite (Path)
+
+----------------
+Basic authentication's pop-up window is fine but not exactly pretty
+http://www.avajava.com/tutorials/lessons/how-do-i-use-form-authentication-with-tomcat.html
+
+HTTPS URL parameter (=get) <-> post
+http://stackoverflow.com/questions/830074/can-a-username-and-password-be-sent-safely-over-https-via-url-parameters
+http://www.w3schools.com/tags/ref_httpmethods.asp
+--------------
+automatic deployment <-> only server.xml & Tomcat restart.
+hosted environment -> deployXML false & ignore context.xml
+context.xml -> may try increased privileges
+production -> DataSourceRealm
+
+manager component -> generate session IDs
+randomClass attribute -> generator
+sessionIdLength attribute
+
+BASIC and FORM authentication -> SSL
+
+------------
+wireless
+laptop -> unintended access point
+-> plug into port -> unsecured switche -> breach
+switchport -> physical port of network switch
+
+WIPS -> Wireless Intrusion Prevention Systems
+WIDS -> Wireless Intrusion Detection Systems
+
+accidental association -> unintended access point
+accidental - on purpose (downloads) - tricked
+
+Malicious association ->
+laptop instead of company access point -> soft AP 
+
+MAC spoofing -> identity theft 
+
+wireless networks -> Layer 2 <-> Layer 3 authentication and (VPNs) -> no barrier

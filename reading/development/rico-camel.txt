@@ -1,0 +1,118 @@
+--) start activemq (via bat) & mysql (via service)
+a) send dummy jms message
+b) read message 
+   delete * from target
+   send to next queue
+c) read message
+   select *
+   log body to console
+   parse data (case sensitive !!)
+   insert *
+--) check via mysql
+
+1) create dir
+C:\rico\development\java\workspace\rico-camel
+
+2) identify archetype
+http://camel.apache.org/camel-maven-archetypes.html
+
+3) use maven
+https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
+3a)
+mvn archetype:camel-archetype-java
+Could not find goal 'camel-archetype-java'
+3b)
+mvn archetype:generate -Dfilter=org.apache:struts
+
+questions -> interactive
+camel-version
+groupId: com.rico
+artifactId: rico-camel-jdbc
+
+4) 
+cd [proj-dir]
+DONT -> mvn eclipse:eclipse
+http://stackoverflow.com/questions/14896152/how-to-build-and-run-maven-projects-after-importing-into-eclipse-ide
+-> auto-loads new dependencies
+MainApp & RouteBuilder -> already there
+
+5) log4j -> src/main/resources/log4j.properties
+https://logging.apache.org/log4j/1.2/manual.html
+TRACE DEBUG INFO WARN
+--
+method -> enabled if level >= level of logger
+Logger  logger = Logger.getLogger("com.foo");
+// logger.setLevel(Level.INFO);
+logger.warn("); logger.debug("");
+<-> statically instantiating a logger in each class
+--
+appender -> console, file, GUI, .. -> synch/asynch
+-> name -> layout (-> pattern, in case)
+log4j.appender.DB=org.apache.log4j.jdbc.JDBCAppender -> special table
+http://www.tutorialspoint.com/log4j/log4j_logging_database.htm
+--
+contextual information into NDC (Nested Diagnostic Context) -> e.g. per client
+
+6) file move
+default -> move processed to .camel subdir <-> delete=true
+body -> File object (<-> unmarshal / .convertBodyTo(String.class))
+--
+out file -> name -> 3 choices
+.setHeader(Exchange.FILE_NAME, constant("report.txt"))
+.setHeader("CamelFileName", constant("report.txt"))
+URI option -> ?fileName=report.txt
+--
+readLock options
+<-> doneFileName option (-> marker file)
+<-> write elsewhere, then copy
+--
+idempotent consumer -> avoiding reading more than once
+filter -> implements GenericFileFilter<T> <-> ANT path matcher (?antInclude)
+Exception -> consumer.bridgeErrorHandler -> IOException
+--
+errorHandler(deadLetterChannel())
+.throwException(new IllegalArgumentException("Forced"))
+http://camel.apache.org/exception-clause.html
+${exception.stacktrace} <-> ${exception.message}
+
+7) MainApp
+main.bind("foo", new MyBean());
+main.addRouteBuilder()
+main.run()
+
+8) ActiveMq
+pooled connection factory -> pom -> max 500
+http://camel.apache.org/activemq.html
+main.bind()
+activemq.bat start
+http://localhost:8161/admin/index.jsp
+
+9) JDBC
+mysql driver -> connector
+tomcat pool
+http://blog.zenika.com/index.php?post/2013/01/30/Using-Tomcat-JDBC-connection-pool-in-a-standalone-environment
+mysql -> Dienst -> starten
+JDBC Component -> "Move Data Between Data Sources"
+
+tricky: getting datasource into JNDI-Registry !!
+http://camel.465427.n5.nabble.com/How-to-register-a-datasource-on-configure-method-or-constructor-of-a-RoutBuilder-td5595165.html
+due to: tricky: JDBC Component NEEDS datasource "jdbc:ds"
+
+10) run with producer template
+a) MainSupport -> kein Zugriff auf start() & waitUntilCompleted()
+-> uses "acquireSharedInterruptibly"
+b) echtes Standalone -> QueueSender.java
+-> file write -> subdir -> many files with exchange name
+
+11) dead-letter-channel
+TODO
+
+12) todo
+error: http://www.slf4j.org/codes.html#multiple_bindings
+error: pool stop() -> Exceptions
+
+xx) enhance pom
+https://mestachs.wordpress.com/2012/05/17/maven-best-practices/
+mvn dependency:resolve -> download dependencies
+eclipse -> downloads right away (on pom.xml save)
+

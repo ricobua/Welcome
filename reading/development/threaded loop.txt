@@ -1,0 +1,64 @@
+C# WS
+http://www.allinsight.de/de/wcf-standalone-webservices-without-iis/
+http://stackoverflow.com/questions/20968171/standalone-c-sharp-webservice-without-webserver
+
+Threads:
+http://manikandanmv.wordpress.com/tag/extends-thread-vs-implements-runnable/
+http://www.tutorialspoint.com/java/java_multithreading.htm
+http://openbook.galileocomputing.de/javainsel9/javainsel_14_004.htm#mj2f866e14a50f07accd817e14e068e022
+
+Completion Service
+http://baptiste-wicht.com/posts/2010/09/java-concurrency-part-7-executors-and-thread-pools.html
+http://stackoverflow.com/questions/5260661/how-do-i-cancel-that-tasks-that-are-taking-too-long-using-completionservice
+http://download.java.net/jdk7/archive/b123/docs/api/java/util/concurrent/ExecutorCompletionService.html#poll(long, java.util.concurrent.TimeUnit)
+
+Scheduled
+http://stackoverflow.com/questions/13182177/how-to-return-value-with-scheduledexecutorservice
+http://docs.oracle.com/javase/1.5.0/docs/api/java/util/concurrent/Future.html#get()
+http://www.javapractices.com/topic/TopicAction.do?Id=54
+
+Interrupt
+http://docs.oracle.com/javase/tutorial/essential/concurrency/interrupt.html
+http://www.javacreed.com/handle-interruptedexceptions-with-jdbctemplate/
+
+Oracle Cancel
+http://theblasfrompas.blogspot.co.at/2008/02/cancelling-long-running-queries-with.html
+
+Queue:
+http://www.javacodegeeks.com/2011/09/java-concurrency-tutorial-blocking.html
+http://tutorials.jenkov.com/java-util-concurrent/synchronousqueue.html
+http://activemq.apache.org/how-should-i-implement-request-response-with-jms.html
+
+SOAP Section 5 encoding
+http://www.jguru.com/article/web-services/soap-with-Java-part2-index2.html
+
+Exe Timeout
+http://stackoverflow.com/questions/808276/how-to-add-a-timeout-value-when-using-javas-runtime-exec
+
+Processors
+http://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html
+
+JMX
+-> monitor both "Camel" or "with Camel"
+http://camel.apache.org/camel-jmx.html
+
+-----------------
+poll() -> poll(delay) -> get()
+-----------------
+1) test every 10 min
+2) shut-down after 3 min (test too long)
+3) 
+
+-----------------
+Java Thread Pool
+1) get thread from queue
+2) call beforeExecute & run & afterExecute
+3) store results to FutureTask -> retrieval
+4) no references to thread -> back to queue (magically ...)
+-----------------
+durable <-> virtual subscription
+http://activemq.apache.org/virtual-destinations.html
+-----------------
+JMX
+http://stackoverflow.com/questions/2780761/how-to-measure-java-thread-execution-time
+http://docs.oracle.com/javase/7/docs/api/java/lang/management/ThreadMXBean.html#getThreadCpuTime(long)

@@ -1,0 +1,24 @@
+pitch detection
+estimate 
+fundamental frequency
+(quasi)periodic
+
+pitch detection algorithm (PDA)
+Time-domain -> zero crossing -> auto-correlation
+Frequency-domain -> spectrum
+
+auto-correlation
+calculated via convolution -> FFT & IFFT
+
+auto-correlation
+measure of congruence (Übereinstimmung)
+s. Excel
+
+RMS
+root mean square = quadratic mean = quadratisches Mittel
+Elektro-Technik -> Effektiv-Wert
+harmonischem
+geometrischem
+arithmetischem
+quadratischem	
+

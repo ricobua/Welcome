@@ -1,0 +1,6 @@
+Eclipse
+Project -> Properties -> Facets -> JPA
+right click -> JPA-Tools -> Generate Entities from Table
+
+TODO
+use entity within project

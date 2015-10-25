@@ -1,0 +1,12 @@
+whatsapp api
+http://openwhatsapp.org/about/
+https://github.com/tgalal/yowsupk
+
+-------------
+check out from github
+1) go to root dir of project
+2) login
+3) look for "clone address"
+4) right click check out dir -> clone
+
+sparse checkout -> sub-dir only -> not easy !!

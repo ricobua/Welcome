@@ -1,0 +1,113 @@
+spring & ajax
+1) Spring -> Controller to accept & answer to json requests
+2) Spring -> REST services (get,post,...) -> publish with .json URL
+3) Client -> jQuery -> use REST via Ajax library -> submit -> $.ajax({...})
+
+(2) -> (a) http://www.javacodegeeks.com/2013/07/spring-mvc-rest-application-with-cnvr-vol-3.html
+(1,3) -> (b) http://www.javacodegeeks.com/2013/09/spring-mvc-ajax-jquery.html
+
+jQuery to access html-elements
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+extension -> JQuery UI -> additional widgets <-> KendoUI 
+-> http://jqueryuivskendoui.com/
+JavaScript -> DOM, event, Ajax
+
+JSF -> Java Server Faces
+http://www.theserverside.com/tutorial/Creating-a-single-page-inteface-SPI-with-JSF-Facelets-Ajax-and-HTML5
+1) html -> reference sub-html -> facelets
+2) Ajax -> JSF-implementation -> just use "#{object.method}" within Facelet
+
+JSIL
+transforms .NET CIL byte-code to (human-readable) JavaScript
+CIL -> Common Intermediate Language
+
+Spring RichClient
+http://www.javabeat.net/introduction-to-spring-rich-client/
+
+
+Rich Internet Application
+in Webbrowsern, ähneln Desktopanwendungen (z.B. Drag&Drop) 
+HTML / JavaScript / Ajax
+
+Google Web Toolkit
+GWT [guit]
+Java->JavaScript-Compiler -> auch Client in Java entwickelt -> debug!!
+
+nice webpage GWT
+http://files.geomajas.org/maven/trunk/geomajas/docbook-gettingstarted/html/master.html
+
+Script# or SharpKit
+C# to JavaScript
+
+model
+view -> datagrid
+view -> filter 
+-> filter-model
+controller -> back to top
+
+bearbeiten
+controller -> open form
+
+concept:
+1) model -> TTableDef
+2) model -> GUI-Values
+3) view -> synch models with GUI
+4) controller A -> knows (1)&(2)
+5) controller B -> knows (2)&(3)
+6) controller B -> forward GUI events to (standard) controller A events
+
+concept II (MVVM):
+1) model -> TTableDef
+2) controller -> knows(1), offers methods (call_backs)
+3) view -> knows (2) -> calls via "Signals"
+4) view -> knows (1) -> listens to changes
+5) infrastruct -> maps Signal source to Signal target
+6) infrastruct -> maps listeners to sources
+
+-------------------
+WebKit (see window.AudioContext = window.AudioContext || window.webkitAudioContext;)
+HTML-Rendering-Engine -> Webseiten in Webbrowsern
+
+KDE -> KHTML & JavaScript-Implementierung KJS
+Abspaltung -> Apple -> Mac-OS-X-Webbrowser Safari -> LGPL & BSD
+Apple, Nokia, Google
+Trolltechs Qt 4.4
+WebCore (der für die HTML-Darstellung zuständigen Bibliothek)
+JavaScript-Parser JavaScriptCore
+-----------------
+Google -> AngularJS
+https://angularjs.de/artikel/angularjs-spring-web-mvc
+-----------------
+angular <-> jquery
+https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough
+spring mvc <-> struts
+http://blogs.isostech.com/web-application-development/struts-2-vs-spring-mvc-battle-frameworks/
+-----------------
+full duplex communication:
+
+Web-Sockets (Tomcat supported)
+see -> C:\rico\development\apacheSVN\websocket
+http://tomcat-configure.blogspot.co.at/2014/05/tomcat-websocket-example.html
+
+wss:// -> (web-socket-secure) -> wie https://
+
+-----------------
+AngularJS
+
+Eclipse -> Code Complete -> Open As -> Web-Browser
+http://marketplace.eclipse.org/content/angularjs-eclipse
+https://github.com/angelozerr/angularjs-eclipse/wiki/Getting-Started
+
+-> see Eclipse "simpleWeb"
+
+How-To
+http://www.w3schools.com/angular/angular_application.asp
+
+deploy
+http://blog.ninja-squad.com/2014/04/14/productive-angular-and-java-environment/
+
+grid-ui
+http://stackoverflow.com/questions/17413824/update-ng-grid-with-outside-data
+http://plnkr.co/edit/h6eZJg?p=preview
+-----------------
+CSP -> Content Security Policy -> Sicherheitskonzept -> Cross-Site-Scripting

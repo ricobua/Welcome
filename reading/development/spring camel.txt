@@ -1,0 +1,23 @@
+SPRING ->
+http://docs.spring.io/spring/docs/3.1.x/spring-framework-reference/html/beans.html#beans-factory-extension-factory-postprocessors
+
+CAMEL ->
+http://camel.apache.org/spring-java-config-example.html
+
+listener -> <contextConfigLocation> -> 
+does not exist -> /WEB-INF/applicationContext.xml 
+
+annotated Java classes instead of XML
+1) camel -> applicationContext.xml
+-> lots of xml-ns imports
+-> <context:annotation-config/>
+-> <bean class="com.pia.e2e.AppConfig"/>
+
+2) @Configuration
+@Bean -> method name == jndi-name
+
+test
+1) add WEB-INF dir
+2) CamelSpringTestSupport -> ClassPathXmlApplicationContext
+3) TRICK: classe moved to
+org.apache.camel.test.spring.CamelSpringTestSupport

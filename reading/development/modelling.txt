@@ -1,0 +1,40 @@
+SCADA
+Supervisory Control and Data Acquisition
+Überwachen & Steuern technischer Prozesse
+
+
+http://en.wikipedia.org/wiki/Event-driven_architecture
+Event-driven architecture (EDA)
+event == "significant change in state" <-> notification message
+Event processing engine -> identify appropriate reaction
+
+SOA 2.0 -> SOA & EDA -> Event-driven SOA <-> centrally orchestrated
+
+Event processing styles
+simple, stream, and complex
+causal, temporal, or spatial (verteilt im Raum)
+
+complex -> opportunities & threats
+
+staged event-driven architecture (SEDA)
+EDA -> decomposed -> stages connected by (blocking) queues
+distributed SEDA -> JMS
+
+EIP -> Competing Consumers
+more than one listener on queue
+http://camel.apache.org/cafe-example.html
+
+
+EIP -> Load Balancer
+specified list of listeners
+
+EIP -> Message History
+attachhistory to message
+
+Asynchronous Processing
+process(Exchange exchange, AsyncCallback callback);
+callback.done(boolean sync) method
+synchronous, unless performance or scalability
+
+Activiti -> BPMN 2.0 <-> jBPM (JBoss)
+

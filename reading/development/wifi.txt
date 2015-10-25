@@ -1,0 +1,130 @@
+WPA (Wi-Fi Protected Access)
+basiert auf Wired Equivalent Privacy (WEP) -> unsicher geltend
+PSK -> pre-shared key
+
+WPA2 (Wi-Fi Protected Access 2) -> 
+WLAN-Standards IEEE 802.11a, b, g,n
+basiert auf Advanced Encryption Standard (AES)
+
+CCMP (Counter-Mode/CBC-MAC Protocol)
+-> Kryptographie-Algorithmus -> IEEE 802.11i 
+-> basiert auf AES (Advanced Encryption Standard)
+128 Bit Schlüssel & 48 Bit Initialisierungsvektor
+
+CM (Counter Mode)
+-> Verschlüsselung der Daten.
+CBC-MAC (Cipher Block Chaining Message Authentication Code)
+-> Integrieren und Authentifizieren der Daten
+-> rekursiv -> "Chaining"
+
+MAC (Message Authentication Code)
+-> an die unverschlüsselte Nachricht angehängt -> Ursprung & Integrität
+
+IEEE 802.11i
+-> erweitert 802.11 ->
+-> TKIP (Temporal Key Integrity Protocol)
+-> CCMP (CTR with CBC-MAC Protocol)
+
+Oberbegriff -> Robust Secure Network Association (RSNA)
+Regeln für Verwendung AES (Advanced Encryption Standard)
+
+PSK -> pre-shared key -> eher privat -> als „Personal“ bezeichnet
+RADIUS (Remote Authentication Dial-In User Service)
+
+IEEE 802.1X -> 
+Authentifizierung & Autorisierung in IEEE 802-Netzen (LAN,VLAN,WLAN)
+
+VLAN -> Virtual Local Area Network
+
+
+WLAN-Client (Wireless Node WN) -> Supplicants (deutsch Bittsteller)
+-> Credentials
+Authenticator -> Switch, Router oder IEEE 802.11-WLAN-Access-Point
+Access-Point (AP) -> Authentifizierungsserver (AS) -> meist RADIUS
+authentifiziert -> LAN-Ressourcen zugreifen
+
+PAE (Port Access Entity) -> 
+Auto: Verlangt Authentifizierung von Supplicant
+ForceUnauthorized -> blockiert
+ForceAuthorized -> offen
+
+Service Set -> Geräte in einem WLAN
+SSID -> Service Set Identifier
+
+BSS -> Basic Service Set -> mehrere Geräte
+BSSID -> Basic Service Set Identification -> MAC-Adresse des Wireless Access Points (?)
+
+broadcast beacon der SSID -> abgeschaltet ->
+benutzten WLAN -> schnell festgestellt
+
+----------------
+DSL -> Digital Subscriber Line
+Übertragungsstandards -> Bitübertragungsschicht -> 1.000 Mbit/s
+-> Kupferleitungen -> Verbesserung gegenüber Telefonmodems- (56 kbit/s) oder ADSL
+zwischen DSL-Modem und DSLAM (Digital Subscriber Line Access Multiplexer)
+
+Vermittlungsstelle -> Central Office (CO)
+DSLAM (teilweise Oberbegriff) -> Central Office Equipment (COE).
+-> regionalen Breitband-Zugangsserver -> IP-Routing & PPPoE-Terminierung
+
+PPP -Point-to-Point Protocol -> > Netzwerkprotokoll
+PPPoE -> PPP over Ethernet (schneller)
+PPTP & PPPoA -> Point-to-Point Tunneling Protocol & PPP over ATM (langsamer)
+
+Ethernet-Frame (~Paket) -> MAC-Header + PPPoE-Paket
+DSL-Modem und Access Concentrator (DSL-AC) des Zugangsanbieters 
+-> kommunizieren über die Ethernet-LAN-Emulation von ATM (LANE)
+ATM -> Asynchronous Transfer Mode -> Kommunikationsprotokoll
+
+Bild (!!!) -> http://de.wikipedia.org/wiki/DSLAM
+
+VDSL -> Very High Speed Digital Subscriber Line
+http://de.wikipedia.org/wiki/Digital_Subscriber_Line
+Teil der DSL Protokoll-Familie ITU-T G.99x.x -> e.g. Annex
+http://de.wikipedia.org/wiki/G.992.1
+
+http://en.wikipedia.org/wiki/Digital_subscriber_line_access_multiplexer
+DSL lines -> DSLAM (ATM), frame relay, and/or Internet Protocol network 
+(i.e., IP-DSLAM using PTM-TC [Packet Transfer Mode - Transmission Convergence])
+
+-------------------
+Splitter & TAE
+http://de.wikipedia.org/wiki/DSL-Weiche
+http://de.wikipedia.org/wiki/Telekommunikations-Anschluss-Einheit
+-------------------
+
+Port-Forwarding -> Mittels-Mann
+NAT -> Network Address Translation ->  Adressinfo ersetzen
+eingehenden Datenpakete -> Destination NAT
+ausgehenden Pakete -> Source NAT maskiert
+e.g. FTP-Server inter Fire-Wall
+
+DMZ -> Demilitarized Zone -> 
+Firewall -> gegen andere Netze (z. B. Internet, LAN)
+-> Zugriff auf öffentlich erreichbare Dienste 
+-> vor Zugriffen von außen geschützt
+DMZ-Host -> vollständige Offenlegung (!!)
+
+Port-Triggering -> Erweitert Forwarding
+eingehenden Datenverkehr erst -> nachdem aus lokalen Netz gesendet hat
+schließt Port nach Inaktivität automatisch wieder
+
+------------------
+ISP Internet Service Providers
+
+DDNS über HTTP
+Heimnutzers -> dynamische IP des ISP -> 
+DDNS-Anbieter -> Domainnamen registrieren -> aktuelle IP-Adresse zuweisen.
+------------------
+A1 Pirelli -> User Config
+single user (SU) -> router = modem -> pppoe relay -> pc öffentliche ip
+multiuser (MU) -> router -> internetverbindung -> von mehreren benutzt
+vob = voice over broadband
+
+-----------------
+VPN Server
+http://www.dieschmids.at/forum/18-pirelli/32823-vpn-in-pirelli-prgav4202n-modem-einrichten#32823
+https://www.irbe.ch/it/vpn-server-mit-linksys-wrt54gl/
+Server
+http://de.wikipedia.org/wiki/CyberGhost_VPN
+-----------------

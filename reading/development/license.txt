@@ -1,0 +1,28 @@
+BSD license
+1) do what you want
+2) namesake -> Berkeley Software Distribution (BSD) -> Unix-like OS
+
+MIT License
+1) do what you want
+
+LGPL -> GNU Lesser General Public License
+1) use this code with your close-source code
+2) use as dll -> user can change it
+
+GPL -> GNU General Public License
+1) Copyleft
+2) use only for other GPL development
+3) kompatibel -> GPL kann mit Projekt source-code austauschen
+
+Apache License
+1) eigene SW muss nicht open source sein, aber Hinweis enthalten 
+2) ASF -> Apache Software Foundation
+----------
+FSF Free Software Foundation
+-> define "open source license"
+-> GPL compatible
+e.g. advertising clause
+
+----------
+Vier Freiheiten Software
+verwenden - untersuchen - kopieren - modifizieren & trotzdem weitergeben

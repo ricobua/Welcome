@@ -1,0 +1,78 @@
+Enterprise Service Bus (ESB)
+isolierte Dienste -> schneller und kosteneffizienter integriert -> wartbar
+
+Transformationsdienste
+Routingdienste
+Orchestrierungsdienste
+
+protokollgetrieben -> Web-Services (bzw. SOAP)
+API driven ESB -> Java
+
+Enterprise Application Integration (EAI) -> 
+möglicher Architekturstil -> ESB
+
+Service-orientierte Architektur (SOA) ->
+profitiert vom Einsatz von Integrations-Middleware (ESB)
+
+Message Oriented Middleware (MOM) ->
+kann das Fundament ESB bilden
+-------------
+Java Business Integration (JBI) 
+Service Orientierten Architektur (SOA)
+Java Community Process (JCP)
+
+Apache ServiceMix
+-> FUSE ESB -> OpenShift
+
+Open ESB
+-> Sun -> NetBeans
+-------------
+TIBCO ActiveMatrix Service Bus (AMX)
+Oracle ESB
+WebSphere ESB -> IBM
+BizTalk Server -> Microsoft
+JBoss ESB -> JBoss Messaging
+JBoss Fuse -> small footprint ESB
+Spring Integration -> Spring
+-------------
+Apache Synapse -> Fokus Webservice -> Apache Axis2
+-> WS02 ESB
+Apache Tuscany -> SCA
+
+-------------
+Service Component Architecture (SCA)
+alle -> Oracle, IBM, Tibco, Sun, Red Hat, ... NICHT Microsoft
+C++, Java, COBOL und PHP, sowie mit XML, BPEL und XSLT
+Service Data Objects
+-------------
+Service Data Objects (SDO)
+API -> heterogene -> JDBC, XML, EJB
+JSR-235
+-------------
+EAI-Hersteller:
+http://de.wikipedia.org/wiki/Liste_von_EAI-Herstellern
+JBoss Enterprise SOA Platform -> Red Hat
+-------------
+Great Comparison -> Camel / Spring Integration / Mule ESB
+http://www.javacodebook.com/2013/07/24/spring-integration-vs-apache-camel/
+https://www.mulesoft.com/resources/esb/mule-vs-camel-comparison
+-------------
+Hot Deploy
+http://blogs.mulesoft.org/osgi-no-thanks/
+-------------
+Apache ServiceMix
+http://www.theserverside.com/tip/OSGi-gives-open-source-middleware-a-modular-deployment-model
+
+-> OSGi Kernel -> Karafe
+
+JBoss ESB
+JBoss Fuse = Fuse ESB = Apache ServiceMix -> JBI & OSGi
+http://stackoverflow.com/questions/20915978/jboss-fuse-vs-jboss-esb-can-find-good-info
+
+-------------
+TODO
+http://www.mulesoft.com/tcat/tomcat-deploy-procedures
+http://fusesource.com/docs/esb/4.4.1/esb_deploy_osgi/DeployCamel-HotDeploy.html
+http://docs.spring.io/spring-book <-> osgi/docs/current/reference/html/introduction.html
+
+

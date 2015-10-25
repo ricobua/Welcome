@@ -1,0 +1,93 @@
+http://www.torsten-horn.de/techdocs/jee-jax-ws.htm#Minimaler-Webservice
+
+1) interface & impl & main-wrapper <-> client
+2) run in regular JVM
+
+------------------
+Maven
+pom.xml -> configuration
+
+
+"standard"-plugins
+maven-surefire-plugin
+maven-compiler-plugin
+
+dependency -> testng
+
+------------------
+XML namespace
+lib in namespace laden:
+xmlns:ora="http://com.oracle.class" <-> import Ora com.oracle.class;
+lib Verwendung:
+<ora:sql/>
+
+lib in default ns laden:
+xmlns="http://com.oracle.class"
+lib Verwendung:
+<sql/>
+------------------
+TestNG -> Nachfolger JUnit
+------------------
+typed map ->
+new ConcurrentHashMap<Long,BuchDO>();
+
+new ConcurrentHashMap<String, MyClass>(8, 0.9f, 1);
+More often though, ConcurrentHashMap is introduced to improve performance.
+In the above, only a single shard segment is created internally 
+that allocates an initial capacity for its HashEntry[] table of 8, 
+which allows for some reasonable number of values to be added 
+before reallocation, 
+and the load factor of 0.9 ensures reasonably dense packing. 
+The single shard offers full read benefits and, 
+unless you have very high concurrency 
+sufficient write throughput 
+without risking crazy unnecessary memory loading.
+http://ria101.wordpress.com/2011/12/12/concurrenthashmap-avoid-a-common-misuse/
+
+does not lock the Map while you are reading from it. 
+does not lock the entire Map when writing to it.
+
+putIfAbsent <-> synchronized block
+------------------
+Ajax
+http://de.wikipedia.org/wiki/Ajax_(Programmierung)
+SOAP-WS JAX-WS
+http://www.torsten-horn.de/techdocs/jee-jax-ws.htm#Minimaler-Webservice
+GTK vs Qt
+http://www.wikivs.com/wiki/GTK_vs_Qt
+JSF Demo
+http://openfaces.org/demo/datatable/DataTable_general.jsf
+Camel Dashboard
+http://hawt.io/
+------------------
+CXF
+WSDL contract -> wsdl2java -> port type, binding, service definitions.
+Address -> http Adresse
+Service Class -> auto-generated Java code
+WSDL location -> im File System (propably for auto-generation)
+Service Name -> combined "{namespace}localName" syntax
+Port Name -> port & operation == modul & functions
+-> port type: e.g. requ/resp, single, ...
+
+http://cxf.apache.org/docs/developing-a-consumer.html
+service & binding -> usually auto-generated -> wsdl2soap & wsdl2service
+
+wsdl2java -> (call "mvn generate-sources")
+targetNamespace -> inverse "endpointInterface" (actually Java is inverse!)
+
+Client classes -> service (~"Connection") -> endpoint (="Interface")
+-> getPortxxx -> derived from available port "xxx" in wsdl 
+-> first output param -> return type
+
+http://cxf.apache.org/docs/standalone-http-transport.html
+CXF -> standalone -> http transport based on jetty server
+-> CXF-Servlet -> spring & tomcat
+
+http://stackoverflow.com/questions/11566609/difference-between-jax-ws-axis2-cxf
+in-jdk -> JAX-WS impl -> plus other (JAX-RS, WS-*, REST, ...)-> CXF
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+SoC -> Separation of concerns ->
+e.g. Internet protocol stack
+e.g. Different Business Logic
+
+-> Normalized Systems -> TODO
+
+CCC -> cross-cutting concerns
+logging & security
+-> do not fit cleanly OO or procedural programming
+-> Aspect-oriented programming
+
+
+TODO -> passive view c# ->
+http://msdn.microsoft.com/en-us/magazine/hh580734.aspx
+
+Ruby ->
+Paradigmen -> objektorientiert, prozedurale, funktionale, ...
+Laufzeit interpretiert
+vollständig objektorientiert -> auch primitive Datentypen
+JRuby -> Ruby-Interpreters in Java -> nahtlos
+Gem -> Package

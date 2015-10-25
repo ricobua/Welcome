@@ -1,0 +1,48 @@
+Qt -> WebSocket -> JSON
+Qt -> Messaging
+
+angularjs -> WebSocket -> JSON
+
+java -> spring
+ -> tomcat -> json
+ -> jdbc / hibernate
+ -> camel
+-------------
+linux
+multi-user
+
+fire-wall
+session-handling
+tomcat
+fail-over
+REST servlet
+
+eclipse
+svn
+back-end vs front-end tools:
+  build mvn ant / grunt(->node.js)
+  depend mvn / Bower-npm-Git
+  scafolding artifacts / yeoman (/angular-seed)
+blue griffon -> html wysiwyg editor
+angularjs -> eclipse plugin
+
+spring
+camel
+active-mq
+
+spring-mvc
+angularjs
+pure-css
+pics
+draw
+grid-customize
+
+db
+orm (Hibernate)
+sms.at
+
+-------
+http://stackoverflow.com/questions/846659/how-can-i-put-a-database-under-git-version-control
+------
+micro-consulting
+https://www.airpair.com/

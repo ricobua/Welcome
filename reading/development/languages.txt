@@ -1,0 +1,5 @@
+Scratch -> graphical & kids
+http://de.wikipedia.org/wiki/Scratch_(Programmiersprache)
+--------
+Arduino -> eigene IDE -> C/C++ -> RS
+--------

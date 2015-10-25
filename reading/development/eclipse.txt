@@ -1,0 +1,117 @@
+Plug-Ins
+1) metadata vs artifacts
+Metadata -> description 
+Artifacts -> actual bytes
+http://eclipsesource.com/blogs/tutorials/eclipse-p2-tutorial-managing-metadata/
+
+2a) p2
+provisioning platform 
+-> dependency resolver (SAT4J)
+-> transactional state changes
+-> OSGi systems
+http://projects.eclipse.org/projects/rt.equinox.p2
+
+2b) site.xml
+
+3) Mirror
+http://stackoverflow.com/questions/1371176/downloading-eclipse-plug-in-update-sites-for-offline-installation
+
+3b) Mirror via P2
+example -> C:\garbage\eclipse\mir.bat
+http://wiki.eclipse.org/Equinox_p2_Repository_Mirroring
+
+3c) Mirror via site.xml -> TODO
+
+4) integrate with IDE -> TODO
+----------------
+CDT 
+C/C++ Development Tooling
+type hierarchy/call graph
+include browser
+macro definition browser
+refactoring & code generation
+debugging -> memory, registers, disassembly viewers
+
+
+DTP
+Eclipse Data Tools Platform
+SQL -> code completion, formatting, dialect specialization
+bridging relational - object - other
+
+source code mgmt
+SCM -> Git -> EGit
+
+JDT
+Eclipse Java development tools
+Eclipse -> Java -> views, editors, wizards
+
+JSDT
+JavaScript Dev Tools
+
+Jubula
+automated functional GUI testing
+
+Maven
+jidd. Sammler des Wissens
+Build-Management-Tool
+Apache SWF
+Convention over Configuration
+
+Mylyn
+task & application lifecycle management (ALM) framework
+links artifacts to the task-at-hand
+facilitates multitasking & sharing of expertise
+
+PTP
+Parallel Tools Platform
+C, C++, Fortran
+
+PDE
+Plug-in Development Environment
+plug-ins, fragments, features, update sites, RCP (rich client platform) products
+component programming
+
+Remote System Explorer
+"Explorer of the Network Neighborhood" 
+consistent UI
+Remote Files subsystem -> transparent working on remote computers 
+
+RAP
+Remote Application Platform (Rich Ajax Platform)
+SWT, JFace (Data) -> JEE servlet container
+
+Scout
+SOA -> service oriente architecture
+Form -> Server Code -> Tomcat
+not coupled with 
+- any UI library (Swing, SWT or JavaFX) 
+- any platform (eclipse RCP, eclipse e4...)
+business logic separated from the rendering engine
+uses internal client/server comm -> Tomcat
+
+WindowBuilder Core
+WYSIWYG visual designer
+SWT Designer and Swing Designer
+
+Source Editing
+XML, SXL, HTML, CSS, JSP
+
+Web Tools Platform
+JPA .. Persistence
+EJB
+JavaEE
+JSDT
+JSF
+Web Service
+
+Xtend
+programming language
+concise
+type inference
+lambda expressions
+defined with Xtext (Parser-Generator)
+
+Papyrus 0.10.0
+UML2 (by OMG)
+graphical editing tool
+SysML (model-based system engineering)

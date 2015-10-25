@@ -1,0 +1,295 @@
+http://tomcat.apache.org/tomcat-8.0-doc/
+----------
+home -> installation
+base -> instance
+context -> webapp
+CATALINA_HOME -> only required, if called outside tomcat dir -> C:\exe\apache-tomcat-8.0.12(\bin)
+XML -> reference -> ${catalina.home}, ${catalina.base}
+----------
+/bin, /conf, /logs, /webapps
+----------
+never share libraries -> put into WEB-INF/lib
+----------
+Expression Language (EL)
+access data from JavaBeans within HTML
+----------
+Windows-service -> registry -> Java 7 JRE -> JDK
+Linux-demon -> JAVA_HOME -> (goog for debug)
+JRE_HOME precedenc over JAVA_HOME -> see scripts setclasspath.(bat/sh)
+
+may need -jvm server (if JVM defaults client VM) -> OSX
+----------
+<Engine> <Host> <Context>
+server - virtual host - web app
+----------
+Servlet API Specification, version 2.2
+Web Application Archive -> standard format
+hierarchy of directories -> Web ARchive (WAR)
+
+sysAdmin -> deploys -> particular server -> context path ->
+top-level directory -> document root -> HTML & JSP -> application's UI
+e.g. /catalog/index.html
+
+/WEB-INF/
+/web.xml == Web Application Deployment Descriptor -> init & security
+/classes/ -> Java class path
+/lib/ -> jars <-> $CATALINA_HOME/lib ... shared libs (e.g. JDBC)
+----------
+Web Application Deployment Descriptor
+Document Type Descriptor (DTD) -> defined order of elements
+----------
+$CATALINA_BASE/webapps/[webappname]/META-INF/context.xml (optional)
+<-> "applicationContext.xml" (belongs to Spring)
+$CATALINA_BASE/conf/[enginename]/[hostname]/[webappname].xml
+Tomcat Context Descriptor
+(used to be part of server.xml)
+----------
+top-level directory web application -> document root -> HTML & JSP
+context path "/catalog" -> URI "/catalog/index.html" -> "index.html" from document root
+----------
+deployment -> static / dynamic / remote
+expanded -> restart
+war -> restart
+
+Tomcat Manager -> context path /manager -> app
+-> interactively
+-> programmatically -> http +ant +maven +cmd-line
+
+Tomcat Client Deployer (TCD) -> 
+helps packaging -> validate, compile, compress 
+uses manager for deployment
+----------
+statically:
+appBase attribute (default "$CATALINA_BASE/webapps")
+deployOnStartup attribute -> true
+----------
+dynamically:
+autoDeploy -> true
+unpackWARs attribute -> true (default)
+----------
+JMX
+Manager -> proxy servlet ->
+tomcat internals & any MBean
+----------
+container managed security
+<security-constraint>
+<login-config> -> Single Sign On
+virtual host -> one machine, two names
+Realm -> "database" -> usernames & passwords
+roles (=groups) -> access to webapp
+e.g. "manager-gui" role -> Manager Application
+
+connections to existing realms -> 
+JDBC & DataSource & JNDI(LDAP) & xml & memory & JAAS
+
+digested -> password not readable, but useable
+java.security.MessageDigest -> algorithms (SHA, MD2, or MD5)
+
+combined realm -> more than one
+LockOutRealm -> too many attempts -> size limited (DOS-attack!!)
+--
+http://tomcat.apache.org/tomcat-8.0-doc/config/realm.html
+Database_Realm -> JDBC (single) <-> DataSource (pooled)
+JNDI Directory -> LDAP Directory -> lookup password via DN (dist. name)
+connection -> driver & url & name & password
+user -> table & col & password
+roles -> optional -> via table & col
+digest -> algorithm (??) -> java.security.MessageDigest (Java Crypth) ->
+http://oreilly.com/catalog/javacrypt/chapter/ch06.html#33393
+--
+tricky -> use of DataSource (see there)
+----------
+SecurityManager
+protect server -> trojan servlets, JSPs, JSP beans, and tag libraries
+----------
+http://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html
+https://gist.github.com/bulain/1144630
+SSL -> web server Certificate -> each external interface (IP address)
+"digital driver's license" -> basic contact information about the site owner
+Certificate Authority (CA) -> VeriSign or Thawte -> vouch for the authenticity
+simply ensure cannot be snooped -> "self-signed" Certificate
+TODO -> Oracle ->
+http://blog.iadvise.eu/2013/09/16/accessing-ssl-encrypted-websites-using-utl_http-and-oracle-wallet-manager/
+----------
+Keystore
+Java KeyStore format (JKS) -> keytool command-line utility
+PKCS12 internet standard -> OpenSSL & Microsoft's Key-Manager
+
+Tomcat
+JSSE implementation JRE
+APR implementation OpenSSL engine
+----------
+http://tomcat.apache.org/tomcat-8.0-doc/jndi-resources-howto.html
+JNDI
+Java EE standard -> /WEB-INF/web.xml -> resources
+Tomcat -> webapp -> JNDI InitialContext instance
+(<env-entry> -> configure application)
+<resource-ref> -> object factory -> resource (JDBC DataSource, JavaMail Session)
+<resource-env-ref> -> simpler -> no authentication
+--
+resource configuration:
+web application deployment descriptor -> standard -> /WEB-INF/web.xml
+Tomcat specific -> (closeMethod, singleton) -> <Context>,<GlobalNamingResources>
+java:comp/env
+--
+(per-web-app context) -> <Context> -> 
+META-INF/context.xml 
+<-> $CATALINA_BASE/conf/server.xml
+5 sub-elements (!!) <Environment><Resource(Link)><GlobalNamingResources><Transaction>
+2nd definition recommended -> /WEB-INF/web.xml (!!)
+precedence -> <Environment> override attribute = true (!!)
+--
+(global) ->  <GlobalNamingResources> -> $CATALINA_BASE/conf/server.xml
+-> (per-web-app context) -> <Context><ResourceLink>
+--
+e.g. JDBC
+Context initCtx = new InitialContext();
+Context envCtx = (Context) initCtx.lookup("java:comp/env");
+DataSource ds = (DataSource) envCtx.lookup("jdbc/EmployeeDB");
+Connection conn = ds.getConnection();
+conn.close();
+--
+Standard Resource Factories -> flexibility (via the <Context> element)
+(Java EE) specs -> only "JDBC Data Source" & "User Transaction"
+e.g. JavaBean resource factory -> default singleton
+& web.xml <resource-env-ref> & configure within <Context> (e.g. contructor)
+e.g. $CATALINA_BASE/conf/tomcat-users.xml -> user & password & role
+-> MemoryUserDatabaseFactory
+e.g. JavaMail -> SMTP host
+e.g. JDBC Data Sources
+----------
+Connection Pool
+DBCP <-> Tomcat's own
+see "properly written code" (!!)
+Oracle -> thin <-> oci
+----------
+http://tomcat.apache.org/tomcat-8.0-doc/class-loader-howto.html
+Bootstrap —> basic runtime classes
+System —> CLASSPATH (Tomcat -> ignores!!) -> instead certain /bin/xxx.jars
+Common -> /conf/catalina.properties -> mostly /lib/
+WebappX -> /WEB-INF/classes /WEB-INF/lib/*.jar
+restriction: Java Security Manager 
+----------
+behind proxy -> port number should reflect original request
+JMX -> custom component -> MBean descriptor -> mbeans-descriptor.xml
+DefaultServlet -> static resources
+----------
+Clustering -> Session Replication -> Load Balancing -> Farming
+http://tomcat.apache.org/tomcat-8.0-doc/cluster-howto.html
+<Engine> or <Host> -> <Cluster>
+DeltaManager -> replicated to all other nodes
+BackupManager -> one backup node
+Front-End -> Load-Balancing
+Back-End -> Shared State & Sessions
+--
+steps (!!)
+completed + Serialize + Cluster + tcpPort(same mach) + <distributeable>
+NTP (!!) -> network time protocol
+session state -> tracked by cookie
+JULI logging framework
+3 types (File || JDBC || Memory)
+DeltaManager -> all-to-all -> split into (smaller) groups
+Farming -> deploy to one server -> distribute to cluster
+<Membership> element -> multicast IP -> heartbeat -> replication tcp port
+synchronous -> session on all other -> request returns
+--
+sticky session <-> simply failing over ->
+session id modified (contained worker id of tomcat)
+JvmRouteBinderValve -> JSESSIONID in cookie -> 
+stickiness in case of a failure for the mod_jk module
+--
+example
+<Cluster> -> <Manager> (Backup or Delta) & <Channel>
+<Channel> -> 
+<Membership><Receiver><Sender> -> tribes framework
+NIO ... New I/O
+concurrently (one sender/many messages) <-> parallel (many sender & messages)
+QA cluster -> easiest -> separate multicast address/port
+<Interceptor> -> TCP error detection & more
+<Valve> -> see stickiness
+<Deployer> -> FarmWarDeployer
+?? Server / Service / Engine / Host / Cluster / Channel ->
+http://www.wellho.net/mouth/1941_Server-Service-Engine-Host-Tomcat.html
+--
+Service (== Engine) -> Grouping of Connectors
+Host -> Grouping of Contexts (== Web-Apps)
+m to n relationship within Server
+Valve -> s. AOP Aspects
+Listeners -> s. Aspects of Lifecycle Events (create / destroy) -> Spring
+--
+1) ReplicationValve -> intercept response
+2) TCP to replicate the session
+3) crash -> load balancer -> redirect requests 
+4) restart -> (a) get session state, (b) open HTTP/mod_jk
+--
+1) members -> multicast pings
+2) no ping within given timeframe -> considered dead
+3) TCP sockets -> built in flow control & guaranteed delivery
+4) multiple parallel requests -> last one overrides all others
+--
+remote:
+JMX -> startup -> CATALINA_OPTS=\ -> com.sun.management.jmxremote
+--
+Load Balancer
+e.g. Apache HTTP Server ->
+mod_proxy -> simple
+mod_jk -> advanced -> servl cont/web serv -> AJP (Apache JServ Protocol)
+----------
+Comet -> IO asynchronously -> APR or NIO HTTP connectors
+----------
+Connectors
+single server: stand-alone >> native webserver in front of Tomcat
+cluster: AJP connector (e.g. mod_proxy) >> proxied HTTP
+----------
+HTTP Connector -> stand-alone tomcat webserver
+http://en.wikipedia.org/wiki/Resin_(software) -> (!! Resin !!)
+http://de.wikipedia.org/wiki/Apache_Web_Server -> (Apache HTTP) ->
+http://de.wikipedia.org/wiki/Webserver#Software (Market Share)
+
+architecture
+http://caucho.com/products/resin/problem
+----------
+Apache Portable Runtime (APR) -> Native library for Tomcat 
+-> Win / Linux
+-> performance & integration (shared memory, CPU stats)
+----------
+WebSocket-Protokoll -> TCP-Verbindung besteht -> bidirektional
+Rewrite -> Adressumleitung (unter zusätzlichen Bedingungen, e.g. Client-IP)
+-> Permanentlinks & Domainweiterleitungen & Cloaking
+Apache Tribes -> remote objects communication -> serialize & channel
+----------
+http://www.mulesoft.com/tcat/tomcat-clustering
+Apache HTTPD & module mod_jk (-> load balancing)
+Tomcat Cluster -> see above
+----------
+http://www.mulesoft.com/tcat/tomcat-connectors
+Catalina -> Connector elements -> links to outside world
+port -> connector -> service
+----------
+Hot Standby (but only for HTTP sessions !!)
+http://tomcat.apache.org/connectors-doc/generic_howto/loadbalancers.html
+----------
+CXF -> Servlet -> web.xml -> url-pattern "services"
+camel-cxf.xml -> adress "inventory"
+----------
+secure WS
+http://www.mkyong.com/webservices/jax-ws/container-authentication-with-jax-ws-tomcat/
+1) define user -> tricky with Eclipse deploy -> (overwrites .xml in tmp1)
+2) add security to web.xml -> login ->
+3) login -> Basic -> part of HTTP header
+4) Soap UI -> Button "Auth"
+----------
+Eclipse -> Servers -> Open -> Launch Config -> Arguments -> tmp1
+... Web-Apps & Logging & Config
+Tomcat Files -> Explorer -> Servers -> *.xml (server, users, etc.) -> (workspace files)
+Servers -> Add & Remove -> Publish immediatelly
+web.xml -> src/main/webapp/WEB-INF
+----------
+http://en.wikipedia.org/wiki/Basic_access_authentication
+----------
+eclipse -> deploy
+-> Tab "Servers" -> Open -> configuration path
+-> C:\rico\development\java\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+---------
+pool config
+http://www.codingpedia.org/ama/tomcat-jdbc-connection-pool-configuration-for-production-and-development/

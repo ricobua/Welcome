@@ -1,0 +1,45 @@
+http://blog.goyello.com/2010/06/15/how-to-create-java-web-application-with-eclipse-wtp-and-m2eclipse/
+
+
+
+
+
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
+1) created from archetype -> creates root
+mvn archetype:generate -DgroupId=com.pia -DartifactId=CamelDBCheckWar -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+2) create src/main/java dir
+
+3) change pom
+a) schemata -> several \n
+b) <version>,<url>
+c) properties -> camel & cxf versions
+d) dependencies -> 
+  i) camel - core/spring/cxf/test
+  ii) cxf
+  iii) spring-web
+  iV) junit (v4!!) & logging (slfj4 ??)
+e) plugins -> wsdl2java
+f) build -> finalName -> xxx.war
+g) compiler-plugin -> java-version (NOT in Eclipse!!)
+
+
+3) update Servlet Version -> 3.1 -> web.xml
+http://antoniogoncalves.org/2013/06/04/java-ee-7-deployment-descriptors/
+
+4) while at it 
+-> Spring Listener
+-> add CXF & Tomcat-User-Security
+
+5) Spring ->
+src\main\webapp\WEB-INF\applicationContext.xml
+-> camelcontext
+-> beans
+
+6) JNDI on Tomcat
+http://tomcat.apache.org/tomcat-8.0-doc/jndi-resources-howto.html
+http://www.coderanch.com/t/592908/Tomcat/bind-objects-JNDI-Tomcat-InitialContext
+
+
+

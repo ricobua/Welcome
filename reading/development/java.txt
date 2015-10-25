@@ -1,0 +1,21 @@
+Java 8
+
+Lambda expressions & streams
+http://www.javaworld.com/article/2151531/java-language/java-8s-functional-fomentation.html
+
+Iterator
+
+http://www.javaworld.com/article/2461744/java-language/iterating-over-collections-in-java-8.html
+-> ":" -> forEach()
+
+-------------
+Java Immutable
+http://www.javapractices.com/topic/TopicAction.do?Id=29
+-----------------
+volatile
+http://www.theserverside.com/news/thread.tss?thread_id=79600
+-----------------
+sys prop <-> arg
+java -DsysProp1=sp1 -DsysProp2=sp2 test.ArgsTest pro1 pro2 pro3
+for (String arg : args)
+System.getProperty(sysProp1)

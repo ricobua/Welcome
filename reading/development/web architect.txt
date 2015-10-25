@@ -1,0 +1,9 @@
+DB -> PL/SQL
+(hibernate)
+Tomcat
+camel
+spring mvc (no xml)
+json
+angularJS
+websockets
+

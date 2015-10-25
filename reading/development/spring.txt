@@ -1,0 +1,23 @@
+spring
+
+SpringMVC -> DispatcherServlet
+maven -> "spring-webmvc" & "javax.servlet-api"
+
+ContextLoaderListener -> not web -> applicationContext
+DispatcherServlet -> web -> WEB-INF/spring/webmvc-config.xml
+
+http://kielczewski.eu/2013/11/spring-mvc-without-web-xml-using-webapplicationinitializer/
+
+SpringMVC 3.1 -> Serlet 3 API -> no web.xml required
+interface -> WebApplicationInitializer
+method -> getContext -> AnnotationConfigWebApplicationContext
+  -> configLocation -> package with classes with annotation "@Configuration"
+method -> void onStartup(ServletContext)
+  -> context to ContextLoaderListener
+  -> DispatcherServlet to ServletRegistration 
+  -> onStartup <-> when servlet first called 
+
+App -> @ComponentScan -> look for @Controller
+Web -> @EnableWebMvc
+
+Controller -> @RequestMapping -> @ResponseBody

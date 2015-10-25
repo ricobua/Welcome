@@ -1,0 +1,102 @@
+-----
+SEE ALSO -> GUI Overview.txt2 -> KDE X Windows
+-----
+http://de.wikipedia.org/wiki/Unix
+Minix -> Linux
+Mac OS X (Darwin)
+FreeBSD / NetBSD / OpenBSD
+AIX / Solaris (OpenSolaris) / HP-UX
+-------
+AT&T -> Unix (open) -> BSD -> (closed)
+-> MS Xenix, Siemens Sinix
+-> GNU's Not Unix -> kompatibel -> ?? Kernel ?? 
+-> Minix -> Linux
+-> frei -> BDSLite -> Free/Net/Open-BSD
+-> NeXTSTEP -> Mac OS X (Darwin)
+-------
+http://openbook.galileocomputing.de/unix_guru/
+-------
+Distributionen:
+Derivate -> 
+Arch / Debian (Knoppix/Ubuntu) / Gentoo / 
+Red-Hat (Fedora/Mandriva) / Slackware / Andere
+--
+package archives -> pro distri
+binär-kompatibel <-> recompile
+--
+Debian -> viel Architekturen -> Raspbian
+Ubuntu -> Heim-Rechner -> window: Unity/GNOME/KDE/LXDE/Xfce -> LiMux & Mint
+-> Mint -> Cinnamon & Mate
+Gentoo -> fortgeschritten -> Chromium OS (Google)
+RHL -> Fedora -> vollständig freie apps -> Red Flag & RHEL
+RHEL Red Hat Enterprise Linux -> kommerziell -> Server
+RHEL -> CentOS (frei) & Oracle Unbreakable & Scientific (CERN) & SME (small business)
+RHL -> Mandriva -> F/RU
+Slackware -> konfig
+openSUSE -> Nürnberg -> The Attachmate Group (früher Novell) 
+Android -> Smartphonse & Tablets
+ELinOS -> embedded
+Puppy -> schlank
+Maemo -> BeagleBoard
+-------
+LTS -> long term support
+-> fork with long term updates 
+-> e.g. Ubuntu (10.4, 12.4, 14.5)
+-------
+Puppy
+http://www.pcwelt.de/ratgeber/Alte_PCs_und_Laptops_mit_Puppy_Linux_fit_machen-Clever_verwerten-7971964.html
+version 
+-> Precise -> Ubuntu 12.04 LTS „Precise Pangolin“
+-> Tahrpup -> Ubuntu 14.04 LTS „Trusty Tahr“
+--
+PAE Kernel -> Physical Address Extension -> 32 bit Systemen -> alt == non
+CPU 333 256 MB Arbeitsspeicher + Swap-Datei von 512 MB + 150 MB Abbild
+-------
+http://de.wikipedia.org/wiki/Linux_Mint
+Linux Mint Debian Edition (LMDE) -> Rolling Updates
+Romeo -> unstable branch
+--
+review
+http://desktoplinuxreviews.com/linux-mint-reviews/linux-mint-17-cinnamon/
+USB bootable
+http://www.everydaylinuxuser.com/2014/05/how-to-create-bootable-linux-mint-usb.html
+Precise Puppy
+http://distro.ibiblio.org/quirky/precise-5.7.1/
+-------
+FAT32 -> File Allocation Table -> 1977 Microsoft -> Industrie-Standard
+Nachfolger NTFS
+Computer -> Laufwerk -> Eigenschaften -> FAT32 (default for USB)
+-------
+Schlauer Fuchs
+http://www.cpu-world.com/CPUs/Bulldozer/AMD-A8-Series%20A8-5500.html
+-------
+UNetbootin -> bootfähiges Ubuntu-Live-System -> USB-Stick
+-------
+ISO image ->  Computer-Datei -> CD/DVD ->  ISO 9660 -> Speicherabbild 
+-------
+file system -> ext2 / ext3 / ext4
+http://www.ehow.com/info_12216958_puppy-linux-ext2-vs-ext3.html
+-------
+Windows -> CPU & RAM
+-> msinfo32.exe
+-> System-Steuerung -> Sicherheit -> System -> Arbeitsspeicher
+--------
+remote access
+PuTTY -> Win native -> multiple GUI can use it
+OpenSSH -> just as good
+X11 client
+-> Linux -> gnomine
+-> Win -> Xming
+--------
+/bin /sbin 
+/usr (unix special routines) 
+-> /usr/bin -> "programs"
+-> /usr/local -> from source
+-> /usr/share -> for all machines
+/opt -> vendors
+/etc -> config
+/home -> user
+http://www.thegeekstuff.com/2010/09/linux-file-system-structure/
+--------
+iTerm2 -> terminal emulator for OS X
+Homebrew -> freie/quelloffene Paketverwaltung -> Mac OS X

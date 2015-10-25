@@ -1,0 +1,16 @@
+Technologie:
+http://de.wikipedia.org/wiki/PowerLAN
+Develo Standard
+http://de.wikipedia.org/wiki/Homeplug_AV
+Modulation (wie ASDL)
+http://de.wikipedia.org/wiki/Orthogonales_Frequenzmultiplexverfahren
+--------------
+Neueste
+http://www.devolo.com/at/Produkte/dLAN-650-triple+/
+Standards & Protokolle
+https://www.devolo.com/products/dLAN-Powerline/dLAN-650+/data/Datenblatt-dLAN-650+-de.pdf
+
+patch-kabel ->
+patch <-> fix-verlegt
+cat 5 -> bis 100MHz
+cat 7 -> dlan 650+ -> 2m -> EUR 5

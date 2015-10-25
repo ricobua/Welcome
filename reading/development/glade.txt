@@ -1,0 +1,52 @@
+Tutorial
+http://blog.borovsak.si/2009/09/glade3-tutorial-1-introduction.html
+
+Part 1
+a) Layout
+b) scroll needs viewPort (=Adapter)?
+
+Part 2
+a) "destroy" signal.
+b) status bar -> "Packing tab" -> pack type -> "End"
+c) Button -> "General" tab -> "Stock button" -> predefined labels 
+
+Part 3
+a) left side (navigation) -> fixed width
+
+Part 4
+a) Misc -> ListStore -> ="model"="data container"
+b) define column data types [gdouble, gchararray]
+c) connect: tree widget -> General -> "Baumansichtsmodell"
+
+Part 5
+-- don't remember, some change to buttons --
+
+Part 6
+a) connect signal to function
+b) Passing custom data to callbacks
+c) 
+
+gboolean
+function( GtkWidget      *widget,
+          GdkEventExpose *event,
+          gpointer        user_data )
+
+------------------
+passing parameters
+http://stackoverflow.com/questions/6684466/c-passing-multiple-arguments-to-a-callback-function-in-gtk
+
+source (view):
+g_object_set_data (context_object, "entry1", entry1);
+g_object_set_data (context_object, "entry2", entry2);
+g_signal_connect (G_OBJECT (Apply), "clicked", G_CALLBACK (apply_clicked), context_object);
+
+call_back (controller):
+GtkEntry *entry1 = g_object_get_data (context_object, "entry1");
+
+only problem:
+(a) view -> listener on model
+(b) controller -> unaware of view
+(c) controller wants to make sure, someone listens !!
+... controller needs to check on view to listen to correct model
+-> seperate business logic
+

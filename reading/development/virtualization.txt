@@ -1,0 +1,110 @@
+server virtualization
+
+Hypervisor = Virtual Machine Monitor = VMM
+host machine -> VMM -> guest machine
+virtual operating platform -> guest operating systems 
+
+Type-1: native or bare-metal -> directly on the host's hardware
+Oracle VM Server
+Citrix XenServer
+VMware ESX/ESXi
+Microsoft Hyper-V 2008/2012
+
+Type-2: hosted hypervisors -> like program
+on a conventional operating system
+VMware Workstation -> Win
+VMware Fusion -> Mac
+
+embedded hypervisors -> problem
+many - weak - no OS anyway
+
+network virtualization
+-> virtual machines connected by virtual switches -> one host
+-> one phys cable acts as many
+
+IO + storage + desktop virtualization
+
+Shared Storage
+-> data in one place -> used by Aktiv/Passiv(=Failover)-Cluster
+-> exe (incl VMM) in one place -> virtual deployment
+
+Technologien
+SCSI -> Kabel von zwei Rechnern
+iSCSI (Internet SCSI) -> SCSI mit IP (SAN-artig) -> TCP/IP -> Ethernet-Frames
+AoE (ATA over Ethernet): ATA-Befehle -> Ethernet-Frames
+FC (Fibre Channel): high speed network -> storage <-> TCP & Ethernet
+
+SAN (Storage Area Network) -> Fibre Channel
+NAS (Network Attached Storage): TCP + Ethernet (overhead) -> RAID + Block (=Filer)
+
+options:
+iSCSI (I-scasi) -> shared storage appliance -> USD 600 Iomega NAS
+open source -> openfiler -> software -> NFS iSCSI Win -> virtual appliance
+Celerra -> UBER -> virtual version of their hardware
+
+NFS -> Network File System -> Linux distributed file system -> TCP port 2049
+SMB -> Server Message Block -> Win -> Unix via Samba
+--------------------
+x86 (Intel & AMD) -> Protected Mode -> vier Ringe (Berechtigungen)
+Virtualisierung -> Deprivilegierung -> 
+virtual host kann mit Ring 0 Berechtigung ausführen, hat sie aber nicht wirklich
+-> hardware-support -> Intel (VT-x) + AMD (AMD-V) 
+
+constraint: memory -> 8GB
+HCL -> harware compatibility list
+
+ESXi -> thin version
+ESX -> phased out
+(aka VMvisor)
+
+VMware vSphere -> suite
+ESXi + Storage Manager + Network + Security + Availability + Scalability
+VMware vCenter -> GUI -> centralized
+-> e.g. host migration -> move VM from physical server to other
+
+free version -> VMware ESXi 4
+incl -> ESXi
+excl -> vMotion - VMHA (high avail) - FT (fault tolerance)
+
+free version -> VMware Player -> Type2 Windows Hypervisor
+
+white box server -> no brand name
+-----------
+docker & coreOS
+Container
+Container -> lauffähiges, virtuelles Betriebssystem -> API
+-> LXC-Schnittstelle des Linux-Kernels
+-> Libcontainer -> Docker
+http://etherealmind.com/basics-docker-containers-hypervisors-coreos/
+
+reason de entree: 1) deploy to laptop, dev & prod
+2) easier stack ->
+http://www.zdnet.com/article/heres-how-microsoft-is-supporting-the-open-source-docker-container-model/
+
+1) docker file -> describes requirements & app
+2) docker image -> binary of app (incl libs) (-> e.g. jvm & jars)
+3) docker hub / repository -> storage for binaries
+4) docker host -> provides interface (libcontainer)
+5) deploy docker image to docker host
+-> @20:00 ->
+http://channel9.msdn.com/Series/Docker-for-NET-Developers/Docker-Overview-for-NET-Developers
+
+problem:
+6) unless docker file is 100% platform independent ->
+MS images only on MS docker hosts
+
+problem2:
+jvm with every imgage -> solution: modularize and link jvm docker
+
+problem3:
+file system -> solution: Overlay-Dateisystem AuFS (Another Unionfs)
+-------------------
+Mircosoft Azure
+1) infrastructe -> datacenter -> cloud -> certified & encrypted ??
+1a) Azure appliance -> private datacenter -> private cloud
+
+2) allows LinuxVMs & docker
+2a) allows .NET jvm
+-------------------
+Google App Engine (GAE) -> Platform as a Service (PaaS)
+Google Compute Engine (GCE) -> Infrastructure as a Service (IaaS).

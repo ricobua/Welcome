@@ -1,0 +1,128 @@
+XML
+
+JSON
+JavaScript Object Notation
+- gültiges JavaScript
+- per eval() interpretiert 
+- eigenes <script>-Element in DOM-Knotenbaum
+
+BSON (Binary JSON)
+
+YAML 
+"YAML Ain’t Markup Language" (ursprünglich "Yet Another Markup Language")
+Datenstruktur 
+- assoziativen Listen (Dictionary, name-value) 
+- Listen (Arrays)
+- Einzelwerten (Skalaren)
+
+jedes JSON ist valides YAML
+
+XMPP
+Extensible Messaging and Presence Protocol
+erweiterbares Nachrichten- und Anwesenheitsprotokoll
+Internetstandard XML-Routing -> primär für Instant Messaging
+früher Jabber
+mindestens ein XMPP-Server (ähnlich Mail Transfer Agent)
+JID (Jabber Identifier) -> Form -> „alice@example.com“ (ähnelt E-Mail-Adresse)
+
+ANTLR
+ANother Tool for Language Recognition
+objektorientierter Parsergenerator
+LL(k)-Grammatiken mit beliebigen k
+Parser-Bibliothek (antlr.runtime.dll)
+"exp = Parser(reader).expression();"
+
+Xtext
+DSL domain specific language
+statt XML, mehr wie ProgrammierSprache
+"depends on junit 3.8.1 for test" -> 
+"<depends><unit>junit</unit><version>3.8.1</version></depends>"
+IDE integration (auto-complete, color-coding, ...)
+Eclipse Modeling Framework
+
+BIRT
+Business Intelligence and Reporting Tools
+Eclipse Top-Level
+Java, Jav EE
+charts, OLAP, data sources
+visual designer -> Eclipse
+
+NoSQL
+not-only-SQL
+Implementierungen 
+Google BigTable & Amazon Dynamo
+CouchDB, Apache Cassandra, MIOdb, MongoDB und OrientDB
+Relationale -> häufige aber kleine Transaktionen oder Batch
+nosql -> hohe Datenanforderungen & häufige Änderungen -> kein ACID
+
+MongoDB
+humongous en gigantisch
+hochperformant, schema-frei, dokumentenorientiert, Open-Source
+
+CouchDB
+Cluster of unreliable commodity hardware Data Base
+Dokumenten-Orientiert -> Apache Top-Level-Projekt
+
+NuoDB
+Cloud DB
+-------------
+Relationale Datenbank ->
+Kritik:
+Segmentierung <-> Objekte
+Künstliche Schlüsselattribute <- z.B. Größe reduzieren (candidate key)
+Externe Programmierschnittstelle <- Impedance Mismatch
+
+NoSQL -> Alternativen: Objekte, semi-strukt (XML)
+
+-------------
+MySQL -> Tocher My -> Oracle -> for-profit version
+MariaDB geht auf Widenius’ jüngere Tochter -> Wikipedia
+
+HSQLDB
+-> Hyper Structured Query Language Database
+-> freie
+-> vollständig in Java
+-------------
+1) LAMP-Software-Bündel -> Linux & Apache & MySQL & PHP
+MySQL - MariaDB - SQLite - PostgreSQL
+Perl - PHP
+
+2) XAMPP
+a) besonders einfache Installation
+b) Tools
+  ProFTPd(FTP-Server)
+  FileZilla Server
+  Mercury(Mailserver)
+  phpMyAdmin & Webalizer & OpenSSL
+
+c) X -> Linux (LAMPP), OS X, Win (WAMPP)
+
+d) Apache Tomcat 7 -> JSP & Servlets 
+
+e) nicht (!) Produktion -> Patras-Hack
+-------------
+CRUD 
+create read update delete
+-------------
+http://flywaydb.org/
+database migrations
+version control
+-------------
+MySql
+
+0) look for service in system tray oder ->
+Start -> SystemSteuer -> System -> Dienste
+
+1) C:\Program Files\MySQL\MySQL Server 5.6\bin (-> on %path%)
+-> mysqld -> server -> run cmd as admin !! -> access to data files
+  close cmd
+  kill process using Task Manager
+-> mysql -> client ->
+-> command line -> mysql -u "javauser" -p
+  use javatest;
+  select * from javatest.testdata;
+
+2) Data Default
+my.ini
+mysqld.exe --defaults-file="C:\ProgramData\MySQL\MySQL Server 5.6\my.ini" MYSQL56
+!! ProgrammData !!

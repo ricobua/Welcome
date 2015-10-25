@@ -1,0 +1,102 @@
+--- from unixlike.txt2----
+Puppy
+http://www.pcwelt.de/ratgeber/Alte_PCs_und_Laptops_mit_Puppy_Linux_fit_machen-Clever_verwerten-7971964.html
+version -> Precise & andere -> Ubuntu 12.04 LTS „Precise Pangolin“
+--
+create ISO image ->
+C:\exe\unetbootin-windows-608.exe
+--
+boot from ISO image
+plug in USB -> start -> press F2 to enter BIOS
+-> set boot order -> (1) USB (2) HD
+-> netbook +/- does not work, press x to disable, then enable again
+--
+setup:
+(low brightness -> Fn+F6)
+country US
+keyboard DE
+network: frisbee -> middle-complicated
+
+first save:
+user: admin (not fido)
+partition: sdb1 (USB)
+filessystem: ext4 -> fastest for flash (ext2 -> encrypted)
+name -> precisesave-xxx.2fs -> xxx == rico 
+encryption -> none (otherwise slow, but protects lost USB)
+size 512MB (recommended)
+
+restart:
+check youtube -> sound
+access files system -> txt
+download -> "file system" / mnt / sda2
+Menu -> Setup -> Puppy package manager -> tar.gz
+--
+SquashFS(SFS) -> compressed read-only file 
+PET -> other package format
+--
+frugal -> container file (either ISO or ZIP) -> extracted
+copy-to-R.A.M. mode -> file system within RAM
+--
+terminal -> like windows dos command line tool -> Menu > Utility > Rxvt
+promt -> Menu -> Exit to prompt -> start again with "xwin"
+find . -name \*.py -> files
+ls grep -> files
+shortcut -> from file manager
+copy -> drag&drop
+--
+packet manager -> ppm -> graphical -> Menu - Setup - Puppy Package Manager
+main software package types -> .txz .pet (old .pup) .sfs
+http://puppylinux.com/development/package-management.htm
+pet file structure (incl desktop icon)
+-> file decides whether /opt/ or /usr/bin/
+http://www.linux.org/threads/puppys-package-management-system.5531/
+--
+Mnemosyne
+-> mnemosyne
+-> python-sip
+--
+ssh -> secure shell -> port 22 -> secure remote connection
+scp -> secure copy -> winscp -> graphical
+client -> win - putty -> linux - ssh command line tool
+server -> e.g. OpenSSH
+ip adress -> ifconfig
+passwords -> spot & root -> connect as spot -> su to root
+http://puppylinux.org/wikka/SshWithPuppy
+http://puppylinux.org/wikka/OpenSSH
+--
+OpenSSH
+installed -> cat /root/.packages/openssh-
+/etc/init/ssh.conf
+/etc/ssh/sshd_config -> missing (!!) -> find . -name ssh\*
+-> create file
+-> generate keys -> ssh-keygen -> 5 times 
+  -> /root/.shh/ -> id_rsa - private <-> authorized_keys - public
+-> privilege separation
+/etc/default/ssh -> options to sshd
+http://www.murga-linux.com/puppy/viewtopic.php?t=80522&sid=6e11d217be01e0bc7f71d34fc557c114
+http://www.faqs.org/docs/securing/chap15sec122.html
+logging -> /var/log/messages
+ps -A | grep sshd
+--
+multi user -> puppy is not (really)
+root -> dumb & malicious
+dumb -> restore -> use previous sqashfs file
+malicious -> protect from other users -> n/a
+malicious -> via network port
+-> spot -> /root/spot -> run SeaMonkey (web-browser)
+-> fido -> non-root user -> 'su' & 'sudo' -> password (-> not quite mature)
+--
+startup
+/etc/rc.d -> rc.sysinit -> multiple (-> see README.txt)
+--
+http://www.puppylinux.com/development/howpuppyworks.html
+---------------
+openssh
+1) package download
+1a) cat /root/.packages/
+2) /etc/ssh/sshd_config
+3) keygen -> /root/.ssh
+4) ssh -v localhost
+5) id_rsa -> remote computer -> puttygen -> conversion import -> save priv ppt
+5a) C:\rico\keys\puppy.ppk
+6) firewall -> pirelli -> Einstellungen -> Port Mapping -> SSH 22

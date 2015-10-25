@@ -1,0 +1,130 @@
+http://de.wikipedia.org/wiki/Liste_von_GUI-Bibliotheken
+http://www.wikivs.com/wiki/GTK_vs_Qt
+-------------
+C -> C++ -> Qt -> [KDE] -> KDevelop
+C -> GTK+ -> [Gnome] -> Glade
+-------------
+Qt ... Nokia
+including Android
+
+GTK+3 ... Gnome
+UI description file ... Glade
+
+-------------
+graphical desktop, desktop environment:
+
+CDE (Common Desktop Environment)
+UNIX: OS, Sun HP, IBM, UNIX Systems Laboratories. 
+Motif toolkit -> GUI apps X Window server -> build CDE
+
+KDevelop
+K Desktop Environment 
+-> new name: KDE Software Compilation (KDE SC4) (new from ground up)
+-> unixlke (FreeBSD, GNU/Linux, OS X), auch win
+Geräte-Typen und -Formfaktoren
+C++ (Qt)
+-> Oberfläche: KDE Plasma Workspaces
+-> Datei-Manager, Media Player, Webbrowser, e-mail, ...
+
+Gnome (open source idealism)
+GNU Network Object Model Environment
+Harmony toolkit on top of GTK+ and other (LGPL-licensed <-> Qt,Motif) 
+GIMP verwendete GTK+ (GIMP-Toolkit) -> C 
+Trolltech 2000 Linux-Qt GNU GPL (Win seit Juni 2005)
+
+KDE vs GNOME
+http://www.linuxuser.co.uk/features/gnome-vs-kde/
+KDE -> new, GNOME -> useability&stable
+GNOME: sacrifice integration (&choice) for the sake of simplicity
+KDE: truely cross-platform, C++ only
+
+Gnome Forks:
+(a) Unity von Canonical -> Arbeitsumgebung -> sparsam mit Bildschirmplatz
+Gegensatz: Gnome, KDE SC 4 Xfce -> keine Programmsammlung 
+(alle GTK+ apps) -> weil nach Streit mit GNOME entstanden
+(b) MATE
+
+Gnome vs Unity
+http://www.linuxuser.co.uk/features/gnome-3-vs-unity-which-is-right-for-you/
+both: want minimum distractions (notification bars & inactive windows)
+
+Xfce X-Face Gesicht für X
+Unix und unixartige
+was CDE, jetzt GTK+ 2
+Ubuntu?
+
+LXDE (Desktop-Umgebung) -> free and open source
+Unix and other POSIX compliant platforms, such as Linux or BSD
+"Lightweight X11 Desktop Environment"
+computers on the low end of the performance spectrum
+Raspberry Pi Foundation -> recommends:  Debian-derived Raspbian
+GTK+
+Qt Port: LXDE-Qt mergerd with Razor-qt
+-------------
+
+Linux: Console -> Displayserver -> Client
+Kommunikationsprotokoll -> (old) X11, (new) Wayland
+
+X Window System (=X11)
+Fenster auf Bitmap-Displays (unixoide & OpenVMS)
+
+Virtual Memory System (VMS) Betriebssystem 
+Digital Equipment Corporation (DEC)
+Virtual Address eXtension (VAX)-Rechner
+1977: 32-Bit & Mehrbenutzer- & Multitasking-fähig & virtueller Speicherverwaltung
+Ende: Juni 2013
+
+Oxygen Project
+computer icons
+KWin window decoration
+widget toolkit themes (GTK & Qt)
+themes for Plasma Workspaces (e.g. "Air","Oxygen")
+TrueType font family (including monospace font)
+
+Tango Desktop Project
+Tango style guidelines 
+hexadecimal color palette
+-> visual consitency  (does not look out of place)
+-> iconset, common metaphors
+
+competitors
+Apples -> Mac OS X & iOS -> windows system Quartz
+Android -> user interface SurfaceFlinger & 3D rendering EGL
+Wayland
+
+window managers
+Xfce
+JWM -> Joe's Window Manager -> light-weight -> Puppy
+----------------------
+OpenGL (see web graphics.txt2)
+http://de.wikipedia.org/wiki/OpenGL
+easier 3D dev
+uses Qt,GTK+
+<-> Direct3D
+----------------------
+IDEs
+
+Qt Creator ist eine integrierte Entwicklungsumgebung (IDE) für GNU/Linux, Mac OS X und Microsoft Windows.
+nutzt compiler (e.g. gcc)
+
+Anjuta -> Gnome
+KDeveloper -> KDE
+
+Code::Blocks ist eine freie, quelloffene Entwicklungsumgebung für C, C++ und D. Code::Blocks basiert auf wxWidgets und läuft unter GNU/Linux, Windows und den meisten Unix-Derivaten.
+nutzt compiler (e.g. gcc)
+
+C# & GTK+ & Visual Studio
+-> gtk#, gtkSharp
+http://stackoverflow.com/questions/11337333/gtk-in-visual-studio-2010
+
+C++ & GTK+ -> gtkmm
+----------------------
+Qt Language-Bindings (=glue code)
+Java -> Qt Jambi -> stale
+JavaScript -> see QML
+
+Qt
+Qt Designer -> *.ui files -> XML-based UI description
+coding C++ Qt widgets classes
+Qt Creator -> QML files -> Javascript (or C++) event handling
+

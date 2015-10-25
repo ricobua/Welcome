@@ -1,0 +1,58 @@
+weird -> no docu for
+C:\rico\development\javascript\VorsorgeRechner
+
+-----------------
+
+node.js
+1) install with .msi
+2) use path or "C:\Progra~1\nodejs\node -v"
+remark: short-win-name -> "dir /x pro*"
+a) js on the server
+b) C10K problem -> serve 10k clients simultaneously
+
+-----------------
+
+pitch detect
+1) http://jbossews-7426.rhcloud.com/ricDetect.htm
+-> works without loading the .ogg file
+-> works with Tablet Chrome
+2) if ever -> access denied ->
+chrome://settings/content
+http://stackoverflow.com/questions/15993581/reprompt-for-permissions-with-getusermedia-after-initial-denial
+3) file:///C:/rico/development
+-> DOES not ask for permission -> denied !!
+-> "C:\PathTo\Chrome.exe" --allow-file-access-from-files
+chrome://version/ -> list enabled flags
+[http://www.chrome-allow-file-access-from-file.com/]
+4) remember:
+Audio Context Chains -> new AudioContext();
+source.connect(gain);
+gain.connect(context.destination); -> destination == speakers
+
+----------------
+// onload event -> verbose
+window.addEventListener('load', init, false);
+function init() {}
+// geht auch
+window.onload = function() {}
+
+// load data -> within request -> define callback -> asynch
+request.onload = function() {}
+
+// drag-and-drop file -> asynch
+detectorElem.ondrop = function (e) {
+this.classList.remove("droptarget");
+var reader = new FileReader();
+reader.onload = function (event) {}
+
+---------------
+pseudo-element
+-> CSS3
+-> elements, that can be accessed, as if it where in the DOM, but it is just code
+http://stackoverflow.com/questions/11359728/what-does-this-operator-in-css-mean
+
+---------------
+Syntax
+http://www.w3schools.com/jquery/jquery_syntax.asp
+innerHtml (== values)
+http://stackoverflow.com/questions/1309452/how-to-replace-innerhtml-of-a-div-using-jquery

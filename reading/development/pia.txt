@@ -1,0 +1,28 @@
+1) java
+C# -> SOFTWARE\\JavaSoft\\Java Runtime Environment\\ ->
+C:\Program Files (x86)\Java\jre7
+http://stackoverflow.com/questions/3038140/how-to-determine-windows-java-installation-location
+
+%java_home%
+d:\jdk -> empty
+
+sources -> JDK:
+C:\Program Files (x86)\Java\jdk7
+
+required by eclipse?
+C:\Program Files\Java\jre6
+
+unused:
+D:\Program Files\Java\jre6
+
+-------------
+weird:
+C:\Windows\System32\javaw.exe
+-------------
+eclipse:
+D:\bat\ecl.bat
+
+compliance level ->
+Preferences > Java > Compiler
+
+no registry entries

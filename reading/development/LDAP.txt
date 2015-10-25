@@ -1,0 +1,75 @@
+OpenLDAP -> C -> proven
+
+ApacheDS 
+-> Apache Directory Server 
+-> pure Java 
+-> extended functionality -> views, stored proc
+
+Active Directory 
+-> exposes details as LDAP
+-> Windows credentials
+-> Windows group membership
+-> already logged into the domain
+-> authoritative source -> SSO (single sign-on)
+
+Integrated Windows Authentication (IWA)
+-> client computer -> Windows user information -> Web server
+-> best within Intranet (-> proxy problems)
+
+------------------
+Intro
+http://oreilly.com/perl/excerpts/system-admin-with-perl/ten-minute-ldap-utorial.html
+
+book
+http://www.zytrax.com/books/ldap/ch2/
+
+Object-Class -> Container of Attributes
+http://www.zytrax.com/books/ldap/ch3/#objectclasses
+
+groups
+http://www.zytrax.com/books/ldap/ch11/groups.html
+
+Active-MQ Bsp
+http://activemq.apache.org/ldap-broker-discovery-mechanism.html
+
+vieldaptest
+dc=brokers (domain)
+cn=vieldaptest
+
+Spring LDAP
+https://spring.io/guides/gs/authenticating-ldap/
+-> uses embedded ApacheDS & Spring-Security-Login page
+-> authenticates user
+http://docs.spring.io/spring-ldap/docs/current/reference/#introduction
+
+ActiveDir via LDAP interface
+http://www.adamretter.org.uk/blog/entries/LDAPTest.java
+
+setup -> LDIF -> import file
+https://access.redhat.com/documentation/en-US/Fuse_Message_Broker/5.5/html/Security_Guide/files/LDIF-Import.html
+
+Spring -> Setup -> LDAP server-address
+http://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-lifecycle-combined-effects
+<bean id="exampleInitBean" class="examples.ExampleBean" init-method="init"/>
+
+Book: 243 -> JNDI to store objects
+
+Spring LdapTemplate 
+https://today.java.net/pub/a/today/2006/04/18/ldaptemplate-java-ldap-made-simple.html
+
+JNDI -> LDAP Interface (DirContext)
+http://www.javaworld.com/article/2076073/java-web-development/ldap-and-jndi--together-forever.html
+
+
+---------------------
+LDAP -> always on ...
+1. ActiveMQ -> startup -> bind to LDAP
+2. ActiveMQ -> startup -> bind to LDAP (standby)
+Spring -> .xml -> LdapTemplate -> LDAP bean
+Spring -> Factory <-> @PostConstruct <-> properties -> AMQ Context
+---------------------
+JNDI Objects -> passed via JNDI
+e.g. dataSource -> Container stores to JNDI, App retrieves as bean
+---------------------
+"In  theory,  bean  wiring  can  be  driven  from  virtually  any  configuration  source, including properties files, a relational database, or even an LDAP directory. But in practice,  XML  is  the  configuration  source  of  choice  for  most  Spring-enabled applications"
+---------------------

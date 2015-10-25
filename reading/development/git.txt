@@ -1,0 +1,55 @@
+Git SCM -> Source-Code-Mgmt
+
+----------------------
+Client -> "Git for Windows"
+-> Git BASH -> Linux shell emulation
+-> Git GUI / GitHub App
+-> dos shell integration (command prompt)
+-> Windows Explorer integration
+
+SSH executables
+-> OpenSSH
+-> Tortoise Plin == PuTTY
+
+line endings
+e.g. check-out Win, check-in Linux
+
+bash -> terminal emulator -> win-style (like cmd.exe), MinTTY (better)
+
+----------------------
+http://githowto.com/setup
+git config --global --list
+
+most important:
+
+(1) check out central repo
+(a) work on local files
+(b) commit to central repo
+
+(2) check out central repo
+(a) create local repo
+(b) work on local files
+(c) commit to local repo
+(d) synch with central repo (pull-request)
+
+----------------------
+rename -> looks like del & new, but
+-> on commit Git checks file content -> detects (and logs) rename
+
+----------------------
+GitHub
+open source -> kostenfrei
+private repositories -> nicht öffentlich
+enterprise -> on-premise
+
+Synch
+GitHub App 
+-> Synch
+-> View on GitHub (!!)
+Git Gui -> 
+-> Remote -> Fetch From
+-> Merge -> Local Merge
+
+----------------------
+ren *.txt *.txt2 
+-> "bulk" rename

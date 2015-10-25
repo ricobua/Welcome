@@ -1,0 +1,40 @@
+1) Credentials -> PassSafe
+2) First App -> http://jbossews-7426.rhcloud.com/
+3) Deploy -> via Git
+4) RHC Client Tools ->
+a) install Ruby
+b) install Git
+c) gem install rhc -> installs Ruby-Package "Red Hat Client"
+
+5) rhc setup -> auto-login & ssh
+6) ssh keys ->
+C:\Users\andersen\.ssh\
+-> id_rsa.pub
+-> id_rsa
+-> known_hosts
+
+7) putty
+a) import key via puttyGen -> .ppk file
+b) create session to catridge address -> save
+c) open -> shell
+
+8) Git
+-> git config --global user.email -> first time only(?)
+
+git clone ...
+git add
+git commit
+git push origin master
+-> auto-deploy -> 2min
+
+9) Hot Deployment
+hot_deploy marker file
+build files are still executed
+
+10) Maven
+pom.xml
+
+11) Catridge -> "Steck-Platz", Gehäuse
+
+work-Dir:
+C:\rico\development\open_shift\jbossews\src\main\webapp>

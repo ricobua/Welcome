@@ -1,0 +1,100 @@
+TODO
+http://camel.apache.org/seda.html
+http://camel.apache.org/aggregator2.html
+
+--------------------------- 
+
+http://camel.apache.org/tutorial-example-reportincident-part2.html
+
+DefaultCamelContext -> 
+camel.addComponent()
+template = camel.createProducerTemplate();
+camel.start();
+
+camel -> Component -> 
+Endpoint -> Exchange
+exchange.getIn().setBody(name);
+
+template <->
+Endpoint -> Producer
+producer.start();
+producer.process(exchange);
+producer.stop();
+--------------------------- 
+
+template.sendBodyAndHeader("file://target/subfolder", name, FileComponent.HEADER_FILE_NAME, filename);
+Component -> file
+Endpoint param -> target/subfolder
+Exchange -> In -> Header(param) & Body -> param/filename & name 
+--------------------------- 
+
+context.addRoutes(new RouteBuilder()); -> configure()
+context.createProducerTemplate().sendBody("direct:start", param);
+from("direct:start").to()
+direct -> synchronous exchange -> response
+to().setHeader() -> set additional params before process()
+
+--------------------------- 
+
+.transform() -> change message of exchange
+.convertBodyTo() -> change type of message within exchange
+
+--------------------------- 
+
+1) see maven.txt -> get camel test project into Eclipse
+2) main() -> right click -> run as maven -> break-point
+3) http://camel.apache.org/walk-through-an-example.html
+-> including JMS queue (activemq)
+
+run without Eclipse:
+  mvn compile
+  mvn exec:java -PExample
+otherwise:
+  mvn eclipse:eclipse
+plugin:
+  mvn camel:run
+  -> creates application context (=bean factory)
+  -> looks for config file in (/target/classes)/META-INF/spring/(*.xml)
+
+
+lovely:
+http://camel.apache.org/tutorial-example-reportincident-part3.html
+
+asynch with ExecutorService -> Future
+http://camel.apache.org/async.html
+
+polling consumer
+http://camel.apache.org/polling-consumer.html
+
+delayer
+http://camel.apache.org/delayer.html
+
+-----------------
+import java.util.concurrent.Future;
+ProducerTemplate template = context.createProducerTemplate();
+Exchange exchange = new DefaultExchange(context);
+exchange.getIn().setBody("Hello");
+
+Future<Exchange> future = template.asyncSend("direct:start", exchange);
+Exchange result = future.get();
+
+http://stackoverflow.com/questions/6290470/eclipse-debugger-always-blocks-on-threadpoolexecutor-without-any-obvious-excepti
+-----------------
+
+SEDA (set of stages connected by queues -> asynchronous)
+http://camel.apache.org/seda.html
+
+asynch:
+seda (per context) <-> vm (per vm)
+synch:
+direct (per context) <-> direct-vm (per vm)
+
+-----------------
+
+"filter().method("myBean", "isGoldCustomer")"
+http://camel.apache.org/bean-language.html
+
+Delay Interceptor -> debug -> slow-down
+http://camel.apache.org/delay-interceptor.html
+
+-----------------

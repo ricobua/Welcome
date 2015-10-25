@@ -1,0 +1,13 @@
+tomcat -> secure jdbc password
+
+1) tomcat NEEDS password to connect !!
+2) if encrypted, tomcat needs to know how to decrypt -> code readable!!
+3) read access to server.xml only to root user -> bad practice 
+4) recommended solution: 
+-> new user
+-> minimum privileges needed to run Tomcat
+-> ONLY start/stop server
+-> read permissions all config files 
+-> disable logging 
+
+

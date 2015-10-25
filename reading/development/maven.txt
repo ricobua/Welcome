@@ -1,0 +1,134 @@
+unpack zip to C:\exe
+
+To env vars
+M2_HOME + M2
+-> path -> C:\exe\maven-3.2.1\bin
+-> mvn -v
+
+Download repositories ->
+bin\m2.conf -> ${user.home}/m2 ->
+C:\Users\andersen\.m2\repository
+
+Eclipse Integration
+mvn eclipse:eclipse -> File -> Import -> File > Import > "Existing ..."
+http://maven.apache.org/plugins/maven-eclipse-plugin/usage.html
+(!!) creates copy within workspace (!!) -> 
+C:\rico\development\java\workspace
+breakpoints:
+http://stackoverflow.com/questions/12598261/maven-build-debug-in-eclipse
+----------------------
+dependecies
+mvn dependency:list
+mvn dependency:tree
+----------------------
+<artifactId>maven-compiler-plugin</artifactId>
+-> add
+<version>2.3.2</version>
+<version>3.1</version>
+-> change
+<jdk>1.7</jdk>
+
+----------------------
+https://maven.apache.org/guides/introduction/introduction-to-the-pom.html
+https://maven.apache.org/pom.html
+pom.xml (used to be project.xml for dirs & maven.xml for goals)
+-> dirs & goals & config
+-> modelVersion -> 4.0.0 (don't ask... XSD)
+-> unique -> groupId:artifactId:version -> furthermore:
+-> packaging -> default:jar, otherwise war, ...
+-> classifier -> "jre1.7" / "1.8" & "sources" / "javadoc"
+
+super pom
+-> "root" pom
+-> dirs "target" & "src/main/java" & "src/test/java"
+-> repository -> "http://repo.maven.apache.org/maven2"
+
+parent -> Inheritance
+-> current pom inherits groupId & version (in case)
+-> if not parent dir -> relativePath
+<-> Aggregation -> specify <modules> 
+-> loads children (weird relative path)
+<-> both -> packaging==pom -> see "package phase"
+variables -> ${xxx} -> child-version overwrites
+
+property -> placeholder -> access via ${xxx}
+-> special -> env. & project. & <settings> & java. & <properties>
+-> project -> ${project.xxx} -> groupID, version, baseDir, timestamp, ...
+
+dependency 
+-> list of depending projects -> recursive
+-> "packaging" is now called "type" (jar, war, ...)
+-> download (from repository) & compile
+-> scope
+  -> compile <-> runtime <-> test
+  -> system -> by "hand"
+  -> provided -> by JDK & not transitive
+-> "dependencyManagement" -> link to definition in parent pom
+ 
+mvn help:effective-pom -> list "resolved" pom
+
+non-central-depository
+-> "mvn install:install-file -> create pseudo-POM for existing jar
+-> "mvn deploy:deploy-file -> local (i.e. intranet) repository
+-> system scope dependency (at least use property for path :-)
+-> optional -> meta-info for importing parent
+-> version -> hard & soft & scope -> <metadata>
+   -> LATEST & RELEASE & open-ended version range [2.1,)
+-> exclusion -> restrict transitive dependencies
+
+plugin 
+-> additional artifacts
+-> <configuration> -> specific & inherited
+-> may have their own dependencies !!
+-> executions -> configure each of the plugins's goals
+-> goals & phase -> when to do what ...
+-> "pluginManagement" -> link to definition in parent pom
+
+resource 
+-> defines include directory, but ...
+-> ... files need additional include/exclude
+-> e.g. bundled with JAR within META-INF
+-> src\main\resources\META-INF\appl.properties
+-------------
+build
+defaultGoal -> jar:jar
+directory (& fileName for bundled)
+filters -> define files with name=value pairs, available as ${name}
+ -> also available within property files
+directories -> src & script & test & ouput
+extension -> ???
+
+reporting -> javadoc
+many more fields -> developer & license info & ...
+-------------
+PluginRepository -> actually, just another repository
+
+DistributionManagement
+snapshotRepository -> post
+Site Distribution -> "DocuWiki"
+
+Profiles
+-> Activation -> Detect environment
+-> modify POM according to circumstances (e.g. test)
+----------------
+mvn compile
+mvn test (or just test-compile) -> *Test*.java (excl: Abstract*Test*.java)
+mvn package -> jar
+mvn install -> to repository
+mvn clean -> remove "target" dir
+mvn eclipse:eclpise -> project file
+---                   ---
+--- mvn clean install ---
+---                   ---
+
+plugin -> maven-dependency-plugin
+mnv dependency:tree -> list
+mnv dependency:copy-dependencies -> copy to project\lib
+
+executeable jar file -> main-class reference in manifest.mf
+-> plugin -> maven-jar-plugin -> <mainClass>
+
+mvn process-resources -> see filter
+----------------
+types of projects -> archetypes
+maven-archetype-webapp

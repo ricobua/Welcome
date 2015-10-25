@@ -1,0 +1,152 @@
+http://camel.apache.org/tutorial-example-reportincident.html
+ActiveMQ
+http://camel.apache.org/walk-through-an-example.html
+Console & Spring Stand-Alone
+http://camel.apache.org/console-example.html
+
+Apache AXIS, Apache CXF -> see article CXF wins for WS
+
+Camel is particular strong as a light-weight and agile routing and mediation framework. 
+
+Developer feels home and have the power.
+Developers not loosing control.
+In my humble experience one of the key fears of developers is that they are forced into a tool/framework where they loose control and/or power, and the possible is now impossible. 
+
+Java DSL as its the most powerful and all developers know Java. Later we will introduce the XML version that is very well integrated with Spring.
+{{port}} -> external .properties file
+
+Enterprise Integration Patterns (EIP)
+fragment problems and use standardized ways to integrate applications
+
+
+Enterprise Service Bus (ESB)
+process management, a registry or business activity monitoring. 
+graphical user interface 
+
+http://en.wikipedia.org/wiki/Infrastructure_as_a_service#Service_models
+
+standalone application, in a web container (e.g. Tomcat or Jetty), in a JEE application Server (e.g. JBoss AS or WebSphere AS), in an OSGi environment or in combination with a Spring container.
+
+Although FuseSource offers commercial support, I would not use Apache Camel for very large integration projects. An ESB is the right tool for this job in most cases. It offers many additional features such as BPM or BAM. Of course, you could also use several single frameworks or products and „create“ your own ESB, but this is a waste of time and money (in my opinion).
+
+camel on spring
+spring on tomcat
+
+Dependency Injection -> Ressourcen und Objekte
+Aspektorientierte Programmierung (AOP) -> Transaktionen oder Sicherheit 
+
+Spring .NET
+Spring Boot -> eigenständig
+
+webservice running in a standard .war application in a standard web container such as Jetty
+webservice tool SoapUI
+from our IDE attach a remote debugger -> port 5005
+
+OSGi
+Anwendungen und ihre Dienste per Komponentenmodell („Bundle“/„Service“) zu modularisieren und zu verwalten („Service Registry“) 
+-> Fahrzeugen, Gebäudeverwaltung 
+
+camel:dot -> goal -> Camel Maven Plugin -> Visualisation -> GraphViz DOT file
+----------------
+
+configure method -> fluent builder syntax -> cmp Hibernate
+
+webservice source code using the CXF wsdl2java generator
+
+log: component -> sfl4j -> Log4j
+Simple Logging Facade for Java (SLF4J)
+
+code for sending a message to a given endpoint is the same ->
+Message Endpoint EIP pattern is all about
+
+Apache Velocity -> template language -> .vm file
+
+URL -> use ? and & to set options
+
+Object-Graph Navigation Language (OGNL)
+----------------
+http://camel.apache.org/tutorial-example-reportincident-part2.html
+
+Part 1
+1) wsdl (possibly via code-first?)
+2) CXF wsdl2java
+3) web.xml -> cxf-config.xml -> <jaxws:endpoint> & <bean>
+4) implement -> ReportIncidentEndpointImpl
+5) run via maven-jetty-plugin & SoapUI & remote debug on 5005
+6) JUnit -> server & client & container
+
+Part 2
+1) Context
+2) Component
+3) Endpoint
+4) Exchange
+5) Producer
+6) Template -> auto-discovery
+
+Part 3
+1) getEndpoint <-> createEndpoint
+2) Consumer -> Processor -> process(Exchange)
+3) mock mail framework -> JUnit
+
+Part 4
+1) RouteBuilder -> configure() -> fluent builder syntax
+2) internal queue "direct:start"
+3) ContextTestSupport (-> anonymous inner RoutBuilder)
+4) pattern -> Pipes and Filters (and Ports) -> passing messages
+.pipeline() <-> .to style
+5) passing parameters -> header to the message 
+6) POJO bean -> compute the filename -> 
+7) Bean Language -> implement an Expression or Predicate
+
+Part 5
+1) camel-config.xml -> standard Spring XML bean file -> CamelContextFactoryBean
+2) bean <-> package scanning
+3) setter injection -> Spring creating and handling lifecycle of Camel
+
+src/main/webapp/WEB-INF/wsdl <-> src/main/resources
+name attribute of the complex type
+
+4) CXF endpoint
+5) process/transform exchange 
+6) .convertBodyTo()
+
+Part 6
+1) XML code
+----------------
+camel = new DefaultCamelContext();
+camel.addComponent("file", new FileComponent());
+camel.start();
+
+sendToCamelLog(name);
+
+Component component = camel.getComponent("file");
+Endpoint endpoint = component.createEndpoint("file://target");
+Exchange exchange = endpoint.createExchange();
+exchange.getIn().setBody(name);
+exchange.getIn().setHeader(FileComponent.HEADER_FILE_NAME, "incident-" + incidentId + ".txt");
+
+Producer producer = endpoint.createProducer();
+producer.start();
+producer.process(exchange);
+producer.stop();
+
+FileEndpoint endpoint = (FileEndpoint)component.createEndpoint("");
+endpoint.setFile(new File("target/subfolder"));
+endpoint.setAutoCreate(true);
+----------------
+ProducerTemplate -> Spring'ish xxxTemplate -> auto discovery
+template = camel.createProducerTemplate();
+template.sendBodyAndHeader("file://target/subfolder", name, FileComponent.HEADER_FILE_NAME, filename);
+
+in-out-params defined by component
+Object response = template.sendBody("velocity:MailBody.vm", parameters);
+----------------
+String url = "smtp://someone@localhost?password=secret&to=incident@mycompany.com";
+template.sendBodyAndHeader(url, body, "subject", "New incident reported");
+----------------
+Endpoint endpint = camel.getEndpoint("file://target/subfolder?consumer.initialDelay=2000");
+Consumer consumer = endpint.createConsumer(new Processor() {
+  public void process(Exchange exchange) throws Exception {
+    String mailBody = exchange.getIn().getBody(String.class);
+----------------
+

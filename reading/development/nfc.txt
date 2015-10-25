@@ -1,0 +1,5 @@
+Lesegerät -> Android Handy
+http://code.tutsplus.com/tutorials/reading-nfc-tags-with-android--mobile-17278
+-----------
+BA Card & Quick Info
+https://www.bankaustria.at/files/Quick_FAQ.pdf

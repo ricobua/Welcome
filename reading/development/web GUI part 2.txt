@@ -1,0 +1,43 @@
+HTML
+Encoding (Character Sets)
+ACSCII -> 128
+ANSI (Windows-1252) -> 256
+ISO-8859-1 -> HTML4 -> 256 -> (except: 128 to 159 unused)
+UTF-8 (Unicode) -> HTML5 -> unlimited
+
+precise:
+Character Set -> Character to Number -> "A" to "41"
+Encoding -> Number to Binary (LE little endian, BE big endian)
+Unicode-Encodings -> UTF-8, UTF-16LE, UTF-16BE, UCS-2
+but:
+Microsoft -> Unicode == UTF-16LE -> "UTF-8" & "Unicode" & "UTF-16BE"
+-------------------
+communicate with the browser:
+http-equiv -> HTTP header for name/value pairs
+content-type -> character encoding
+default-style -> style sheet
+refresh -> (deprecated)
+
+HTML 5 -> "shortcut" -> charset attribute
+
+charset defaults:
+HTML4 -> <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+HTML5 -> <meta charset="UTF-8">
+-------------------
+pics -> all same size !!
+-------------------
+TODO -> html template
+
+angular -> directives -> custom
+1) html
+2) ng-include -> templates
+3) directives -> expressive -> describes not just structure, but behavior
+3a) expand html ('E' -> element, 'A' -> attribute) -> templateUrl
+3b) call & handle events
+3c) reuse components (i.e. a+b)
+
+directive -> ajax call to include file -> directive == function
+tricky: dash translates to camel-case
+
+-------------------
+CSS display property -> specify type of box

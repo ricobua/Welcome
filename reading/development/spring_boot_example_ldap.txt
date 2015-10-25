@@ -1,0 +1,61 @@
+http://spring.io/guides/gs/authenticating-ldap/
+http://stackoverflow.com/questions/28479507/how-to-specify-connection-to-data-source-for-ldaps-context-source
+
+REST endpoints -> Spring MVC controllers & "@RestController"
+Application class -> key beans & "@SpringBootApplication"
+
+@SpringBootApplication
+-> @Configuration -> tagged as source of application context.
+-> @EnableAutoConfiguration -> tells Spring to start adding beans
+-> @EnableWebMvc -> (if spring-webmvc on classpath) -> DispatcherServlet
+-> @ComponentScan -> look for components, configurations, services -> HelloController.
+
+@Bean <-> @Component
+-> @Config call method with @Bean -> create bean
+-> @Component -> no inter-bean injection
+
+no web.xml, no applicationContext.xml
+(except -> https://kishanthan.wordpress.com/2013/05/12/embedded-tomcat-tips-tricks-and-hacks/)
+
+Starter POMs & @EnableAutoConfiguration
+-> spring-boot-starter-web 
+-> additional dependencies -> e.g. Tomcat & Spring Boot
+-> check with "mvn dependency:trees"
+
+main() -> SpringApplication.run()
+setWebEnvironment(boolean) -> determine kind of config (both via annotation)
+-> AnnotationConfig-ApplicationContext
+-> AnnotationConfig-EmbeddedWeb-ApplicationContext
+-> sometimes importatn for JUnit
+
+main
+-> eventLoop -> run
+-> config -> pass itself class
+-> user args
+
+CommandLineRunner -> access to raw command line arguments
+ExitCodeGenerator -> event loop with JVM -> called on shutdown
+
+mvn spring-boot:run
+-> mvn clean package -> cleans out-dir & packages app
+-> java -jar target/xxx-0.1.0.jar
+-> OR: build WAR instead -> tomcat
+
+graceful exit -> Ctrl-C
+----------------------
+INSTEAD of xml for security & LDAP server:
+
+@EnableWebMvcSecurity -> certain sec beans
+
+extends WebSecurityConfigurerAdapter
+.antMatchers("/css/**").permitAll()
+.antMatchers("/app/admin/**").access("hasRole('ROLE_ADMIN')")
+.anyRequest().fullyAuthenticated() -> .formLogin()
+
+extends GlobalAuthenticationConfigurerAdapter
+login form -> username -> plugged into {0}
+uid={0},ou=people,dc=springframework,dc=org
+file -> LDIF (LDAP Data Interchange Format) -> list of users (non-prod!!)
+-----------
+logging
+logback <-> log4j

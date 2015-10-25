@@ -1,0 +1,23 @@
+JDBC Polling
+http://camel.apache.org/jdbc.html
+
+Java ExeService
+http://stackoverflow.com/questions/2758612/executorservice-that-interrupts-tasks-after-a-timeout
+http://stackoverflow.com/questions/4917039/how-to-ensure-garbage-collection-of-a-futuretask-that-is-submitted-to-a-threadpohttp://bugs.java.com/bugdatabase/view_bug.do?bug_id=6602600
+
+JMX
+http://de.wikipedia.org/wiki/Java_Management_Extensions
+
+Tibco
+http://eai.ittoolbox.com/groups/technical-functional/tibco-l/is-there-way-to-determine-stuck-or-hang-process-at-the-engine-level-4351981
+http://eai.ittoolbox.com/groups/technical-functional/tibco-l/tibco-hawk-rulebase-to-identify-the-bw-hung-thread-4353598
+
+Java Thread
+http://michaelscharf.blogspot.co.at/2006/09/dont-swallow-interruptedexception-call.html
+
+Camel
+https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse/6.0/html/Programming_EIP_Components/files/Templates-Producer-Intro.html
+http://camel.apache.org/async.html
+https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse/6.1/html/API_Reference/files/camel/org/apache/camel/processor/resequencer/TimeoutHandler.html
+http://camel.apache.org/asynchronous-processing.html
+http://camel.apache.org/seda.html

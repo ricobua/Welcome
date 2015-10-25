@@ -1,0 +1,21 @@
+1) fat WAR/JAR
+2) main -> pom defined
+3) configure
+4) test -> assert waits 10 seconds
+-> fulfilled within that time  -> success
+e.g. timer -> default 1000 ms
+count(3) -> fulfilled after 3 seconds
+
+5) difference to regular camel 
+-> e.g. embedded tomcat
+-> e.g. Spring Boot actuators -> metrics
+
+---------------
+blocking main without boot
+http://camel.apache.org/running-camel-standalone-and-have-it-keep-running.html
+---------------
+system command
+http://camel.apache.org/exec.html
+---------------
+xymon custom client test script
+https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO#How_can_I_create_a_hobbit_client_custom_test_script.3F

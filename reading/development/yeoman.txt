@@ -1,0 +1,12 @@
+http://yeoman.io/codelab/setup.html
+1) look for node.js
+cmd -> node --version
+2) update win -> download
+cmd -> where nodejs
+3) git
+4) yo
+
+-----------
+generator -> the starting point -> e.g. angular
+
+

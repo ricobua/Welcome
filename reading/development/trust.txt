@@ -1,0 +1,42 @@
+1) install gpg4win
+2) download KEYS
+3) gpg.exe -edit-key KEYS
+-> trust the file
+4) download .zip
+5) download .zip.asc
+6) gpg.exe --verify xxx.exe.asc
+
+gpg: no ultimately trusted keys found
+This means key is not "ultimately trusted" by you or your web of trust
+-> okay for verifying file signatures
+
+WARNING: This key is not certified with a trusted signature! 
+There is no indication that the signature belongs to the owner.
+-> Your level of trust -> you possess our real public key
+-> Ideally, a MySQL developer would hand you the key in person
+-> Setting up a web of trust
+
+further steps:
+a) download
+b) verify hash -> e.g. different site
+c) verify key via hash (also called fingerprint)
+
+http://www.gpg4win.org/doc/de/gpg4win-compendium_16.html
+Zertifikats-Prüfung
+1) c't kryptographie -> PGP file downloaden
+2) mit Fingerprint aus Heft verifizieren
+3) Hierarchy (X.509) oder Web of Trust (PGP)  
+
+------
+example: Apache Camel
+ftp://ftp.pop-mg.rnp.br/pub/apache/info/verification.html
+1) Download .zip file (via FTP tu-wien)
+2) Download KEYS file (from apache-camel download site)
+3a) import keys cmd -> gpg.exe --import KEYS
+3b) Cleopatra -> 
+4a) Certify Certificate -> Willem Jiang -> verify fingerprint
+5a) gpg.exe --verify apache-camel-2.15.2.zip.asc
+5b) right click .asc -> Entschlüsseln & Prüfen
+
+BAD "signature" -> failure
+GOOD -> success

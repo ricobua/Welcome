@@ -1,0 +1,20 @@
+OpenGL
+Open Graphics Library
+API -> 2D & 3D Grafik
+plattform- und sprachenunabhängig
+OpenGL-Standard -> 250 Befehle -> 3D-Szenen in Echtzeit
+http://de.wikipedia.org/wiki/OpenGL
+
+WebGL
+lizenzfreier Standard -> Basis OpenGL Sprache JavaScript
+Implementierungen -> Rendering-Engines WebKit & Gecko
+Browser -> Chrome, Firefox
+http://de.wikipedia.org/wiki/WebGL
+
+Projekt Angle (Almost Native Graphics Layer Engine steht) 
+-> plattformübergreifend -> Windows, Mac und Linux
+
+Softwarewerkzeuge -> 3D-Szenen
+Blender, CopperCube, Maya -> Grafiker ohne Programmierung
+Three.js -> JavaScript -> 
+GPU-accelerated 3D animations -> website without proprietary browser plugins

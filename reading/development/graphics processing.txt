@@ -1,0 +1,28 @@
+Graphics processing unit -> graphic card / motherboard / on-chip
+General Purpose GPUs (GPGPU) ->
+graphics accelerator's shader pipeline into general-purpose
+
+CUDA (aka Compute Unified Device Architecture) -> 
+parallel computing platform 
+implemented by GPUs
+libs for C/C++ & others
+
+OpenCL (Open Computing Language) -> OS X
+Schnittstelle für uneinheitliche Parallelrechner
+Programme (=Kernel) -> Laufzeit -> OpenCL-Geräte verteilt
+-> verfügbaren Kerne
+-> Shader der Graphik-Karte
+
+Kernel-Arten: OpenCL & Native
+Speicher-Arten: 
+- Host(remote), Global, Constant(Global), 
+- Local(Gruppe), Private(Single)
+Sprache: OpenCL C -> nicht Obermenge, aber viel Gemeinsamkeiten
+
+TODO:
+http://wiki.tiker.net/CudaVsOpenCL
+
+TODO:
+http://en.wikipedia.org/wiki/Molecular_modeling_on_GPU
+
+
