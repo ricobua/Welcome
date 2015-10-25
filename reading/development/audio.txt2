@@ -1,0 +1,58 @@
+HTML5 Audio -> W3C -> Client-Side -> Framework -> element & API
+
+<audio> element -> play mp3 (IE), ogg (others), [all] (Chrome)
+
+Web Audio API -> high-level JavaScript API -> AudioNode objects -> 
+processing and synthesizing audio
+routing graph -> underlying Assembly / C / C++
+
+----------
+
+WebRTC (Web Real-Time Communication) -> W3C -> Client-Side -> Framework
+basiert auf: HTML5 & JavaScript
+MS -> CU-RTC
+Desktop-VoIP
+navigator.getUserMedia() -> microphone access
+
+"Media Capture APIs"
+2011 -> W3C -> Device APIs Policy (DAP) Working Group
+
+Flash / WebRTC combination ->
+WAMI -> Web-Accessible Multimodal Interface
+
+PCM (Puls-Code-Modulation) -> zeit- und wertdiskrete
+analoges Signal -> Abtastung ->
+zeitlich konstanten Abtastrate -> Pulsamplitudenmodulation (PAM)
+Nyquist-Shannon-Abtasttheorems -> zeitdiskrete Signalfolge
+Quantisierung -> Codierung -> meist Binärcode
+Quantisierungsstufen -> Quantisierungsrauschen
+----------
+
+WebRTC
+1) setzen -> navigator.getUserMedia= ...impl_mac_moz...
+2) prüfe vorhanden -> if(navigator.getUserMedia)
+3) use -> navigator.getUserMedia(dict,callback...)
+4) Werte für dictionary -> {audio: true, video: true}
+5) FFT Analyser -> 
+  analyser = audioContext.createAnalyser();
+  analyser.fftSize = 2048;
+6) connect -> source-analyser-destination
+  mediaStreamSource.connect( analyser );
+  analyser.connect( audioContext.destination );
+7) data -> typed(!)
+// Create arrays to store sound data
+  var fFrequencyData = new Float32Array(analyser.frequencyBinCount);
+  var bFrequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+  // Retrieve data
+  analyser.getFloatFrequencyData(fFrequencyData);
+  analyser.getByteFrequencyData(bFrequencyData);
+  analyser.getByteTimeDomainData(bFrequencyData);
+8) loop
+-- execute call-back repeatedly (before every repaint)
+window.requestAnimationFrame( updatePitch );
+9) audioContext.sampleRate
+linear PCM audio data -> sample-frames per second -> 22050 to 96000
+
+
+

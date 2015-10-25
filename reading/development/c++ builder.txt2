@@ -1,0 +1,23 @@
+C++ Builder
+Borland -> SW-Abteilung ausgegliedert -> CodeGear
+Embarcadero -> gliedert CodeGear ein
+C++ Builder -> eigentständig & Embarcadero RAD Studio XE
+
+Versionen:
+2010
+XE .. XE5
+
+Verwechslung:
+Borland C++BuilderX -> basierend auf JBuilder, Java, keine Entwicklung
+
+GUI-Framework
+-> Visual Components Library (VCL) (wie Delphi)
+-> FireMonkey -> cross-platform compatible modern GUI framework
+
+FireMonkey 
+-> cross-platform compatible modern GUI framework
+-> WPF like
+-> since version XE2
+
+Active Template Library (ATL)
+-> template-based C++ classes -> simplify Component Object Model (COM)

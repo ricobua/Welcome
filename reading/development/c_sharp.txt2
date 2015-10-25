@@ -1,0 +1,72 @@
+Event -> publish / subscribe
+http://msdn.microsoft.com/en-us/library/aa645739(v=vs.71).aspx
+
+1) old days
+a) Publisher
+- define callBack method -> myCallBack()
+- maintain list of subscribers
+- addListener(obj) -> list 
+- callListeners(arg) -> loop -> myCallBack()
+
+b) Subscriber
+- implement callBack method -> myCallBack()
+- subscribe -> addListener(obj)
+
+2) C#
+a) Publisher
+-- define delegate (name not relevant!!) with args (relevant!!)
+public delegate void ChangedEventHandler(object sender, EventArgs e);
+-> only args for callBack defined
+
+-- attach delegate to event & give it a name 
+public event ChangedEventHandler Changed;
+-> name = "Changed"
+-> list of subscriber available
+
+Changed(this, e); 
+-> calls invisible manager -> list -> function on subscriber
+
+helper:
+protected virtual void OnChanged(EventArgs e)
+-> checks for subscribers!=null
+
+-- call the helper
+OnChanged(EventArgs.Empty);
+
+b) Subscriber
+-- define name (not relevant!!) with args (relevant!!)
+private void ListChanged(object sender, EventArgs e)
+
+-- subscribe
+List.Changed += new ChangedEventHandler(ListChanged);
+function pointer -> invisible manager -> list
+
+3) always
+c) Main
+publisher
+subscriber -> pass publisher with constructor
+change publisher -> subscriber reacts
+
+--------------------------------
+noteable:
+delegate -> define outside class
+event -> define inside class
+--------------------------------
+INotifyPropertyChanged (==PropertyChanged event)
+http://msdn.microsoft.com/en-us/library/ms743695(v=vs.110).aspx
+
+public event PropertyChangedEventHandler PropertyChanged;
+-> this time, name is very relevant -> interface
+
+helper:
+protected void OnPropertyChanged(string name)
+
+-> via local variable -> PropertyChangedEventHandler handler = PropertyChanged;
+-> with args (-> the name of the changing property)
+handler(this, new PropertyChangedEventArgs(name));
+
+call -> OnPropertyChanged("PersonName");
+compare to -> OnChanged(EventArgs.Empty); -> Changed(this, e);
+
+--------------------------------
+

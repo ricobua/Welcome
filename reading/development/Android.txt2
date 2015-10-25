@@ -1,0 +1,44 @@
+SE Linux -> Security-Enhanced -> NSA 
+-> finer granularity access controls -> Android
+
+Knox -> Samsung ->  business & personal content -> same handset
+--
+CyanogenMod 
+-> Community-basierte Android-Distribution
+-> Aftermarket-Firmware-Distribution
+-> namensgebenden Entwickler Cyanogen (Steve Kondik)
+-> zusätzliche Funktionen & Leistung & Stabilität
+
+Rooten
+administrativen Zugriff auf Linux-Subsystem von Android
+
+bootloader -> bootstrap loader
+firmware (BIOS) -> bootable device -> bootloader -> Kernel
+PuppyLinux -> GRUB (Grand Unified Bootloader) -> GNU
+Android Bootloader -> gesperrt -> secure for avg user
+
+Android SDK
+run as admin -> download additional packages
+2.3.4 == 2.3.3
+adb -> Android Debug Bridge
+fastboot -> manipulate flash partitions
+--
+Linux
+sudo -> super-user-do -> run as su
+Ubuntu package -> sudo apt-get install pkg
+Fedora/Centos/RHEL -> sudo apt-get install pkg
+--
+http://developer.sonymobile.com/unlockbootloader/ -> video !!!!
+secret dial code -> use only 14 of 15 numbers
+phone off & blue light (press "menu" button bottom right)
+to unlock ->
+C:\Program Files (x86)\Android\android-sdk\platform-tools\fastboot.exe
+fastboot devices
+fastboot -i 0x0fce oem unlock 0xB3B9A104018302A8
+--
+HOW-TO
+http://www.android-hilfe.de/anleitungen-fuer-sony-ericsson-xperia-pro/172517-anleitung-cyanogenmod-auf-das-xperia-pro.html
+boot.img -> fastboot
+
+
+

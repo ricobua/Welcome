@@ -1,0 +1,35 @@
+Hadoop -> multiple projects
+--
+HDFS -> fault tolerant distributed file system
+--
+OLTP -> Online Transaction Processing 
+OLAP -> Online Analytical Processing 
+MOLAP (Multi-dimensional OLAP) -> pre-compute -> dimensions -> cube
+fast <-> flexible
+ROLAP (Relational-OLAP) -> star & snow-flake schema -> aggregation
+Kylin -> build data cube (MOLAP) from hive table (ROLAP) -> route (HOLAP)
+--
+Facebook -> quick and temporal -> many servers -> HBase -> CAP -> CP
+--
+TSDB -> time series database 
+OpenTSDB -> optimzed schema -> HBase
+data point -> metric & timestamp & value (64bit) & tags (key-value pairs)
+one set of Time Series Daemons (TSDs) per HBase cluster
+one HBase cluster per physical datacenter
+2000 new data points per second per core
+http://opentsdb.net/overview.html
+--
+HBase -> automatic failover
+data -> pieces (shards) -> distributed across cluster
+-> server fail -> several others (not just one) -> no cascade
+--
+HBase -> ZooKeeper quorum -> 5 machines -> 2 can fail
+SPoF -> NameNode of HDFS
+UNIX timestamps -> ms since Epoch -> not be affected by timezone
+LZO (Lempel-Ziv-Oberhumer) data compression -> schneller gzip
+-> schneller als Verschlüsselungsalgorithmen & Festplattenlesegeschwindigkeit
+---------
+http://en.wikipedia.org/wiki/HTTP_compression
+HTTP compression
+-> gzip
+-> Google Shared Dictionary Compression Over HTTP (SDCH)
