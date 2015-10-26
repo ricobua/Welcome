@@ -1,0 +1,16 @@
+
+----------
+Bootstrap
+-> Twitter
+-> CSS style sheet
+-> nice design decissions already made
+
+link -> "stylesheet" -> "bootstrap.min.css"
+
+http://www.w3schools.com/angular/angular_bootstrap.asp
+http://www.w3schools.com/bootstrap/default.asp
+
+Bootstrap
+-> HTML & CSS & JavaScript framework
+-> responsive
+-> mobile-first

@@ -174,3 +174,56 @@ laptop instead of company access point -> soft AP
 MAC spoofing -> identity theft 
 
 wireless networks -> Layer 2 <-> Layer 3 authentication and (VPNs) -> no barrier
+
+-------------
+Bootkit & Rootkit Attacks
+https://technet.microsoft.com/en-us/library/dn632182.aspx
+
+Rootkits -> kernel [drivers] / library [system calls] / application [trojan]
+Bootkits -> hypervisor [boot-sequence] / firmware [BIOS / UEFI]
+
+(1) pre-boot authentication -> BitLocker PIN -> inconvenient 
+(2) UEFI-based Secure Boot 
+ -> Unified Extensible Firmware Interface -> between OS & Firmware
+(3) TPM -> PCR -> bootloader tamper free
+ -> device’s Trusted Platform Module (TPM)
+ -> Platform Configuration Register (PCR)
+
+UEFI (chain of trust)
+-> BIOS replacement
+-> Secure Boot
+-> checks own config -> unchanged
+-> checks valid firmware signature
+-> checks bootloader digital signature 
+-> checks trusted authority -> Microsoft’s certification authority (CA)
+
+non–Microsoft-signed bootloader -> UEFI database
+"Linux Foundation Secure Boot System" -> own distributions
+-> Microsoft signed EFI binary load -> separately verified EFI binary chain
+-------------
+Direct memory access (DMA)
+-> read any location in memory
+-> encryption keys
+-> USB does not allow, but FireWire, PCI, ...
+
+-> potential: custom device disguised as a free USB flash drive
+-> potential: setting "debugging" -> allows DMA
+
+-------------
+hyberfil.sys -> Windows hibernation -> snapshot of system memory
+-> includes BitLocker & other encryption keys -> encrypted as well !!
+
+memory remanence attack -> memory after restarting a PC
+-> Instead of restarting Windows -> boot another OS
+
+-------------
+Microsoft Passport -> multifactor authentication (MFA)
+BitLocker -> data
+Enterprise Data Protection -> file-level encryption -> mail attachement
+Windows Hello -> biometric-capable devices -> fingerprint- & facial recognition
+
+physical security locks 
+geofencing (GPS)
+wired corporate network & Windows Deployment Services
+  -> BitLocker-protected PCs to start automatically
+  -> Network Unlock
