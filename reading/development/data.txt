@@ -65,6 +65,9 @@ Dokumenten-Orientiert -> Apache Top-Level-Projekt
 
 NuoDB
 Cloud DB
+
+Neo4j
+GraphDB -> nahe am White-Board
 -------------
 Relationale Datenbank ->
 Kritik:
