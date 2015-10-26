@@ -15,6 +15,7 @@ Colors
   -> Material Design Color Palette <-> Google Col Pal 
   -> primary color (brand & subtle) -> action color (buttons)
 Typography -> "Roboto" - "Noto" - "Sans Serif"
+  -> thin / light / regular / medium / bold / black
 z-Layer -> hierarchy & shadows -> floating modals & buttons
 Motion -> "true" -> physical motion
 Chrome -> theme-color & icon 192x192png
