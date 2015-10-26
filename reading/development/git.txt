@@ -32,6 +32,7 @@ most important:
 (c) commit to local repo
 (d) synch with central repo (pull-request)
 
+(c) <-> stash save (not commited, but not lost either)
 ----------------------
 rename -> looks like del & new, but
 -> on commit Git checks file content -> detects (and logs) rename
