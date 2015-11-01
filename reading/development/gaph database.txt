@@ -1,0 +1,35 @@
+Entity–attribute–value -> data model
+row modelling
+
+EAV table
+patient -> temp -> 39
+patient -> cough -> true
+patient -> ... -> ...
+
+-> metadata -> support tables
+multiple rows <-> multiple columns
+
+-> "classes"
+----------------
+graph structures
+semantic queries 
+nodes & edges -> properties
+
+strength:
+weighted joins
+object-oriented structure (sub-classes)
+
+weakness:
+same operation on large numbers of data elements
+
+equal:
+ER-model <-> graph theory
+----------------
+graph in ER-model:
+geht: Kanten in Tabelle
+Problem: Abfrage
+Lösung: Traversionsalgo
+
+Tripel -> Subjekt --Prädikat-> Objekt
+Ontologie -> (endliches) Wörterbüch bekannter Begriffe
+logische Schlussfolgerungen (Inferenz)

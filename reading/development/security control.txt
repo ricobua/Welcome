@@ -1,0 +1,79 @@
+access control
+Permission to access a resource is called authorization.
+issue ID -> ask for ID -> verify -> look up rights -> grant access
+-------------
+authorization
+specifying access rights to resources
+
+access requests -> access control rules
+decide -> approved (granted) or disapproved (rejected)
+-------------
+identification -> stating a person's or thing's identity
+identity document (ID) -> stating an aspects of personal identity
+authentication -> confirming the truth of an attribute
+
+credentials 
+->  attestation issued by a third party (authority)
+-> username & password
+
+e.g. person 
+-> provides credentials as identity document
+[... or document or digital certificate]
+-> system authenticates (=validates) password
+-> second form of identification might be required
+
+two-factor authentication (2FA) 
+-> provides identification 
+-> something you know & something you own
+
+knowledge factors
+ownership factors
+inherence factors -> is or does (biometric, DNA, signature, voice)
+
+inherence -> Anhaften, Innewohnen
+-------------
+roles & activities
+https://lostechies.com/derickbailey/2011/05/24/dont-do-role-based-authorization-checks-do-activity-based-checks/
+
+user -> roles
+method -> activity
+[simple case: method name = activity]
+control system -> 
+(1) roles -> activities
+(2) match? -> continue
+
+-------------
+Oracle
+https://docs.oracle.com/cd/B14117_01/network.101/b10773/authoriz.htm#1009619
+privilege -> right to execute -> particular action -> on specific object
+user -> role -> privilege
+
+categories of privileges -> by object & attributes
+
+System Privileges
+Schema Object Privileges
+Table Privileges
+View Privileges
+Procedure Privileges
+Type Privileges
+
+tricky:
+Definer's Rights <-> Invoker's Rights
+-> at the time of execution
+
+Attributes
+-> Session / Call / CPU / Logical Reads
+Profile
+-> collection of attributes
+
+-------------
+audit
+session -> begin - end
+login 
+-> failed attempts
+-------------
+safety 
+-> being protected against non-desirable events
+-> "something bad will never happen"
+-> security can help
+-> failsafe can help
