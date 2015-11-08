@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------
+-- Chap 1
+--------------------------------------------------------------------------
+
+system -> quantified -> discrete states -> multistate system
+number of states -> each identifyable by (set of) quantum number(s)
+
+all states 
+-> probability
+-> amplitude (i.e. square root)
+-> normalized (to 1)
+-> state vector
+
+bracket -> row * column -> scalar
+conjugate -> "verbindend" -> scalar = 1
+Hermetian conjugate
+-> transpose (rows as columns, main diagonal .. const)
+-> complex conjugate (change sign of imaginary values)
+
+bra-ket <-> individual states
+general rules <-> inwieldly elements
+-> stateless math
+
+operator
+1) extract value
+2) change state
+-> Hamiltonian H -> energy E (scalar)
+-> Gradient & LaPlace
+-> Momentum P
+
+psi phi -> non commutative (commutare .. vertauschen)
+orthogonal -> one row, one column
+orthonormal -> 1
+
+Hermetian adjoint -> operater same when transposed + complex conjugated
+sometimes -> stateless math -> restricted -> inverse can't be found
+-> restrict to unitary U -> i.e. inverse same as (simpler) conjugate
+
+expectation value -> abbreviation <A> 
+-> expections for state on main diagonal
+-> e.g. two dice -> <phi|A|phi> = 7
+ket-bra -> "matrix" -> linear operator
+
+non commutative -> measure it !!
+commutator -> if 0, then actually commute !!
+[A,B] = AB-BA (all matrices)
+hermetian adjoint of Hermetian operators -> Chap1 / Bsp 12
+
+operator -> usually matrix multiplication
+-> same matrix applied to eigenvector
+-> (much) simpler multiplication with eigenvalue
+-> Hermetian operator -> eigenvalue real, eigenvector orthogonal
+
+calculation:
+1) use I and get everything to the left
+2) det() -> solvable & equation
+3) roots -> eigenvalues -> equation -> eigenvectors
+4) multiple roots -> degenerate -> transform circle to line
+5) straight forward for diagonal operators (s. example)
+6) free particles -> continuous ??
+
+--------------------------------------------------------------------------
+-- Chap 2
+--------------------------------------------------------------------------
+
+barrier & tunnel (E<V)
+
+--------------------------------------------------------------------------
+-- Chap 3
+--------------------------------------------------------------------------
+
+classical -> harmonic oscillator -> spring, pendulum
+-> potential & kinetic energy -> continuous -> angular frequency
+
+quantum physics -> can't describe individual particle
+-> statistics -> probabilities -> quantized states
+-> wave functions -> similar to macro-oscillators
+
+Hamiltonian
+-> eigenvalues -> energy states
+-> eigenstates -> wave functions
+
+kinetic & potential energy
+-> in terms of position & momentum (Impuls)
+
+
