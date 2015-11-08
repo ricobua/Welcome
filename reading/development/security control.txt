@@ -1,6 +1,34 @@
+safety 
+-> being protected against non-desirable events
+-> "something bad will never happen"
+
+computer safety
+-> "the computer is safe"
+-> IT security can help
+-> fail-over hardware can help
+
+security 
+-> protection against danger, damage, loss, and crime
+-> level of safety
+
+computer security (cybersecurity) -> protection 
+-> of system hardware from theft or damage
+-> of  software and information
+-> from disruption or misdirection of service
+-> from malpractice by operators
+-> intentional or accidental deviation from secure procedures
+
+stages ->
+vulnerable	no
+reactive	after
+compliant	rules based
+proactive	anticipating
+resilient	adaptive
+-------------
 access control
 Permission to access a resource is called authorization.
-issue ID -> ask for ID -> verify -> look up rights -> grant access
+issue ID -> ask for ID -> verify -> 
+look up rights -> grant access -> aquire resource
 -------------
 authorization
 specifying access rights to resources
@@ -10,14 +38,15 @@ decide -> approved (granted) or disapproved (rejected)
 -------------
 identification -> stating a person's or thing's identity
 identity document (ID) -> stating an aspects of personal identity
-authentication -> confirming the truth of an attribute
 
 credentials 
 ->  attestation issued by a third party (authority)
+-> I.D.
 -> username & password
 
+authentication -> confirming the truth of an attribute
 e.g. person 
--> provides credentials as identity document
+-> provides identity document -> credential
 [... or document or digital certificate]
 -> system authenticates (=validates) password
 -> second form of identification might be required
@@ -71,9 +100,3 @@ audit
 session -> begin - end
 login 
 -> failed attempts
--------------
-safety 
--> being protected against non-desirable events
--> "something bad will never happen"
--> security can help
--> failsafe can help
