@@ -1,0 +1,44 @@
+Model -> BPMN
+Design -> Java
+Explore -> GUI
+-> Manage & Monitor
+-> Manipulate
+WS-REST -> Automate
+
+Engine
+-> Repository -> BPMN
+-> Identity -> Test-User
+-> Runtime -> Instance + Vars
+-> Task -> non-GUI Manipulate
+
+BPM Life Cycle
+-> Design (SLA)
+-> Model (BPMN)
+-> Execute (often BPMS)
+-> Monitor (KPI)
+-> Optimize
+
+tricky: 
+BPM <-> Activiti
+Design <-> Model
+
+BPMN 1.0
+WS-BPEL
+BPMN 2.0 -> executeable
+Level 1, 2, 3 (design - model - execute)
+
+pool - lane - task (service - user - sub) - annotation
+start - terminate - end
+message - sequence - gateway (parallel - exclusive)
+error (end - start - catch)
+actions (claim - complete - reassign)
+
+files
+BPMN 2.0 XML
+BPMN DI -> schema -> graphical representation
+http://www.w3schools.com/xml/xml_namespaces.asp
+BAR -> deployable artefact
+
+testing Engine
+-> connect to existing
+-> create in @BeforeClass

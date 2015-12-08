@@ -77,20 +77,42 @@ DSL-Modem und Access Concentrator (DSL-AC) des Zugangsanbieters
 ATM -> Asynchronous Transfer Mode -> Kommunikationsprotokoll
 
 Bild (!!!) -> http://de.wikipedia.org/wiki/DSLAM
+Bild (!!!) -> https://en.wikipedia.org/wiki/Digital_subscriber_line_access_multiplexer
+Subscriber -> xDSL router ->
+Subscriber Line -> DSLAM ->
+NSP -> BRAS
+ISP -> Internet Router
+
+BRAS -> Broadband Remote Access Server
+
+NSP -> Network Service Provider
+-> provides Transport Network 
+-> ATM oder Ethernet/IP
+-> e.g. IP-DSLAM using PTM-TC protocol stack
+PTM-TC -> Packet Transfer Mode - Transmission Convergence
 
 VDSL -> Very High Speed Digital Subscriber Line
 http://de.wikipedia.org/wiki/Digital_Subscriber_Line
 Teil der DSL Protokoll-Familie ITU-T G.99x.x -> e.g. Annex
 http://de.wikipedia.org/wiki/G.992.1
 
-http://en.wikipedia.org/wiki/Digital_subscriber_line_access_multiplexer
-DSL lines -> DSLAM (ATM), frame relay, and/or Internet Protocol network 
-(i.e., IP-DSLAM using PTM-TC [Packet Transfer Mode - Transmission Convergence])
+SDSL -> Symmetric digital subscriber line (<-> ADSL)
+-> bandwidth downstream = upstream
+-> digital data -> copper wires -> telephone network
 
+naked DSL -> entbündeltes DSL
+-> Marketing-Ausdruck
+-> Kabel ohne Kabelfernsehen, Kabel ohne Telefon
 -------------------
 Splitter & TAE
 http://de.wikipedia.org/wiki/DSL-Weiche
 http://de.wikipedia.org/wiki/Telekommunikations-Anschluss-Einheit
+
+Overbooking 
+IP Netz reservierte Bandbreite
+Bandbreite pro Endkunde
+Überbuchungsfaktor (Bsp: 1:5)
+-> verfügbare Bandbreite < max. Datenübertragungskapazität
 -------------------
 
 Port-Forwarding -> Mittels-Mann
@@ -128,3 +150,14 @@ https://www.irbe.ch/it/vpn-server-mit-linksys-wrt54gl/
 Server
 http://de.wikipedia.org/wiki/CyberGhost_VPN
 -----------------
+channel -> non-overlap -> 1,6,11,14
+channel width -> 2.4GHz -> usually 20MHz
+https://en.wikipedia.org/wiki/List_of_WLAN_channels
+https://en.wikipedia.org/wiki/IEEE_802.11n-2009#Description
+-----------------
+pirelli -> check other wifi
+fortgesch -> wlan -> erweitert -> Umgebung
+-----------------
+LTE -> "4G" (i.e. Nachfolger 3G)
+LTE 800 -> 800MHz -> weitere Reichweite als normal (?2.6 GHz)
+-> auch ländlicher Raum

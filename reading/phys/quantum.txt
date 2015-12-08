@@ -13,7 +13,7 @@ all states
 
 bracket -> row * column -> scalar
 conjugate -> "verbindend" -> scalar = 1
-Hermetian conjugate
+Hermitian conjugate
 -> transpose (rows as columns, main diagonal .. const)
 -> complex conjugate (change sign of imaginary values)
 
@@ -32,24 +32,33 @@ psi phi -> non commutative (commutare .. vertauschen)
 orthogonal -> one row, one column
 orthonormal -> 1
 
-Hermetian adjoint -> operater same when transposed + complex conjugated
+Hermitian adjoint -> operater same when transposed + complex conjugated
 sometimes -> stateless math -> restricted -> inverse can't be found
 -> restrict to unitary U -> i.e. inverse same as (simpler) conjugate
+
+(p 21,33):
+a) adjoint rules
+At ... AT* (transpose & conjugate)
+[A,B]t ... [Bt,At]
+b) adjoint rule + commutator rule
+[A,B]t = [Bt,At] = BtAt-AtBt
+c) ... + Hermitian operator
+... = BtAt-AtBt = BA-AB = [B,A]
 
 expectation value -> abbreviation <A> 
 -> expections for state on main diagonal
 -> e.g. two dice -> <phi|A|phi> = 7
 ket-bra -> "matrix" -> linear operator
 
-non commutative -> measure it !!
-commutator -> if 0, then actually commute !!
+non commutative -> measure difference between applying one or the other
+commutator -> if 0, then actually commute !! (p. 21)
 [A,B] = AB-BA (all matrices)
-hermetian adjoint of Hermetian operators -> Chap1 / Bsp 12
+hermitian adjoint of Hermitian operators -> Chap1 / Bsp 12
 
 operator -> usually matrix multiplication
 -> same matrix applied to eigenvector
 -> (much) simpler multiplication with eigenvalue
--> Hermetian operator -> eigenvalue real, eigenvector orthogonal
+-> Hermiltian operator -> eigenvalue real, eigenvector orthogonal
 
 calculation:
 1) use I and get everything to the left
@@ -59,6 +68,15 @@ calculation:
 5) straight forward for diagonal operators (s. example)
 6) free particles -> continuous ??
 
+naming:
+multiplication -> 
+a) matrix * vector = vector -> i.e. map vector to vector
+b) any linear operator that maps vectors to vectors 
+(e.g. derivative from calculus)
+@b -> "eigenvector" may be replaced by a more specific term
+e.g. "eigenfunction", "eigenmode", "eigenface", "eigenstate".
+
+https://en.wikipedia.org/wiki/Introduction_to_eigenstates
 --------------------------------------------------------------------------
 -- Chap 2
 --------------------------------------------------------------------------
@@ -67,6 +85,18 @@ barrier & tunnel (E<V)
 
 --------------------------------------------------------------------------
 -- Chap 3
+
+video 1:30 -> potential energy
+https://www.youtube.com/watch?v=gRdCV9p8sAU
+--------------------------------------------------------------------------
+https://de.wikipedia.org/wiki/Heisenbergsche_Unsch%C3%A4rferelation
+Für Ort und Impuls sowie andere Paare komplementärer Observablen ist der Kommutator aber jeweils proportional zum Einheitsoperator;
+[P,X]=1
+[p,q]=i -> [a,at]=1
+--------------------------------------------------------------------------
+THE REAL CALCULATIONS !!!!!
+http://quantummechanics.ucsd.edu/ph130a/130_notes/node167.html
+http://quantummechanics.ucsd.edu/ph130a/130_notes/node169.html#section:HOcom
 --------------------------------------------------------------------------
 
 classical -> harmonic oscillator -> spring, pendulum
@@ -76,11 +106,27 @@ quantum physics -> can't describe individual particle
 -> statistics -> probabilities -> quantized states
 -> wave functions -> similar to macro-oscillators
 
+ladder operators
+-> raise & lower
+-> creation & annihilation
+
 Hamiltonian
--> eigenvalues -> energy states
--> eigenstates -> wave functions
+-> allowed energy states
+-> eigenstates -> (i.e. vector Psi) -> wave functions
+-> eigenvalues -> (i.e. scalar E) -> actual energy states (<-> allowed)
+(see example 3/2)
 
 kinetic & potential energy
 -> in terms of position & momentum (Impuls)
 
+--------------------------------------------------------------------------
+-- Chap 4
+--------------------------------------------------------------------------
+angular momentum -> commutator only zero for L^2
 
+
+--------------------------------------------------------------------------
+-- Chap 5
+--------------------------------------------------------------------------
+spin -> independent (!) of surroundings -> inherent
+e.g. -> electron 1/2, photon 1 -> possible states

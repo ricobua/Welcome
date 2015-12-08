@@ -1,5 +1,8 @@
+guo biao (= national standard) 
+-> abbreviations for region / provinces / municipality
+
 Central-Region
-Han core (China proper) -> 18 provinces (definced by Qing)
+Han core (China proper) -> 18 provinces (defined by Qing)
 succession of states principle <-> ethnic borders
 
 Buffer-Regions (defined by Ming)
@@ -32,7 +35,9 @@ Spratley Island & Scarborough Shoal
 historic:
 Mongol Empire -> 1279
 Ming Dynasty (the last Han Chinese dynasty) -> 1644
-Qing Dynasty -> 1911 -> 1921 -> Mongolia
+Qing Dynasty -> 1644-1911 -> 1921 -> Mongolia
+(Qing=Jin aus Volk der Mandschuren=Jurchen)
+-> Republik 1.1.1912
 
 language:
 Mandarin -> 960 mio -> Beijing dialect -> Standard Chinese (Putonghua)
@@ -140,9 +145,21 @@ Zhu Jiang (Perlfluss)
 capital Guangzhou
 economic hub Shenzhen
 +++++++++++
+Guangxi ->
+Sprache Zhuang 
+-> Überbegriff, inkl Tai-Sprache
+-> zwischen Dialekten eher gleich Mandarin / Katonesisch
+-> Latein -> kaum geschrieben / gelesen
++++++++++++
+Yunnan Province [yun -> Wolke, Wolkenberg]
+Nuodeng -> Salt Village -> salt water
+elephants, tiger, diverse
+multi-ethical
++++++++++++
 Zhejiang Sheng
 Hangzhou -> Bucht & Stadt (8 mio)
 Qiantang Jiang (Fluss Qiantang) -> 9m Gehzeitenwelle
+-> [zhe -> Falte, jiang -> Fluss]
 Grand Canal (Beijing-Hangzhou Grand Canal)
 +++++++++++
 2 Städte, 2 Flüsse, 2 Provinzen, 2 Stunden -> Hangzhou / Suzhou
@@ -161,7 +178,7 @@ CNN ad -> http://www.cityofnanjing.com/
 Suzhou -> Stadt
 Kanäle Brücken Pagoden Gärten (!!)
 http://www.tripadvisor.at/Tourism-g297442-Suzhou_Jiangsu-Vacations.html
-Chang Jiang (Jangtsekiang=yangtze) [Chang -> lang, Jiang -> Fluss]
+Chang Jiang (=Jangtsekiang=yangtze) [Chang -> lang, Jiang -> Fluss]
 +++++++++++
 Shandong [shan -> mountain]
 Huang He [yellow river]
@@ -198,6 +215,8 @@ actually three furnaces -> yangtze
 Wuhan -> 4mio -> Hafen -> 3000 Jahre -> Hubei Sheng (Provinz)
 -> tower of Jiangnan (yellow crane)
 -> https://www.youtube.com/watch?v=TMP0zbasIuc
+-> Hubei = "nödlich des Sees" [bei -> Norden]
+-> Drei-Schluchten-Staudamm
 +++++++++++
 Guizhou Sheng
 https://www.youtube.com/watch?v=31rMdtUzcMc
@@ -208,3 +227,60 @@ Tea, Chilli
 Shidong
 https://www.youtube.com/watch?v=_ZBWgS_ltmI
 +++++++++++
+Mandschurei -> Mandschu -> Qing Dynastie
+https://de.wikipedia.org/wiki/Mandschurei
++++++++++++
+Jilin
+-> winter fishing in Chagan Lake -> Intangible cultural heritage (ICH)
++++++++++++
+Hunan [hu -> lake, nan -> Süden]
+"south of the lake" <-> Hubei [bei -> Norden]
+birthplace of Chairman Mao -> Shaoshan
+Changsha -> capital
+Zhangjiajie National Forest 
+-> karst pillars of sandstone
+-> covered with sub-tropical rainforest
+-> often covered in fog
+city -> Fenghuang -> river -> Stadt des Phönix
+https://www.youtube.com/watch?v=jyNyaX-O9P4
++++++++++++
+Jiangxi
+Rückzugsgebiet der Kommunisten
+Lu Shan -> schönster Berg (?) -> UNESCO Welterbe -> Global Geopark
+Jingdezhen -> [zhen -> Stadt] -> capital of porcelain
++++++++++++
+Anhui -> cities of Anqing & Huizhou [an -> still, hui -> Treffen]
+Huang Shan [huang -> gelb, shan -> Berg] -> Chinesen
+-> vollendete Harmonie Fels & Kiefern & Wolkenmeer
+Hefei -> capital -> industrial
+Hongcun -> ancient village (UNESCO)
++++++++++++
+Chongqing [zhixiashi -> municipality] -> 30mio
+[chong -> wiederholt, qing -> Freude] -> double celebration
+direct-controlled municipalities = province-level municipality
+shi -> city & shengji -> province
++++++++++++
+rivers:
+huang he -> yellow river
+(huai he)
+jangtzekiang -> chang jiang -> long river
+zhu jiang -> pearl river
+----------
+huai he
+-> border north + south china
+-> huang he 1897 + 9 year levee breach
+-> yangtze via lake hongze
+-> Henan - Anhui - Jiangsu
+----------
+Guójia Zhongxin Chéngshì
+-> National Central City
+-> proposed by Ministry of Housing and Urban-Rural Development
+-> reforming urbanization in China
+-> Bejing - Tianjin / Chongqing / Shanghai / Guangzhou
+Regional Central Cities 
+-> including Chengdu, Wuhan, Nanjing / Shenyang / Xi'an / Shenzhen
+ECs
+-> Beijing + Tianjin -> Bohai Economic Rim
+-> Shanghai -> Yangtze River Delta Economic Zone
+-> Guangzhou -> Pearl River Delta Economic Zone
+-> Chongqing -> West Triangle Economic Zone 
