@@ -7,9 +7,9 @@ succession of states principle <-> ethnic borders
 
 Buffer-Regions (defined by Ming)
 Xinjiang (muslim Uighurs people)
-Inner Mongolia
-Manchuria
-Tibet
+Nei Mongol (Inner Mongolia)
+dongbei (North-East) -> Manchuria
+(Xizang) Tibet
 
 Han Core:
 Densly populated world-wide
@@ -50,6 +50,14 @@ standard written form (Zhongwen) -> characters (hanzi)
 population:
 1960:  700 mio
 2008: 1300 mio
+Zhonghua minzu -> Chinese nation/race -> Han + 55 others
+zhongguo renmin -> Chinese People
+Han Chinese -> ethnic group -> 20% world population
+Man (Manchus)
+Meng (Mongolians)
+Hui (ethnic groups of Islamic faith in northwestern China)
+Zang (Tibetans)
+Weiwuer zu (Uyghurs)
 
 religion:
 Taoism 88%
@@ -259,6 +267,53 @@ Chongqing [zhixiashi -> municipality] -> 30mio
 [chong -> wiederholt, qing -> Freude] -> double celebration
 direct-controlled municipalities = province-level municipality
 shi -> city & shengji -> province
++++++++++++
+Qinghai [qing -> azure?, hai -> See]
+-> Chinese + Muslim + Tibet + Hui (s. Ningxia)
+-> 1928 -> separation from Gansu
+-> Huang,Yangtze,Mekong
+-> even basin -> 3500m
++++++++++++
+Xinjiang [xin -> neu, jiang -> ~Grenze (actually jing)]
+-> 45% Uyghurs (Turks)
+-> 40% Han (ethnic Chinese)
+one province in 1884 -> Tianshan Mountains
+-> north -> Dzungaria -> Dzungar people 
+-> steppe dwelling, nomadic Tibetan Buddhist 
+-> south -> Tarim Basin -> Uyghur people
+-> oasis dwelling, sedentary farmers, Turkic Muslim
++++++++++++
+dongbei (Northeast) -> outside China referred to as manchuria
+-> inner = dongbei + parts of Nei Mongol 
+-> outer = former Qing, now Russian manchuria
+-> Sakhalin island
+----------
+post WWII
+KMT -> Kuomintang -> Chinese Nationalist Party (now Taiwan)
+-> = Guomindang [guowen -> Chinesisch, minzu -> national,dang -> Partei]
+CPC -> Communist Party of China
+-> Zhongguo Gongchandang [zhong -> China, gongchan -> kommunistisch]
+Japan -> Soviet Red Army Manchurian campaign -> Russia
+countryside -> dominated by CPC
+Chiang Kai-shek (KMT) 
+-> delay Russian withdrawal
+-> move men and modern material into region 
+-> Russians refused permission for the Nationalist troops
+-> airlifted by US to key cities
+-> Soviets -> extra time systematically dismantling industrial base
+-> Soviets -> some Imperial Japanese Army weapons -> Mao Zedong (CPC)
+----------
+Heilongjiang (hei -> schwarz, long -> Drache)
+-> = Amur = Tamur river -> fish 6m
+-> only to junction of Amur and Ussuri Rivers <-> Sea of Japan
+----------
+Jilin [ji -> außerordentlich, lin(mu) Wald]
+-> in Manchu language -> "jilin wula" [along the river]
+-> natural mineral deposits + heavy industries
+-> Korean is spoken, 5% actually Korean
+----------
+Liaoning [Liao -> ein Fluß, ning -> befriedet]
+raw materials production -> mining, oil, industry
 +++++++++++
 rivers:
 huang he -> yellow river
