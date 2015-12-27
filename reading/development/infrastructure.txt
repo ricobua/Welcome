@@ -1,0 +1,24 @@
+2-phase-commit
+https://dzone.com/articles/xa-transactions-2-phase-commit
+http://activemq.apache.org/should-i-use-xa.html
+
+
+resin sessions
+https://www.google.at/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=resin%20count%20sessions
+
+server-side java-script
+node.js -> express.js
+https://de.wikipedia.org/wiki/Express.js
+
+-----------
+httpd login
+http://wiki.apache.org/httpd/FAQ#How_do_I_set_up_Apache_to_require_a_username_and_password_to_access_certain_documents.3F
+
+-----------
+resin with apache
+http://www.caucho.com/resin-4.0/admin/starting-resin-apache.xtp
+Apache httpd -> servlets & JSP files
+
+-----------
+resin session failover
+http://www.caucho.com/resin-4.0/admin/clustering-overview.xtp#ClusteredSessions

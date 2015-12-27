@@ -1,0 +1,41 @@
+XML -> XSLT -> XML,Html,text,XSL-FO
+XSL-FO to produce PDF
+
+http://programmers.stackexchange.com/questions/211049/xslt-and-possible-alternatives
+rule-based language -> different mindset 
+imperative language <-> feel less in control
+similar to SQL
+more common term for "Rule based language" -> declarative language
+
+rules -> based on patterns -> Xpath
+ETL editors -> XSLT as output
+
+--------------
+http://www.martinfowler.com/bliki/MovingAwayFromXslt.html
+XML -> lousy syntax for a programming -> too much noise
+XSLT -> subroutines painful -> encourages duplicate code
+XSLT -> simple tasks well -> some are impossible
+OO language -> clear syntax -> kick-ass XML library
+
+--------------
+https://de.wikipedia.org/wiki/Extensible_Stylesheet_Language
+XSL -> drei Sprachen (XSL-FO, XSLT, XPath)
+-> Transformation (XSLT) 
+-> Formatierung (XSL-FO) -> XSL-Formatting Objects
+-> Baumadressierung (XPath)
+XSLT 2.0 & XPath 2.0 -> 2007
+
+XQuery
+-> somewhat procedureal XML query language
+-> Oracle -> XMLQUERY -> XQuery expression -> returns XML
+
+DSSSL -> Vorgänger von XSL
+--------------
+https://de.wikipedia.org/wiki/Apache_Formatting_Objects_Processor
+Apache FOP 
+-> Formatting Objects Processor
+-> XSL-FO-Layout-Beschreibungen -> verschiedene Ausgabeformate 
+-> primär PDF, PNG, RTF
+--------------
+Angular -> XSLT module -> filter !!
+https://krtnio.github.io/angular-xslt/

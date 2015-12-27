@@ -42,3 +42,12 @@ BAR -> deployable artefact
 testing Engine
 -> connect to existing
 -> create in @BeforeClass
+
+DMN
+-> "Decision Model and Notation"
+-> complements BPMN
+-> separation of concerns -> decision vs process
+-> DMN files -> exportable to Drools
+
+Activiti forks
+Alfresco <-> Camunda
