@@ -1,0 +1,24 @@
+1) SDK
+2) run locally
+3) deploy
+
+-------------------------
+Azure
+.NET WF 4.5 -> Workflow Foundation
+Microsoft Azure SQL Database -> Database Technology
+AppFabric -> Middleware -> Composite App -> WF
+Azure AD & Office 365 -> Identification
+
+-------------------------
+http://docs.aws.amazon.com/amazonswf/latest/awsflowguide/getting-started-example-helloworldworkflow.html
+AWS Amazon Web Service
+Application Services
+-> Amazon SWF -> Simple Workflow Service
+-> AWS Flow Framwork for Java -> no garphical designer
+Amazon RDS (Relational Database Service)
+
+-------------------------
+https://cloud.google.com/appengine/articles/fantasm
+Google
+Task Queue Java API
+Google Cloud SQL
