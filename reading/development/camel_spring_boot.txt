@@ -17,5 +17,3 @@ http://camel.apache.org/running-camel-standalone-and-have-it-keep-running.html
 system command
 http://camel.apache.org/exec.html
 ---------------
-xymon custom client test script
-https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO#How_can_I_create_a_hobbit_client_custom_test_script.3F

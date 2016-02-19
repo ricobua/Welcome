@@ -32,7 +32,6 @@ macro definition browser
 refactoring & code generation
 debugging -> memory, registers, disassembly viewers
 
-
 DTP
 Eclipse Data Tools Platform
 SQL -> code completion, formatting, dialect specialization
@@ -60,6 +59,7 @@ Convention over Configuration
 Mylyn
 task & application lifecycle management (ALM) framework
 links artifacts to the task-at-hand
+Aufgabe & alle Dokumente, an denen gearbeitet wird
 facilitates multitasking & sharing of expertise
 
 PTP

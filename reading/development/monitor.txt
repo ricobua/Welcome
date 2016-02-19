@@ -1,0 +1,44 @@
+Hobbit -> Xymon
+---------------
+Example & Help !!
+https://www.xymon.com/xymon.html
+---------------
+"Install" -> Buid !! -> Linux only
+Server -> Linux
+Client -> Linux (Win possible)
+Client Script -> Linux (run by client!)
+Sending TCP update -> all
+---------------
+Config
+https://www.xymon.com/help/xymon-config.html
+Tasks -> cmd - interval - logfile
+https://www.xymon.com/help/manpages/man5/tasks.cfg.5.html
+Update Frequ
+http://xymon.sourceforge.net/xymon/help/xymon-tips.html#updatefreq
+---------------
+Colors
+https://www.xymon.com/help/xymon-tips.html#icons
+recent(faces) <-> longer(signs)
+green / yellow / red / blue / purple / grey(empty)
+---------------
+xymon custom client test script 
+& custom tcp update ->
+https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO#How_can_I_create_a_hobbit_client_custom_test_script.3F
+
+HOW-TO
+https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO/Custom_Monitoring_Scripts_for_Hobbit
+
+Java Socket -> send tcp update
+http://www.tutorialspoint.com/java/java_networking.htm
+---------------
+multi http (work-around-ish)
+http://www.it-eckert.com/blog/2014/advanced-http-monitoring-with-xymon/
+---------------
+'no data' <-> 'no report'
+http://lists.xymon.com/oldarchive/2007/06/msg00314.html
+---------------
+critical -> acknowledge
+https://www.xymon.com/help/criticalsystems.html
+---------------
+JVM -> JMX
+https://wiki.xymonton.org/doku.php/monitors:jmxstat

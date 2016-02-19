@@ -1,0 +1,55 @@
+Wie man an einem Sonntag Nachmittag auf die Galvanisierung stößt:
+
+Kurz in Standard rein "blättern", beginne mit "Nordkorea schoss Rakete in Weltraum".
+http://derstandard.at/2000030520801/Nordkorea-schoss-Langstreckenrakete-in-Weltraum
+
+Dorst steht dann "als ballistische Rakete eingestuft". Also gleich Mal Wikipedia anwerfen: 
+https://de.wikipedia.org/wiki/Ballistische_Rakete
+
+Aha, alles klar, etwas mehr als nur beim Start in eine Richtung zielen, aber etwas weniger als eine Lenkwaffe. 
+
+Als Weiterentwicklung werden "steuerbare Gefechtsköpfe" genannt und auch verlinkt. Dort findet sich dann ein Bild von einer Rakete mit dem Giftgas "Sarin":
+https://de.wikipedia.org/wiki/Sprengkopf
+https://de.wikipedia.org/wiki/Sarin
+
+Sarin hat, wie sich herausstellt, eine schöne Strukturformel (ist mir halt wichtig...) und wirkt im Zusammenspiel mit Actylcholin.
+
+Direkt? Nein.
+Vielmehr auf das Enzym Acetylcholinesterase, und zwar inhibierend. Lustig, da war der Name wohl zu lang, also spricht man von Cholinesteraseinhibitoren.
+
+Es folgen ein bisserl Analytik, ein bisserl Dekontamination, aber dann: 
+Im Zuge des CWÜs wurde die OPCW mit der Erstellung von Listen betraut, Sarin ist eine Chemikalie der Liste 1, also nur für Waffen zu gebrauchen.
+
+Schedule 3 hingegen bedeutet: large-scale uses, dort findet sich TEA. Und bei TEA werden die Amis lyrisch:
+https://en.wikipedia.org/wiki/Triethanolamine
+
+TEA is both a tertiary amine and a triol.
+OMG, amine AND triol. Well, good for you...
+
+Was mach ma damit: Giftgas, Ohrentropfen, Zement-Zuschlag und: (Trommel-Wirbel)
+Electroless Plating
+
+Galvanisierung an sich ist schon coool:
+dissolved metal cations -> form metal coating on electrode
+
+Aber warum Strom verbrauchen, wenn es auch ohne geht:
+one electrode & reducing agent (& no external current):
+https://en.wikipedia.org/wiki/Electroplating#Electroless_deposition
+
+Sorry, bin wohl etwas in Schwärmen geraten, also zurück bei den Raketen noch kurz über die vier Navi-Systeme schlau gemacht:
+(russisches GLONASS & US-amerikanischen GPS & europäischen Galileo-System & chinesischen Beidou)
+
+Dann Felix Baumgarnter Kommentar verfasst:
+http://derstandard.at/1350259583134/Wir-wuerden-eine-gemaessigte-Diktatur-brauchen
+
+Und dann den Witz vom Rabbiner gar nicht schlecht gefunden:
+http://derstandard.at/2000030449939/Oberrabbiner-Eisenberg-Was-der-Papst-kann-kann-ich-auch
+
+Zwei Leute streiten, sie gehen zum Rabbiner. Er hört den einen an und sagt: Du hast recht. Dann hört er den anderen an und sagt: Du hast recht. Dann kommt die Frau des Rabbiners herein und sagt: Das geht nicht, die können ja nicht beide recht haben. Sagt der Rabbiner: Und du hast auch recht.
+
+LGR
+
+
+
+
+
