@@ -22,7 +22,9 @@ recent(faces) <-> longer(signs)
 green / yellow / red / blue / purple / grey(empty)
 ---------------
 xymon custom client test script 
-& custom tcp update ->
+http://xymon.sourceforge.net/xymon/help/xymon-tips.html#scripts
+
+custom tcp update
 https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO#How_can_I_create_a_hobbit_client_custom_test_script.3F
 
 HOW-TO

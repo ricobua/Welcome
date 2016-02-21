@@ -4,6 +4,51 @@ http://docs.spring.io/spring/docs/3.1.x/spring-framework-reference/html/beans.ht
 CAMEL ->
 http://camel.apache.org/spring-java-config-example.html
 
+-------------------
+
+spring boot
+https://www.youtube.com/watch?v=sbPSjI4tt10
+1:13
+sping boot app (jar) + backend db
+repository + transact
+rest + mvc + ops integration + stack + security
+deploy as jar to cloud (with docker) with could foundry
+
+Spring -> Cache + Session
+Hystrix -> Netflix Circuit Breaker
+
+Jhipster -> spring boot + angular js + bootstrap
+https://www.youtube.com/watch?v=baVOGuFIe9M#t=1.456804
+
+-------------------
+
+camel MicroService
+https://www.youtube.com/watch?v=91UiQgazt3g
+
+5:14 route
+6:00 inlined
+14:00 running
+16:16 non-blocking
+16:49 incl Spring
+19:00 Microservice
+https://de.wikipedia.org/wiki/Liste_von_Dependency_Injection_Frameworks
+
+
+MicroService (2 pizza rule)
+https://www.youtube.com/watch?v=PY9xSykods4#t=21.094638
+
+-------------------
+
+ZooKeeper -> Election
+http://frommyworkshop.blogspot.co.at/2013/06/leader-election-of-camel-router-through.html
+
+-------------------
+
+Oracle OCI installation for JDBC
+http://docs.oracle.com/cd/B19306_01/java.102/b14355/overvw.htm#CJAHEFFI
+
+-------------------
+
 listener -> <contextConfigLocation> -> 
 does not exist -> /WEB-INF/applicationContext.xml 
 
@@ -21,3 +66,6 @@ test
 2) CamelSpringTestSupport -> ClassPathXmlApplicationContext
 3) TRICK: classe moved to
 org.apache.camel.test.spring.CamelSpringTestSupport
+
+-------------------
+

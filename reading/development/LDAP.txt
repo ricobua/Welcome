@@ -12,10 +12,26 @@ Active Directory
 -> already logged into the domain
 -> authoritative source -> SSO (single sign-on)
 
+------------------
 Integrated Windows Authentication (IWA)
 -> client computer -> Windows user information -> Web server
 -> best within Intranet (-> proxy problems)
 
+http://www.tomcatexpert.com/blog/2011/06/22/windows-authentication-apache-tomcat
+http://serverfault.com/questions/406288/integrated-windows-authentication-with-apache-http-server-on-linux
+http://www.held-im-ruhestand.de/software/apache-ldap-active-directory-authentication.html
+
+Central usermanagement. This is your Active Directory.
+It has the users and LDAP is the interface.
+
+As AD won’t allow anonymous acces, you need a username and a password just to do the search.
+
+Linux server joined to our Active Directory 2003 infrastructure
+https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO#Transparent_Authentication_against_Active_Directory_2003_with_Apache_and_CentOS_5
+Domain Account
+https://msdn.microsoft.com/en-US/library/aa545262(v=cs.70).aspx
+"Domain Controller" lets Server with "Domain Account" connect to other servers
+Linux -> Enable Kerberos and Winbind
 ------------------
 Intro
 http://oreilly.com/perl/excerpts/system-admin-with-perl/ten-minute-ldap-utorial.html

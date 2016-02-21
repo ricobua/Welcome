@@ -1,0 +1,8 @@
+Audio Software
+
+1) File -> Open -> MP3
+2) Play -> Pause -> STOP
+3) Strg-B / Tracks -> Add Label
+4) Move Label to End
+5) Edit -> Cut
+6) Export As ... -> MP3 -> Add Details

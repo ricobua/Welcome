@@ -84,7 +84,7 @@ TrueType font family (including monospace font)
 Tango Desktop Project
 Tango style guidelines 
 hexadecimal color palette
--> visual consitency  (does not look out of place)
+-> visual consistency  (does not look out of place)
 -> iconset, common metaphors
 
 competitors

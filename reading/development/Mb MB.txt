@@ -1,0 +1,15 @@
+Latenz 35ms
+Down 15Mb/s
+Up 2.6Mb/s
+25 MB Datei (Audacity) -> 10 sec
+
+Text Datei 3 Buchstaben -> 3 Byte
+Audacity Installer -> 25MB
+Audacity Disc -> 60MB
+Audacity RAM -> 12MB
+
+Chrome Disc -> 500MB
+Chrome RAM -> 10 Prozesse -> 1GB
+
+Schlauer Fuchs -> Disc -> 880GB
+

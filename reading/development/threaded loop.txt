@@ -62,3 +62,21 @@ http://activemq.apache.org/virtual-destinations.html
 JMX
 http://stackoverflow.com/questions/2780761/how-to-measure-java-thread-execution-time
 http://docs.oracle.com/javase/7/docs/api/java/lang/management/ThreadMXBean.html#getThreadCpuTime(long)
+-----------------
+Quartz Scheduler (-> Camel Component)
+
+MisFire -> can not run (incomplete, no threads, server down)
+https://quartz-scheduler.org/documentation/quartz-2.1.x/examples/Example5
+http://quartz-scheduler.org/api/2.2.0/org/quartz/SimpleTrigger.html
+FIRE_NOW -> only for 'one-shot' equivalent to -> RESCHEDULE_NOW
+"smart" misfire policy
+
+Clustering for Fail-Over
+http://www.quartz-scheduler.org/documentation/quartz-2.x/configuration/ConfigJDBCJobStoreClustering
+RAC issue (Oracle)
+https://quartz-scheduler.org/documentation/faq#FAQ-racDead
+
+http://camel.apache.org/quartz2.html
+recovery
+http://stackoverflow.com/questions/27031971/quartz-clustering-in-camel-spring-dsl
+-----------------
