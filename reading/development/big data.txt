@@ -33,3 +33,8 @@ http://en.wikipedia.org/wiki/HTTP_compression
 HTTP compression
 -> gzip
 -> Google Shared Dictionary Compression Over HTTP (SDCH)
+---------
+http://zookeeper.apache.org/doc/trunk/recipes.html
+Name Service - Configuration - Group Membership
+Barriers - Queues - Locks - 2P-Commit - Leader Election
+---------

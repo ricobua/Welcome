@@ -30,6 +30,11 @@ https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO#How_
 HOW-TO
 https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Other_Docs/HOWTO/Custom_Monitoring_Scripts_for_Hobbit
 
+Windows Client
+https://en.wikibooks.org/wiki/System_Monitoring_with_Xymon/Developer_Guide#Windows_Hobbit_client
+source code
+https://svn.code.sf.net/p/bbwin/code/
+
 Java Socket -> send tcp update
 http://www.tutorialspoint.com/java/java_networking.htm
 ---------------
@@ -44,3 +49,4 @@ https://www.xymon.com/help/criticalsystems.html
 ---------------
 JVM -> JMX
 https://wiki.xymonton.org/doku.php/monitors:jmxstat
+---------------

@@ -22,3 +22,7 @@ Apache httpd -> servlets & JSP files
 -----------
 resin session failover
 http://www.caucho.com/resin-4.0/admin/clustering-overview.xtp#ClusteredSessions
+
+-----------
+JMS from Oracle JVM
+https://blog.synyx.de/2011/10/sending-jms-from-oracledb-to-external-activemq-broker/
