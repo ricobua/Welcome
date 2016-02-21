@@ -26,6 +26,8 @@ Getting Started (single)
 https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html
 Camel -> RoutePolicy (also read/write)
 http://camel.apache.org/zookeeper.html
+ephermal -> [gr] -> epi hermal -> zu/bis Tag
+Node endet mit Session Ende
 ------------
 Google -> camel failover controller
 http://www.liquid-reality.de/display/liquid/2011/11/11/Hot+Standby+failover+for+Apache+Camel+routes

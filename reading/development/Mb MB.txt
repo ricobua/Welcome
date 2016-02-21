@@ -13,3 +13,8 @@ Chrome RAM -> 10 Prozesse -> 1GB
 
 Schlauer Fuchs -> Disc -> 880GB
 
+USB 2.0 -> 40MB
+USB 3.0 -> 300MB
+External Serial ATA -> serieller Bus
+5000 Steckzyklen (<-> SATA -> 50)
+eSATA -> SATA I/II/III -> 150/300/600MB -> 3Gb

@@ -40,3 +40,8 @@ ftp://ftp.pop-mg.rnp.br/pub/apache/info/verification.html
 
 BAD "signature" -> failure
 GOOD -> success
+------
+typical files (all text/hex):
+.asc -> pgp public key
+.md5 -> Message Digest (5-rounds) -> hex encoded
+.sha1 -> significantly stronger cryptographic hash
