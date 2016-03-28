@@ -1,0 +1,44 @@
+Ostereiersuche
+
+TODO:
+http://answers.microsoft.com/en-us/windows/forum/windows_8-update/error-0xc0000034-for-windows-8-after-hibernation/61b726e4-089f-4be4-bb28-ee3bda23f62d?auth=1
+
+Notebook ohne Akku wurde versehentlich abgesteckt,
+Windows zeigte Error Message
+UEFI Setup (vormals BIOS) -> F2
+erlaubte non-secure boot
+(Secure Boot Mgmt -> Secure Boot)
+erlaubte nicht USB boot, 
+genauer: es standen nur HD und DVD zur Auswahl
+
+Also schnell 3 DVDs gebrannt:
+Win10 Upgrade
+Puppy Linux
+Win8 Recovery
+
+http://www.notebookcheck.com/Test-Medion-Akoya-S4216-MD-99080-Ultrabook.84335.0.html
+Laptop Medion Akoya S4216
+1.8 GHz, 4GB RAM, 1TB HD, 32GB SSD
+
+Puppy -> in-memory
+kein WLAN, also:
+WLAN Adapter rausfinden
+(Intel Centrino Wireless-N 2230)
+Forum konsultieren ->
+http://ubuntuforums.org/showthread.php?t=2089512
+lspci -v
+dmesg | grep iwl
+ls -al /lib/firmware/iwlwifi-2030-6.ucode
+tatsächlich, bestimmtes Firmware File fehlt
+über PC und USB Stick runterladen
+(package .deb ist eh nur .zip)
+Module removen & neu laden (module === driver)
+modinfo iwlwifi
+modprobe -r iwlwifi
+modprobe iwlwifi
+-> Cajou ??
+zu leise ->
+alsamixer -> alles auf 100
+
+saved to "puppy" USB stick
+"slacko64save-angi-old"

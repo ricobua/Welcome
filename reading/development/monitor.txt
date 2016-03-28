@@ -1,5 +1,25 @@
 Hobbit -> Xymon
 ---------------
+http://xymon.sourceforge.net/xymon/help/manpages/man5/analysis.cfg.5.html
+hosts.cfg -> list of hosts -> list of tests
+analysis.cfg -> COLUMN SETTINGS ->
+1) time-diff & start-up -> "CPU STATUS"
+UP 10m 4w yellow
+CLOCK 15 red
+2) heartbeat -> file -> "FILES STATUS"
+"mtime<600" means difference less than 600 seconds, otherwise red
+3) logfile -> "MSGS STATUS"
+[first into client-local.cfg file -> trigger client into reporting]
+regular expression -> %WARNING|NOTICE
+4) Oracle -> /ext/DATAEXPORT -> mounted to many servers !!
+---------------
+Reset of File/Msg Status:
+http://comments.gmane.org/gmane.comp.monitoring.hobbit/35772
+... will stay red for only one 5-minute client cycle.
+---------------
+Java -> JMX
+https://wiki.xymonton.org/doku.php/monitors:jmxstat
+---------------
 Example & Help !!
 https://www.xymon.com/xymon.html
 ---------------

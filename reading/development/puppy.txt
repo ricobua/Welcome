@@ -100,3 +100,9 @@ openssh
 5) id_rsa -> remote computer -> puttygen -> conversion import -> save priv ppt
 5a) C:\rico\keys\puppy.ppk
 6) firewall -> pirelli -> Einstellungen -> Port Mapping -> SSH 22
+
+---------
+old Angi-laptop
+Intel Wireless-N 2230
+WLAN drivers -> /lib/firmware/iwlwifi-2030-6.ucode
+http://ubuntuforums.org/showthread.php?t=2089512

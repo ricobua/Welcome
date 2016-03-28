@@ -1,0 +1,17 @@
+C:\exe\camunda-bpm-tomcat-7.4.0
+
+1) start test server
+start-camunda.bat
+login: demo demo
+
+2) connect to h2 database
+http://localhost:8080/h2/h2/
+connect: jdbc:h2:./camunda-h2-dbs/process-engine
+login: sa sa
+
+select * from act_id_user
+Ctrl+Return
+tricky: default h2 is empty
+
+3) tomcat apps
+server\apache-tomcat-8.0.24\webapps\camunda

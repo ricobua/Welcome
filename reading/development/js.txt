@@ -1,8 +1,17 @@
+single vs double quotes
+-> same, but
+http://stackoverflow.com/questions/242813/when-to-use-double-or-single-quotes-in-javascript
+
+Newcomers -> familiar with double quotes from other langs
+English   -> passage of quoted text
+JSON      -> double quotes
+
+-----------------
+
 weird -> no docu for
 C:\rico\development\javascript\VorsorgeRechner
 
 -----------------
-
 node.js
 1) install with .msi
 2) use path or "C:\Progra~1\nodejs\node -v"
@@ -10,6 +19,26 @@ remark: short-win-name -> "dir /x pro*"
 a) js on the server
 b) C10K problem -> serve 10k clients simultaneously
 
+Chrome -> java script runtime -> V8
+node.js -> same runtime + event loop
+
+websocket
+file upload
+real-time data
+
+not a framework
+not multi-threaded
+but call-backs
+
+npm -> package/module manager -> packaged modules -> dependency mgmt
+module directory -> C:\Program Files\nodejs\node_modules
+package.json -> explicit dependencies & versions -> npm install
+semantics -> major.minor.patch -> major changes API
+"~1" -> latest version but less than "2" -> "~1.8.7" less than "1.8.8"
+npm install -- save -> install & add to package.json !!
+-----------------
+express.js
+route + middleware + environ + file upload
 -----------------
 
 pitch detect
@@ -56,3 +85,14 @@ Syntax
 http://www.w3schools.com/jquery/jquery_syntax.asp
 innerHtml (== values)
 http://stackoverflow.com/questions/1309452/how-to-replace-innerhtml-of-a-div-using-jquery
+
+---------------
+Frameworks
+jquery     -> less structure
+dojo       -> 
+angularjs  -> mvvm
+bootstrap  -> nice .css, also mvvm
+
+---------------
+IDEs
+Maqetta -> dojo

@@ -41,3 +41,11 @@ tricky: dash translates to camel-case
 
 -------------------
 CSS display property -> specify type of box
+
+-------------------
+Maqeta
+get started
+https://www.youtube.com/watch?v=fo9XM0mOLys
+composition types (hi-lo-mob)
+https://www.youtube.com/watch?v=J24Hi3f7yQ4
+

@@ -75,7 +75,8 @@ container managed security
 <security-constraint>
 <login-config> -> Single Sign On
 virtual host -> one machine, two names
-Realm -> "database" -> usernames & passwords
+Realm (engl Reich, Bereich)
+-> "database" -> usernames & passwords
 roles (=groups) -> access to webapp
 e.g. "manager-gui" role -> Manager Application
 
@@ -293,3 +294,15 @@ eclipse -> deploy
 ---------
 pool config
 http://www.codingpedia.org/ama/tomcat-jdbc-connection-pool-configuration-for-production-and-development/
+---------
+JSP -> html + JSTL + Expression Lang -> compiled to Servlet
+Servlets -> @WebServlet annotation -> overridden doGet() & doPost() -> req + resp
+JSF -> MVC framework -> uses Servlets 
+-> Facelets (XHTML) === View & Javabean === Model. 
+---------
+"INF" -> "Information"
+similarity JAR files -> META-INF
+-> contains executables !!
+meaning changes -> no longer makes sense 
+-> e.g. Linux bin -> non-binary "executables" -> shell scripts
+

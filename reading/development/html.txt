@@ -1,0 +1,28 @@
+----------
+Data to the Server
+GET - PUT - POST
+
+simple explanation:
+GET  - select
+PUT  - update
+POST - insert
+----------
+with regard to forms:
+
+HTML web page <form> submit button
+GET -> plus url param [arg1=1&arg2=2]
+POST -> body
+
+PUT -> have to use AJAX
+
+e.g.
+method="GET" -> browser will add field values inside form to the query string
+----------
+Data from the Server
+GET - POST
+
+GET  - url params
+POST - body params
+
+e.g. jQuery -> $.post("/dat.json",func(data){...});
+----------

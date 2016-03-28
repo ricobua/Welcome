@@ -22,3 +22,9 @@ https://cloud.google.com/appengine/articles/fantasm
 Google
 Task Queue Java API
 Google Cloud SQL
+
+-------------------------
+IBM Bluemix
+
+-------------------------
+Redhat OpenStack

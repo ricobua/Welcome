@@ -1,0 +1,47 @@
+
+
+------------------
+size 200MB / 1GB
+remove 
+truncate / drop / drop purge / create or replace table / delete
+
+1) mem size
+2) create as select
+3) mem size
+4) remove
+5) mem size
+
+6) truncate only:
+insert again -> should NOT grow, but re-use
+
+---------------
+truncate
+http://docs.oracle.com/cd/B28359_01/server.111/b28286/statements_10007.htm
+-> keeps dependencies & privileges
+-> no roll-back & no flash-back
+-> storage -> (drop <-> reuse) -> default: freed space to tablespace
+-> index is also truncated
+(-> purge only for materialized views)
+http://www.dba-oracle.com/t_oracle_truncate.htm
+-> resets high water mark
+-> Deallocates all space
+-> no way to actually retrieve old rows
+-> old rows will be overwritten with the new rows
+
+------------------
+https://docs.oracle.com/cd/B28359_01/server.111/b28286/statements_9003.htm
+
+drop
+-> invalidates dependent objects
+-> indexes - integrity constraints - triggers
+-> removes object privileges
+
+Recycle Bin
+https://docs.oracle.com/cd/B28359_01/server.111/b28310/tables011.htm#i1011357
+-> flashback table -> from recycle bin
+-> purge -> free tablespace
+
+purge 
+-> space being released -> to tablespace
+
+cascade constraints -> FK entries

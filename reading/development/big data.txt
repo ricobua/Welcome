@@ -38,3 +38,11 @@ http://zookeeper.apache.org/doc/trunk/recipes.html
 Name Service - Configuration - Group Membership
 Barriers - Queues - Locks - 2P-Commit - Leader Election
 ---------
+Configuration -> Apache Tamaya
+- local -> e.g. properties, xml, json
+- distributed -> e.g. ZooKepper
+goals:
+decouple
+document options
+integrate DevOps
+-> "Configuration Injection"

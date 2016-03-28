@@ -1,12 +1,16 @@
 1) Credentials -> PassSafe
 2) First App -> http://jbossews-7426.rhcloud.com/
 3) Deploy -> via Git
+
 4) RHC Client Tools ->
 a) install Ruby
 b) install Git
 c) gem install rhc -> installs Ruby-Package "Red Hat Client"
-
 5) rhc setup -> auto-login & ssh
+
+[redo steps 4+5 every now and then !!]
+http://stackoverflow.com/questions/22951037/rhc-setup-error-a-secure-connection-could-not-be-established-to-the-server
+
 6) ssh keys ->
 C:\Users\andersen\.ssh\
 -> id_rsa.pub
