@@ -15,3 +15,23 @@ tricky: default h2 is empty
 
 3) tomcat apps
 server\apache-tomcat-8.0.24\webapps\camunda
+
+---------------
+
+sub-process
+1) Poster
+http://www.bpmb.de/images/BPMN2_0_Poster_EN.pdf
+
+2) Real-Life BPM
+C:\reading\development\process engine\real-life-bpmn.pdf
+
+3) Event Subprocess + Execution Semantics for Sub-process
+C:\reading\development\process engine\BPMN-Execution.pdf
+
+4) Online Workflows
+https://opsdog.com/industries/asset-management/asset-management-workflows
+
+5) loop exceptions (block order)
+a) roll-back
+b) fix by user
+c) continue with one less
