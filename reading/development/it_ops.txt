@@ -1,0 +1,142 @@
+
+DevOps & Puppet
+https://dzone.com/articles/don%E2%80%99t-do-it-wrong-put-puppet
+
+Deployment Automation
+http://techblog.constantcontact.com/devops/deployment-automation-continuous-delivery-pt1/
+
+Sonatype Nexus, a software repository manager
+
+------
+
+ensure service is running
+http://www.puppetcookbook.com/posts/ensure-service-is-running.html
+
+resurrecting dead processes
+http://centos-vn.blogspot.co.at/2014/06/daemon-showdown-upstart-vs-runit-vs.html
+
+ubuntu (old version -> upstart), new -> systemd
+respawn
+http://askubuntu.com/questions/251577/how-to-supervise-and-automatically-restart-a-process
+
+CentOS systemd
+https://linuxacademy.com/blog/linux/centos-7-take-the-plunge-into-systemd/
+
+systemd respawn
+https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-service-to-start-automatically-after-a-crash-or-reboot-part-1-practical-examples
+
+tricky: systemd starts puppet client !!
+http://www.itzgeek.com/how-tos/linux/centos-how-tos/install-and-configure-puppet-on-centos-7-rhel-7.html
+
+
+------
+
+UBA & UBM
+User Behavior Analytics & User Behavior Monitoring
+https://www.youtube.com/watch?v=TXh_sI04N94&feature=youtu.be
+UBA -> identify high risk individuals
+UBM -> monitor them
+
+------
+
+Apache Geronimo 
+-> https://de.wikipedia.org/wiki/Apache_Geronimo
+-> Apache Software Foundation (ASF)
+-> implementiert JavaEE-Standard
+-> Kompatibilitätstests (TCK) des Java Community Process -> Juni 2005
+-> (als dritter Open-Source-Server nach JBoss und JOnAS)
+-> Tomcat - Jetty - ActiveMQ - ServiceMix - Axis - WADI - Karaf
+
+------
+
+IT Automation
+https://youtu.be/j8ImF23jZAg
+
+Comparison (selected)
+http://www.infoworld.com/article/2609482/data-center/data-center-review-puppet-vs-chef-vs-ansible-vs-salt.html
+
+Comparison (all)
+https://en.wikipedia.org/wiki/Comparison_of_open-source_configuration_management_software
+
+Tasks
+server automation
+configuration management
+orchestration -> interact with nodes
+DevOps -> Continuous Integration
+multi-node deployment
+ad-hoc task execution
+
+SSH & Json
+SSLv3 == TLSv1
+resources to be put into the declared state
+ensure that server's state matches the description
+
+Ansible ->
+Chef -> 
+Puppet ->
+Salt -> 
+
+
+------
+
+Domain Controller (DC, englisch für Bereichs-Steuerung)
+-> Microsoft Rechnernetz
+-> Server zur zentralen Authentifizierung und Autorisierung
+-> Computer und Benutzer
+-> Active-Directory-Datenbank
+-> Samba -> auch nicht-Win-DCs
+
+------
+
+Software-Configuration-Management (SCM)
+Controlled change process
+Configuration auditing
+Requirements, architectural specifications and user manuals
+Build management
+Environment management
+Defect tracking
+
+------
+
+Vagrant
+https://en.wikipedia.org/wiki/Vagrant_(software)
+virtual development environments
+above virtualization software 
+-> [VirtualBox, VMware, KVM, Linux Containers (LXC)]
+-> server environments like Amazon EC2.
+below configuration management software 
+-> [Ansible, Chef, Salt, Puppet]
+originally tied to VirtualBox
+
+------
+
+Hudson
+CI server -> Continuous Integration
+
+------
+
+Google Books
+Learning Puppet 4: A Guide to Configuration Management and Automation
+
+------
+
+Puppet Hadoop HBase Example
+http://hstack.org/hstack-automated-deployment-using-puppet/
+Hadoop -> Map-Reduce
+HBase -> Backend
+HDFS -> Namenodes
+Zookeeper -> for HBase
+Puppet -> setup user + rights -> deploy -> run
+
+------
+
+http://www.sonatype.com/products-sonatype
+Source -> GitHub, RubyGem, DockerHub
+Develop -> eclipse, VS, Intellij
+Build -> Jenkins, Baboo
+Store -> npm, NuGet, Docker
+Operate -> Check, Puppet
+
+
+Microsoft Virtual Academy
+Udacity

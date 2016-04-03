@@ -1,0 +1,51 @@
+master-slave (zookeeper, ...)
+
+http://www.ofbizian.com/2014/01/masterslave-failover-for-camel-routes.html
+
+http://www.liquid-reality.de/display/liquid/2011/11/11/Hot+Standby+failover+for+Apache+Camel+routes
+
+------------
+
+Camel-Java-spring-boot -> no XML
+
+https://github.com/emalock3/camel-with-spring-boot-example/blob/master/src/main/java/com/github/emalock3/camel/Application.java
+
+Utilizes "try with resources"
+http://portfolio.planetjon.ca/2011/07/29/java-7-launches-new-language-features-introduced/#try_with_resources
+
+spring-boot-options -> change some ports ...
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+------------
+
+multi context -> XML
+http://camel.apache.org/advanced-configuration-of-camelcontext-using-spring.html
+
+mentions "CamelContextFactoryBean"
+http://camel.apache.org/tutorial-example-reportincident-part5.html
+
+points to factory necessary
+http://stackoverflow.com/questions/32839489/register-spring-bean-as-an-apache-camel-route-builder-with-java-config
+
+maps <camelcontext> to FactoryBean
+http://massapi.com/source/apache/16/64/166499130/dist/camel/apache-camel/2.7.0/apache-camel-2.7.0-src.zip/apache-camel-2.7.0-src.zip.unzip/apache-camel-2.7.0/components/camel-spring/src/main/java/org/apache/camel/osgi/CamelContextFactoryBean.java.html#52
+
+------------
+
+what spring-boot can NOT do -> 2 contexts
+http://henryk-konsek.blogspot.co.at/2014/10/using-apache-camel-with-spring-boot.html
+
+spring java
+http://camel.apache.org/spring-java-config.html
+http://www.tutorialspoint.com/spring/spring_java_based_configuration.htm
+
+------------
+
+ActiveMQ failover test
+http://alvinalexander.com/java/jwarehouse/activemq/activemq-core/src/test/java/org/apache/activemq/transport/failover/FailoverConsumerOutstandingCommitTest.java.shtml
+http://alvinalexander.com/java/jwarehouse/activemq/activemq-core/src/test/java/org/apache/activemq/transport/failover/FailoverClusterTest.java.shtml
+
+------------
+
+Camel Persistence -> Dead Letter Queue
+http://stackoverflow.com/questions/10753762/embedded-persistence-solution-in-apache-camel-to-save-dead-letter-message
