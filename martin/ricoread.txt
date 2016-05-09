@@ -1,0 +1,58 @@
+Practical Handbook, p 156
+https://books.google.at/books?id=LSiVFMTgvLgC&pg=PA149&lpg=PA149&dq=sea+material+entropy&source=bl&ots=LEGVcrtFmY&sig=ccylAxVIrv3KEL3FX9ahPEqmzvs&hl=de&sa=X&ved=0ahUKEwjoy-6dkMrMAhUKuBQKHUZrAOoQ6AEINTAE#v=onepage&q=sea%20material%20entropy&f=true
+
+
+Antritt
+PubDat_144981_Antritt.pdf
+
+US school
+NAWTEC16-1915-Kaufman.pdf
+
+phd thesis -> extended -> compounds
+PubDat_220465.pdf
+
+pdf -> extended
+PubDat_210360.pdf
+
+
+
+-----------
+Shannon Entropy
+https://en.wikipedia.org/wiki/Entropy_(information_theory)
+How much info is acquired due to the observation of event i? 
+proper choice of function to quantify -> logarithmic -> 2 -> bit
+--
+https://www.youtube.com/watch?v=TT5Wm9jDR2A
+8:40 -> why log(1/p) ?
+1) P->1 I->0, P->0 I->inf -> typical log !!
+9:56 -> p1+p2 -> p1*p2 -> typical log !!
+13:30 -> TV-picture
+50:00 -> bits == avg number of questions to identify symbol
+--
+event i can happen with probability p_i ->
+average amount of information -> p_i*info
+
+Intro
+https://www.youtube.com/watch?v=JnJq3Py0dyM
+9:47, 11:22
+Use Formula
+https://www.youtube.com/watch?v=LodZWzrbayY
+10:30
+https://www.youtube.com/watch?v=8bDP364v8Gc
+1:10 (!!!!!)
+In words:
+Information contained in "letter" -> log2
+Probability of particular "letter" -> p
+thus -> Sum[p*log(p)]
+
+(X~p) ... read: random var X is distributed according to p
+
+3:20 -> probability effects entropy (!!!!!)
+12:15 -> link to thermodynamic
+
+Thermodyn Entropy
+https://www.youtube.com/watch?v=ykUmibZHEZk
+2:32 -> reverse
+
+Nice:
+https://www.youtube.com/watch?v=uVOJIK4r-p4
