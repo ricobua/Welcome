@@ -1,0 +1,78 @@
+Winkel-Beschleunigung S.157
+torque 
+-> Beschleunigung normal zur Ebene
+-> vom höchsten Punkt v immer mehr aus Ebene
+-> max in Mitten-höhe
+-> wieder 0 am unteren Ende
+
+----------------------
+
+p=mv <-> L=I[ohm]
+
+mass -> depends only on amount of matter
+moment of inertia (I) -> also on 
+axis of rotation and 
+shape of matter (mr^2)
+
+E=mv^2/2 -> m*r^2*[ohm^2]/2 -> I*[ohm^2]/2
+I=mr^2
+
+Angular velocity [ohm] -> always direction of rotation axis
+angular momentum L may point in a different direction 
+-> depending on how the mass is distributed
+
+split into two main components: 
+"spin" angular momentum -> through the centre of mass
+"orbital" angular momentum -> axis outside the object
+
+Torque -> rate of change of angular momentum
+(-> analogous to force -> change of mementum ("Impuls"))
+
+conservation of angular momentum
+
+quantum -> L=r.p -> either r or p
+
+lovely:
+"collection of particles" -> arithmetic geometry
+
+force over time -> impulse (work) 
+-> change in translational momentum
+torque acting over time -> "angular impulse"
+-> change in angular momentum
+
+https://en.wikipedia.org/wiki/Precession
+Euler Angels -> frame of reference
+first -> precession
+second -> nutation
+third -> rotation itself
+
+torque-free -> symmetry -> e.g. teapot
+torque-induced (gyroscopic)
+
+external torque -> spin axis 
+-> move at right angles to intuitively
+
+two forces -> torque -> change in angular velocity
+-> angular velocity of precession
+
+precession
+http://www.videoman.gr/de/49485
+spin-angular-momentum is "chasing" the torque
+
+spinning charged particle (e.g. electron)
+-> Larmor precession
+https://en.wikipedia.org/wiki/Larmor_precession
+
+----------------------
+
+swinging ruler
+https://www.youtube.com/watch?v=cB-4ETRiA2E
+
+gyroscope
+https://www.youtube.com/watch?v=CvKbFtczyos
+15:20
+16:30 -> impossible to create constant torque !!
+20:30 -> L goes in the direction of torque
+24:00 -> apply torque to spinning wheel -> obtain precession 
+32:20 -> spin-angular-momentum >> torque
+-> otherwise: end of precession mode
