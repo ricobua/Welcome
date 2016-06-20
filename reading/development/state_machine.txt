@@ -1,0 +1,8 @@
+Combinatorial Explosion
+http://www.ifs.tuwien.ac.at/~js/download/umlstm.ppt
+
+Why State Machines Struggle With Concurrency
+http://aigamedev.com/open/article/fsm-struggle/
+
+self-synchronized ??
+http://web.cecs.pdx.edu/~mperkows/CLASS_573/MARCH_3_06/design-of-self-synchronized.pdf

@@ -1,3 +1,21 @@
+Gradle -> remote deploy
+https://gradle-ssh-plugin.github.io/
+
+-----------
+
+Jenkins Example
+https://www.rdegges.com/2011/simple-continuous-integration-deployment-with-jenkins/
+
+Jenkins -> Build-Pipline-Plugin -> Graphical !!
+
+Jenkins SSH Plugin
+https://wiki.jenkins-ci.org/display/JENKINS/SSH+plugin
+
+Puppet - Jenkins - Nexus
+https://dzone.com/articles/don%E2%80%99t-do-it-wrong-put-puppet
+
+Puppet - Jenkins Video
+https://www.youtube.com/watch?v=xtuHysOiyRM&list=PL42866CE0CE19FCD3
 
 DevOps & Puppet
 https://dzone.com/articles/don%E2%80%99t-do-it-wrong-put-puppet
@@ -5,8 +23,17 @@ https://dzone.com/articles/don%E2%80%99t-do-it-wrong-put-puppet
 Deployment Automation
 http://techblog.constantcontact.com/devops/deployment-automation-continuous-delivery-pt1/
 
-Sonatype Nexus, a software repository manager
+http://programmers.stackexchange.com/questions/184475/using-subversion-as-an-artifact-repository-vs-a-specific-artifact-management-too
+Sonatype Nexus, a artifact repository manager
 
+Tools Overview
+https://xebialabs.com/the-ultimate-devops-tool-chest/
+
+Feature toggles
+http://www.beyondjava.net/blog/getting-started-with-continuous-delivery/
+
+Buildbot -> more advanced than Jenkins
+http://buildbot.net/
 ------
 
 ensure service is running
@@ -112,6 +139,10 @@ originally tied to VirtualBox
 
 Hudson
 CI server -> Continuous Integration
+
+------
+
+JSLint (JS und Lint) statische Quellcode-Analyse
 
 ------
 

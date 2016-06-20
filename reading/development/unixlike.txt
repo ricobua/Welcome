@@ -31,6 +31,7 @@ Gentoo -> fortgeschritten -> Chromium OS (Google)
 RHL -> Fedora -> vollständig freie apps -> Red Flag & RHEL
 RHEL Red Hat Enterprise Linux -> kommerziell -> Server
 RHEL -> CentOS (frei) & Oracle Unbreakable & Scientific (CERN) & SME (small business)
+-> grafischer Installer "Anaconda"
 RHL -> Mandriva -> F/RU
 Slackware -> konfig
 openSUSE -> Nürnberg -> The Attachmate Group (früher Novell) 
@@ -39,9 +40,16 @@ ELinOS -> embedded
 Puppy -> schlank
 Maemo -> BeagleBoard
 -------
+Server-Ranking -> CentOS & Debian & Ubuntu
+-------
 LTS -> long term support
 -> fork with long term updates 
 -> e.g. Ubuntu (10.4, 12.4, 14.5)
+-------
+"Enterprise-OS:
+LTS 10 Jahre
+Zertifizierung (e.g. Oracle, SAP)
+binärkompatibel zu RHEL
 -------
 Puppy
 http://www.pcwelt.de/ratgeber/Alte_PCs_und_Laptops_mit_Puppy_Linux_fit_machen-Clever_verwerten-7971964.html

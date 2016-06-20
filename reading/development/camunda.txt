@@ -35,3 +35,9 @@ https://opsdog.com/industries/asset-management/asset-management-workflows
 a) roll-back
 b) fix by user
 c) continue with one less
+
+---------------
+
+links:
+google -> "camunda form sdk"
+http://de.slideshare.net/camunda/2015-0107-tasklist-en
