@@ -115,6 +115,7 @@ MySql
 
 0) look for service in system tray oder ->
 Start -> SystemSteuer -> System -> Dienste
+-> (or re-install)
 
 1) C:\Program Files\MySQL\MySQL Server 5.6\bin (-> on %path%)
 -> mysqld -> server -> run cmd as admin !! -> access to data files

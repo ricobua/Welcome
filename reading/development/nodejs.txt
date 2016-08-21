@@ -1,0 +1,31 @@
+SEE:
+C:\rico\development\nodejs
+-------------
+npm
+install globally -> 
+http://stackoverflow.com/questions/9587665/nodejs-cannot-find-installed-module-on-windows
+
+set node_path=
+%AppData%\npm\node_modules
+(package.json creates sub-dirs -> copy to this...)
+-------------
+nodejs -> mysql
+simple (start via MySql Installer)
+-> test_mysql_pool.js
+-------------
+nodejs -> Oracle
+
+OCI -> pain to install
+https://blogs.oracle.com/opal/entry/introducing_node_oracledb_a_node
+-> requires "node-gyp" -> requires python2.7 & c++ compiler
+
+-> gyp -> compile native addons
+-> via npm <-> stand-alone config-file
+-------------
+JDBC -> run JVM
+https://www.npmjs.com/package/jdbc
+https://github.com/CraZySacX/node-jdbc
+
+-------------
+HTML -> static
+http://blog.modulus.io/nodejs-and-express-static-content
