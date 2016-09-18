@@ -1,0 +1,9 @@
+LAME install -> press button -> just follow instructions
+
+join multiple mp3s -> Ctrl-A -> Tracks-Align-EndToEnd -> Time Shift (<->), in case
+
+record system output -> headphone loop-back
+1) Windows WSAPI
+2) Mic -> Lautsprecher (!)
+3) Speaker -> Lautsprecher
+4) red button
