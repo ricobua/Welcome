@@ -1,0 +1,8 @@
+fonts -> metrically-compatible
+
+Times New Roman (Liberation Serif)
+Arial (Liberation Sans)
+Courier (Liberation Mono)
+
+Calibri (Carlito)
+Cambria (Caladea)

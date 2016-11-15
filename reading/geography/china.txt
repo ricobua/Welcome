@@ -267,6 +267,7 @@ Chongqing [zhixiashi -> municipality] -> 30mio
 [chong -> wiederholt, qing -> Freude] -> double celebration
 direct-controlled municipalities = province-level municipality
 shi -> city & shengji -> province
+https://www.youtube.com/watch?v=kyTWU5hMuxw
 +++++++++++
 Qinghai [qing -> azure?, hai -> See]
 -> Chinese + Muslim + Tibet + Hui (s. Ningxia)
