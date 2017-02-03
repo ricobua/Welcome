@@ -1,0 +1,103 @@
+Visual Studio Python Tutorial
+Install VS
+https://www.youtube.com/watch?v=_okUV47eM5c
+
+----------------
+Visual Studio Code = VS Code
+Editor
+----------------
+
+Why Python
+https://www.quora.com/What-are-the-benefits-of-learning-Python-for-somebody-who-knows-Java
+
+Python Web Framework -> Django
+Why Django Sucks
+https://www.youtube.com/watch?v=Niq-HoraNPo
+- prog in JS + Py
+- no server push
+- no widget templates (e.g. calendar)
+
+Using Python With Oracle Database 11g
+http://www.oracle.com/technetwork/articles/dsl/python-091105.html
+----------------
+JS
+Express -> Koa
+Meteor -> real-time
+Restify -> JSON only
+MEAN -> MongoDB, Express, Angular, and Node
+Keystone -> DB + Forms-Processing + Session-Handling
+----------------
+
+PyQT Qt language binding for Python
+http://www.informit.com/articles/article.aspx?p=1149122
+
+Python cross compiler
+Jython -> Java
+IronPython -> CLI
+Pyjamas -> JavaScript
+
+----------------
+http://www.infoworld.com/article/3120996/application-development/bossie-awards-2016-the-best-open-source-application-development-tools.html
+
+Johnny-Five
+JS for Arduino + RaspPI + Beagle
+
+Angular -> MVP <-> Ember -> MVVM
+Bootstrap -> mobile first (html css js)
+SamsaraJS -> animation
+JSHint -> check for suspicious and nonportable constructs
+
+----------------
+R + RStudio + Oracle Support
+
+Pandas + Jupyter notebooks + Scikit-learn (for machine learning) +
++ Statsmodels (statistics and econometrics) +
++ NumPy, SciPy, Matplotlib
+-> Python unnecessary to use R 
+----------------
+Caffe -> computer vision learning
+NLTK -> Natural Language Toolkit -> Python human language data
+TensorFlow -> Google -> machine learning -> language understanding
+Alexa Voice Service API -> 
+https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/content/avs-api-overview
+----------------
+Theano -> Python -> computer algebra system (CAS)
+----------------
+Databricks -> Spark as a service (running on Amazon Web Services)
+Spark -> streams of events -> handle them
+
+CUDA -> Compute Unified Device Architecture -> Nvidia proprietary
+-> order of magnitude -> CPU-only calculations
+-> many data elements in parallel -> GPUs were designed for
+-> Amazon EC2 P2 instances -> 16 Nvidia Tesla GK210 GPUs
+
+hundreds of petabytes 
+-> your own HBase, Cassandra, or Accumulo clusters
+-> not easy or cheap to build, install, or manage
+-> use Google Cloud Bigtable
+
+Amazon Aurora -> extremely well-tuned MySQL on great infrastructure
+MongoDB Atlas -> database as a service
+DeepSQL -> 40 years after B-trees -> optimized in-memory + append only
+Redis -> in-memory, disk-backed, NoSQL -> acceleration cache
+
+Rust -> alternative to C -> low-level, performant + safe by default
+
+React Native -> native mobile development -> Facebook OSS
+GraphQL -> Facebook -> multiple data sources -> unified JSON
+
+----------------
+ZooKeeper -> key-value semantics -> distributed application 
+-> own service discovery and coordination layer on top of ZooKeeper 
+Consul -> common patterns -> integrated health checks + access control
+
+Security -> Kerberos + AWS Identity and Access Management + Vault 
+
+OSquery -> DB -> running processes, loaded kernel modules, etc.
+
+ActiveMQ -> Kafka (big data) -> Confluent
+Elastic Stack -> Elasticsearch, Logstash, and Kibana -> Log analysis
+Let’s Encrypt -> free certificate authority 
+
+Dashlane -> passwords + personal information 
+-> online payments -> credit cards, bank account
