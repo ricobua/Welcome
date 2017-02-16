@@ -1,0 +1,14 @@
+MX -> Flow diagrams + XML samples -> 7.4.1.4
+https://www2.swift.com/uhbonline/books/public/en_uk/stdsmx_nov_2016_funds_mdrs/index.htm
+https://www2.swift.com/uhbonline/books/public/en_uk/stdsmx_nov_2016_funds_mdrs/sr2016_mx_funds_mdr1_standards.pdf
+
+MX - MT - mapping overview
+https://www2.swift.com/uhbonline/books/public/en_uk/stdsmt_mt_mx_eq_tbl/index.htm
+
+
+MT handbook
+https://www2.swift.com/uhbonline/books/public/en_uk/us5ma_20160722/index.htm
+
+------------
+see also:
+C:\rico\development\swift mt

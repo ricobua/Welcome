@@ -1,0 +1,29 @@
+Single-Page-App -> Code-School
+1) css -> pre-processor + framework
+https://www.codeschool.com/beginners-guide-to-web-development/css-preprocessors-and-frameworks
+
+2) Angular -> fixed, React -> small (<-> express -> node.js)
+
+https://www.genuitec.com/products/angular-ide/pricing/                         
+
+3) font-size (not pixel) -> em, vw
+http://www.w3schools.com/cssref/css_units.asp
+https://css-tricks.com/optimizing-large-scale-displays/
+media <-> bootstrap
+https://cloudfour.com/thinks/the-ems-have-it-proportional-media-queries-ftw/
+http://stackoverflow.com/questions/18424798/twitter-bootstrap-3-how-to-use-media-queries
+
+4) vertical overview
+http://getbootstrap.com/css/
+-> simply 2 cols (rest is nested)
+
+WinJS -> Browser=Stand-Alone-App
+https://developer.microsoft.com/en-us/windows/develop/winjs
+
+------------
+Code School Bootstrap Class
+
+http://getbootstrap.com/css/#buttons
+http://www.w3schools.com/bootstrap/default.asp
+
+html5 -> drag&drop

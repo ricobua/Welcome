@@ -1,0 +1,6 @@
+Artifactory
+-> only artifactory looks for missing libs
+-> no unwanted remote references within project
+
+Gradle -> Groovy -> JVM scripting language
+Gradle-SSH -> remote execute on various servers (deploy + restart)

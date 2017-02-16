@@ -1,0 +1,27 @@
+https://www.pluralsight.com/guides/node-js/amazon-alexa-skill-tutorial
+https://github.com/Donohue/alexa/blob/master/src/index.js
+
+deployed to AWS
+
+Skill = Invocation-Name + Intent
+
+Invocation Name: "Rico"
+
+Intent: "TestIntent"
+Utterances are mapped to name 
+-> "Hello World"
+-> "say Hello World"
+-> "to say Hello World"
+
+Alexa, tell "Rico" "to say hello world".
+
+function onIntent(intentRequest, session, callback) {
+    var intent = intentRequest.intent,
+        intentName = intentRequest.intent.name;
+
+    if (intentName == 'TestIntent') {
+        handleTestRequest(intent, session, callback);
+    }
+}
+
+

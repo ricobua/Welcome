@@ -1,3 +1,20 @@
+uname -m
+x86_64 -> 64 bit
+
+OS version
+cat /etc/*-release
+
+hostnamectl (CentOS 7)
+
+http://serverfault.com/questions/112542/how-can-i-get-processor-ram-disk-specs-from-the-linux-command-line/112543
+cat /proc/cpuinfo
+df -h
+cat /proc/meminfo
+free
+https://de.wikipedia.org/wiki/Front_Side_Bus -> dmidecode
+
+SSH shell:
+http://www.htpcbeginner.com/best-ssh-clients-windows-putty-alternatives/
 -----
 SEE ALSO -> GUI Overview.txt2 -> KDE X Windows
 -----
@@ -32,6 +49,7 @@ RHL -> Fedora -> vollständig freie apps -> Red Flag & RHEL
 RHEL Red Hat Enterprise Linux -> kommerziell -> Server
 RHEL -> CentOS (frei) & Oracle Unbreakable & Scientific (CERN) & SME (small business)
 -> grafischer Installer "Anaconda"
+-> yum -> yellow-dog-update-mgr
 RHL -> Mandriva -> F/RU
 Slackware -> konfig
 openSUSE -> Nürnberg -> The Attachmate Group (früher Novell) 
@@ -96,7 +114,7 @@ X11 client
 -> Linux -> gnomine
 -> Win -> Xming
 --------
-/bin /sbin 
+/var /bin /sbin (belong to system)
 /usr (unix special routines) 
 -> /usr/bin -> "programs"
 -> /usr/local -> from source
@@ -108,3 +126,52 @@ http://www.thegeekstuff.com/2010/09/linux-file-system-structure/
 --------
 iTerm2 -> terminal emulator for OS X
 Homebrew -> freie/quelloffene Paketverwaltung -> Mac OS X
+--------
+systemd (Schulung Linux Systemd Intensiv v2.5.9.pdf)
+Hintergrundprogramm (Daemon) -> abschließenden "d" Namensschema
+(LGPL) + C
+Linux -> System startet und betreut
+-> erster Prozess (Prozess-ID 1) -> init
+(-> nach BIOS/UEFI, GRUB/LILO -> Kernel)
+-> Starten + Überwachen + Beenden -> weiterer Prozesse
+-> gegenseitigen Abhängigkeiten -> Parallelisierung 
+-> D-Bus-Verbindungen und Sockets -> vom Kernel gepuffert
+-> gelegentlich benötigte Dienste ereignisbasiert -> bei Bedarf 
+-> Shell-Boot-Skripte -> durch deklarative Konfigurationsdateien ersetzt
+-> einfacher zu schreiben als init-Skripte
+default bzw. fallback
+-> DNS-Anfragen -> Google-Nameserver
+-> Google-Zeitserver als  
+https://de.wikipedia.org/wiki/Systemd#/media/File:Systemd_components.svg
+
+config -> ls -ltr /etc/systemd/*.conf
+-> manche automatisch, manche manuell verwaltet
+
+Verwaltungs-Programm (Control ctl) -> systemctl <-> systemd
+
+targets -> group of units (s.S.98/99) -> Haltepunkte -> defaults
+units -> e.g. device, socket, path (s.S.36)
+-> dependency trees -> run-level (wie minimales Windows)
+
+processes -> auto-restart (nach Absturz) -> S 167ff
+logging -> journald (d) -> binär, nix grep
+timer -> systemctl list-timers -> Genauigkeit 1 min (default)
+process Sicht -> Linux Kernel Namespaces -> virtual resources (net,mount,..)
+cgroups -> Gruppe von Prozessen -> RAM, cpu, I/O, net_prio
+slice 
+-> types -> service (intern) + scope (session)
+-> sub -> system + user + machine
+-> kill -> cgroup
+-> temp -> /tmp + /var/tmp
+-> Network Device Naming -> je nachdem, welcher Treiber sich meldet eth0,...
+-> Generator -> dynische systemd configs erzeugen
+-> Einstellungen: Sprache,Zeit,Kernel-Params,..
+--------
+disk partitions -> third partition (root + swap + boot)
+http://www.computerhope.com/unix/fdisk.htm
+--------
+Apache
+-> config -> /etc/httpd/conf
+-> start -> systemctl start httpd.service
+-> testing -> Apache Benchmark (ab) -> S.350
+

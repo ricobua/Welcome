@@ -1,0 +1,23 @@
+Amazon AWS
+https://aws.amazon.com/de/certification/certified-developer-associate/
+
+https://aws.amazon.com/certification/certification-prep/?nc1=h_ls
+https://aws.amazon.com/training/course-descriptions/developing/
+-------------
+IBM Bluemix
+https://www.ibm.com/blogs/bluemix/2015/09/ibm-cloud-certification-application-developer/
+
+-------------
+RedHat
+
+EUR 500 -> Fuse = Camel
+https://www.redhat.com/de/services/training/ex421-red-hat-certificate-expertise-camel-development-exam
+
+EUR 3500 -> Hibernate
+https://www.redhat.com/de/services/training/jb298-jboss-development-persistence-hibernate-expertise-exam
+
+EUR 500 -> RHCSA -> SysAdmin
+https://www.redhat.com/de/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam
+
+EUR 500 -> RHCSA -> Engineer
+https://www.redhat.com/de/services/training/ex300-red-hat-certified-engineer-rhce-exam

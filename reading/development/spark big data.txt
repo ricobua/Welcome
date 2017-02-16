@@ -1,0 +1,28 @@
+Try it free:
+https://cloud.google.com/dataproc
+
+machine learning 
+deep learning (see IX 11/2016 S 116)
+neuronal + parallel (GPU)
+CNN convolutional neural networks
+überwacht, or not
+Caffee, Theano, TensorFlow
+
+DAG
+graph -> vertices + edges
+directed -> edges are arrows
+acyclical -> order from first to last
+
+Hadoop ecosystem:
+File-System: HDFS (Hadoop Distributed File System)
+File-System-Format -> Avro + Parquet (+csv)
+NoSQL-DBs -> HBase + Cassandra
+Messaging -> Flume + Kafka
+SQL -> HiveMetastore
+Scheduler -> YARN
+Batch Processing Engines -> MapReduce + Impala
+
+PySpark -> Python lib -> calls Spark (automatic distribution)
+better -> call from Scala
+old: SQL -> retrieve, Python -> manipulate
+Spark: Scala -> retrieve + manipulate (+ distribute)

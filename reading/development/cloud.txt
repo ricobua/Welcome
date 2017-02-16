@@ -1,7 +1,19 @@
+[C:\reading\development\cloud]
+
 1) SDK
 2) run locally
 3) deploy
 
+-------------------------
+AWS -> https://aws.amazon.com/what-is-aws/?nc1=h_ls
+Amazon Web Services
+computing + storage + networking + database
+on-demand + pay-as-you-go pricing (tech + finance)
+security + identity + audit (governance)
+hybrid -> deep features + identity federation + tools
+190 countries + 13 regions + 35 Availability Zones + 50 Points of Presence
+
+AWS + scaling-focus = EC2
 -------------------------
 Azure
 .NET WF 4.5 -> Workflow Foundation
@@ -17,6 +29,9 @@ Application Services
 -> AWS Flow Framwork for Java -> no garphical designer
 Amazon RDS (Relational Database Service)
 
+image of CentOS7:
+https://aws.amazon.com/marketplace/pp/B00O7WM7QW
+
 -------------------------
 https://cloud.google.com/appengine/articles/fantasm
 Google
@@ -28,3 +43,11 @@ IBM Bluemix
 
 -------------------------
 Redhat OpenStack
+
+-------------------------
+Virtualization -> HVM is the future
+https://cloudnative.io/blog/2014/07/paravirtual-vs-hvm-images/
+-> Linux Amazon Machine Images AMI
+-> PV paravirtual
+-> HVM hardware virtual machine
+-> difference -> boot + special hardware (CPU + network + storage)

@@ -21,11 +21,93 @@ https://blogs.oracle.com/opal/entry/introducing_node_oracledb_a_node
 
 -> gyp -> compile native addons
 -> via npm <-> stand-alone config-file
+
+https://www.youtube.com/watch?v=3p6rutSLlkg&index=4&list=PLlo3zrPbMP9_HDjsq9lcdi8RyiIvqfmBy
+1) basic + sdk
+2) OCI_LIB_DIR + OCI_INC_DIR
+3) npm install oracledb
+[4) apple -> libs -> DYLD_LIBRARY_PATH]
+5) node select.js -> node runs .js
+6) direction (in_out) + type sometimes need specification !!
+7) pool.getConnection -> connection.release 
+<-> DRCP -> sys -> dbms_connection_pool.start_pool() -> connectionClass
 -------------
 JDBC -> run JVM
 https://www.npmjs.com/package/jdbc
 https://github.com/CraZySacX/node-jdbc
 
 -------------
+https://www.npmjs.com/package/teradata
+teradata -> node-jdbc wrapper -> promisified functions
+-------------
+
 HTML -> static
 http://blog.modulus.io/nodejs-and-express-static-content
+-------------
+https://docs.npmjs.com/getting-started/what-is-npm
+npm
+1) website
+2) registry = database of information about packages
+3) client: to publish + to install from registry
+
+install node.js:
+OS X or Windows -> installer
+Linux -> installer or NodeSource's binary distributions
+
+npm -> updated more frequently than Node -> npm -v -> npm install
+-> manually -> https://registry.npmjs.org/npm/-/npm-{VERSION}.tgz
+
+path to npm's global directory -> npm config get prefix
+C:\Users\andersen\AppData\Roaming\npm
+/usr/local -> change permissions ->
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+
+npm install <package_name> -> create node_modules directory in current dir
+-> no package.json file -> latest version of package
+-> package.json -> build reproducable -> name + version -> npm init
+npm outdated + npm update
+
+npm install -g <package> -> globally
+npm outdated -g --depth=0
+After install globally -> link local project
+npm link mysql (e.g. for mysql) -> careful with delete (!!!) -> deletes link target
+
+!!! ---------------
+https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders
+You are highly encouraged to place your dependencies locally in node_modules folders.
+!!! ---------------
+
+npm list + npm list -g -> available packages
+npm list -g | findstr /R /C:"mysql"
+
+semver -> Semantic versioning
+bug-fix + minor-change: Patch release -> 1.0.1
+new features -> middle number, e.g. 1.1.0
+break backwards compatibility -> major release -> first number, e.g. 2.0.0
+example -> range >=1.2.7 <1.3.0
+example -> prerelease tag -> [major, minor, patch] -> 1.2.3-alpha.7
+~1.2.3 means >=1.2.3 <1.3.0
+~1.2.3-beta.2 -> only 1.2.3 betas (not 1.2.4)
+tags -> npm install somepkg@uat
+
+Artifactory
+1) Firewall
+cache management -> access remote repository (e.g. github)
+-> organization requires you proxy to access a remote repository
+-> username + password
+
+2) virtual repository -> aggregates local + remote repositories
+client -> single URL -> artifactory standalone or local ->
+npm config set registry http://localhost:8081/artifactory/api/npm/<repository key>
+npm install <package> -> contacts <repository key> only
+-> default -> anonymous access
+npm search [] -> asynchronously + "quiet period"
+Artifactory -> deployed or cached -> npm.name + npm.version
+
+may not have full visibility
+-> malicious dependencies -> whitelist
+-> Enable Dependency Rewrite 
+-> rewrite package.json dependencies -> virtual repository
+
+3) manual copy of node_module directory should be fine...
+http://stackoverflow.com/questions/24102022/is-it-safe-to-copy-node-modules

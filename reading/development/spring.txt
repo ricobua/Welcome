@@ -21,3 +21,10 @@ App -> @ComponentScan -> look for @Controller
 Web -> @EnableWebMvc
 
 Controller -> @RequestMapping -> @ResponseBody
+
+------------
+Factory 2.2.7
+-> make getObject() debug-able
+http://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html
+FactoryBean explained !!
+https://spring.io/blog/2011/08/09/what-s-a-factorybean
