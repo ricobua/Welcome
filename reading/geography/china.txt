@@ -11,6 +11,10 @@ Nei Mongol (Inner Mongolia)
 dongbei (North-East) -> Manchuria
 (Xizang) Tibet
 
+Schrift (lang, kurz, Standard, pinyin):
+https://de.wikipedia.org/wiki/Kurzzeichen
+https://de.wikipedia.org/wiki/Pinyin
+
 Han Core:
 Densly populated world-wide
 north: Huang He [Yellow river] / Yellow sea (across Korea)
@@ -272,6 +276,7 @@ Chongqing [zhixiashi -> municipality] -> 30mio
 direct-controlled municipalities = province-level municipality
 shi -> city & shengji -> province
 https://www.youtube.com/watch?v=kyTWU5hMuxw
+Tor zum Westen
 +++++++++++
 Qinghai [qing -> azure?, hai -> See]
 -> Chinese + Muslim + Tibet + Hui (s. Ningxia)
