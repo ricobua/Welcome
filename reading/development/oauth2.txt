@@ -1,0 +1,122 @@
+https://www.mindjet.com/
+
+https://spring.io/guides/tutorials/spring-boot-oauth2/
+https://entwickler.de/online/php/so-funktioniert-oauth2-3-134332.html
+https://entwickler.de/online/agile/scrum-master-agile-scrum-579887200.html
+OAuth2
+
+	De-facto-Standard der Clientautorisierung bei API
+	Facebook, Twitter, Google 
+	OAuth2 wurde von Grund auf neu
+	Basisspezifikation -> durch andere erweitert > kann und zum Teil auch muss
+
+Beispiele für Erweiterungspunkte:
+
+	"Client Profiles" -> Anwendungsszenarien (Web-, Mobile-, Desktop-, JavaScript App)
+	-> spezielle Protokollflüsse
+	-> unterschiedliche Request-Autorisierungsmechanismen
+	  --> "Bearer Tokens" über TLS/SSL
+	  --> HMAC-Signaturen
+	  --> SAML Assertions.
+
+Client initial beim Anbieter registrieren
+
+	Client-ID + "Client Secret" 
+	(analog zu Consumer Key und Consumer Secret bei OAuth1)
+	Secret darf Dritten nicht zugänglich gemacht werden
+
+	Callback URL -> Authorization-Server nach Autorisierung zurückleiten
+	bei Registrierung <-> (nicht mehr bei jedem Request)
+
+Web Profile von OAuth2 -> ähnelt (vereinfachter) OAuth1 
+
+	(Registrierung <-> Request)
+	Server der Clientanwendung: leitet User im Browser(!!) 
+	-> zum OAuth2-Authorization-Endpunkt des Providers
+	-> Redirect -> Query-Parameter an URL
+	-> Client-ID und optional Scope + State + "response_type code"
+	Callback URL -> muss nicht, aber wenn -> vorregistrierten Callback URL
+	Scope -> Provider -> Access Control Level -> read / write / (Verfeinerungen)
+	State-Parameter -> nach Redirect zurück zum Callback URL -> z.B. Sessioninformationen 
+
+Web-Profile-Protokollflusses:
+
+	Schritt 1:
+	a) Server -> vom Client -> Redirect -> Provider(=Anbieter)
+	b) User autorisiert Client zum API-Zugriff (i.e. Passwort eintippen)
+	c) Authorization-Code -> beim Provider an Client-ID + "autorisierenden Nutzer" gebunden
+	d ) Query-Parameter -> Authorization-Code + State-Parameter -> Callback URL
+
+
+	Schritt 2:
+	a) Client Code + "Client Secret" -> "Authorization Header"
+	b) "Server-zu-Server-Kommunikation" -> Provider -> "(Access-)Token-Endpunkt"
+	c) -> "Access Token" + "Refresh-Token"
+
+	Schritt 3-n:
+	a) "Access Token" -> Authorization Header
+	b) Requests -> API
+
+	Nach Time-out:
+	a) Refresh-Token -> Token-Endpunkt 
+	b) -> neues Access-Token (und neues Refresh-Token)
+
+Bearer-Token-Autorisierung:
+
+	1) NUR(!!) Schritt 1
+	  -> Requests nicht mehr signiert
+	2) über TSL/SSL gesicherte HTTPS-Adresse
+	  Client auch die Echtheit der TLS/SSL-Zertifikate 
+	  und die Korrektheit des zugeordneten Hosts überprüfen. 
+
+SSL_VERIFYHOST -> Zertifikat der Gegenstelle
+
+	a) gültiges Zertifikat AUCH(!!) der Certification Authority (CA) 
+	b) Name im Zertifikat existiert 
+	c) ... und dieser mit dem Hostnamen des Servers übereinstimmt
+
+HOW to get: CA Zertifikat (CA-Root-Zertifikat)
+
+	a) Hostnamen (zum Beispiel https://api.twitter.com) in einen Browser
+	b) Google Chrome -> Adressleiste -> klick Schlosssymbol
+	  -> Zertifikatinformationen -> Fenster 
+	  -> oberste Zertifikat -> zieht in Ordner -> "certificate.cer"
+
+JavaScript User Agent Profile
+
+	per Definition offenen JavaScript-Code
+	Client Secret vorhalten
+	JavaScript-Anwendung öffnet neues Browserfenster 
+	(oder iFrame; Phishing <-> Popup besser -> Adressbar sichtbar)
+
+	Authorization-Endpunkt
+	(Query-Parameter) -> Client-ID + Scope + State + Callback URL 
+	-> wie "Web Profile"
+	response_type -> token
+	
+	Popup -> Nutzer -> Client autorisieren
+	Popup -> zum Callback URL -> denselben Host, wie im öffnenden Fenster
+	(Same-Origin-Policy der Browser)
+	Fragmentteil des Callback URL -> Access Token für API 
+	(Authorization-Code gibt es nicht <-> Schritt 1)
+
+Backend
+
+	Access Token steht nicht zur Verfügung
+	statisches JavaScript -> Access Token aus Fragmentteil des URL ausliest
+	JavaScript-Anwendung -> Access Token -> API
+	  -> JSONP 
+	  -> Ajax
+	  -> Cross-Origin Resource Sharing (CORS) Requests
+
+CORS
+	Cross-Origin Resource Sharing
+	(<->  Same-Origin-Policy (SOP))
+	https://de.wikipedia.org/wiki/Cross-Origin_Resource_Sharing		  
+	server -> HTTP-Header -> Access-Control-Allow-Origin: http://foo.example
+	Alternative -> JSONP -> nur GET
+	
+Externer User Agent	
+	native Anwendung
+	nutzt WebBrowser
+	Authorization-Endpunkt des API-Anbieters aufrufen
