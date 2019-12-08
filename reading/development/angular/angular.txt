@@ -1,0 +1,58 @@
+https://www.tutorialspoint.com/typescript/typescript_quick_guide.htm
+-> namespace
+https://stackoverflow.com/questions/29524061/what-is-the-difference-between-the-three-ways-of-loading-typescript-module-depen
+https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html
+
+https://zellwk.com/blog/js-promises/
+https://zellwk.com/blog/async-await/
+The await keyword lets you wait for the promise to resolve. 
+It returns the parameter passed into the "then(value)" call.
+"catch(error)" is handled via try-catch
+https://zellwk.com/blog/async-await-in-loops/
+
+https://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript
+(function () {...})();
+<-> 
+var f = function () {...}; 
+f();
+
+-------------------
+let meaningOfLife = false;
+let cnt: number=0;
+async function waitForMeaningOfLife() {
+   while (true){
+      if (meaningOfLife) {
+         console.log(42);
+         console.log('c: '+cnt);
+         return
+      };
+      cnt++;
+      console.log('c: '+cnt);
+      if (cnt > 10000) { meaningOfLife = true;}
+      await new Promise(resolve => setTimeout(resolve, 0));
+      // await new Promise(resolve => resolve(123));
+      // await null; // prevents app from hanging
+   }
+}
+waitForMeaningOfLife();
+setTimeout(()=>meaningOfLife=true,420)
+-------------------------
+const sleep = ms => {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+const test = async _ => {
+   await new Promise(resolve => setTimeout(resolve, 420));
+   console.log('one');
+   await sleep(420);
+   console.log('one');
+   await sleep(420);
+   console.log('one');
+
+  console.log('Done')
+}
+
+test()
+console.log('test')
+------------------------
+https://dzone.com/articles/understanding-output-and-eventemitter-in-angular
