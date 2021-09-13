@@ -1,0 +1,17 @@
+0:  3,26,			#read to 26
+2:  1001,26,-4,26,  #subtract 4
+6:  3,27,			#read to 27
+8:  1002,27,2,27,	#multiply by 2
+12: 1,27,26,27,		#add 26,27
+16: 4,27,			#write to output
+18: 1001,28,-1,28,	#dec 28
+22: 1005,28,6,		#loop to 6 while not 0
+25: 99,				#outQueue holds 5 values
+26: 0,0,5
+
+
+25: 99,a-4,b+2,5
+25: 99,a-4,a+b-2,5
+25: 99,a-4,a+b-2,4
+
+out a+b-2

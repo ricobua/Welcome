@@ -1,0 +1,195 @@
+https://angular.io/guide/architecture
+Angular is a platform and framework for building single-page client applications using HTML and TypeScript.
+The basic building blocks are NgModules, which provide a compilation context for components.
+NgModules <-> JavaScript Modules
+Every Angular app has a root module, conventionally named AppModule, which provides the bootstrap mechanism that launches the application.
+Every Angular application has at least one component, the root component that connects a component hierarchy with the page document object model (DOM).
+Each component defines a class that contains application data and logic, and is associated with an HTML template that defines a view to be displayed in a target environment.
+A template combines HTML with Angular markup
+
+Components define areas of responsibility in UI
+component class (.ts) - handle data and functionality
+HTML template (.html) - HTML snipplet
+Component-specific styles (.css) - CSS
+@Component() decorator - selector, templates, styles
+selectors begin with the prefix app-
+
+import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
+
+Angular: Binding + DI + BUILT-IN
+
+A template is a section of HTML, which renders a view in the browser, just like regular HTML, but with a lot more functionality.
+A template statement responds to an event raised by a binding target such as an element (HTML), component (Ang), or directive.
+(A method call or simple property assignment should be the norm)
+An Attribute directive changes the appearance or behavior of a DOM element.
+Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.
+e.g. *ngFor
+
+tricky: template statement <-> template expression
+
+Interpolation allows you to incorporate calculated strings 
+(the template expression with delimiter double curly braces, {{ and }}) into 
+- the text between HTML element tags
+- and within attribute assignments
+Operators are: 
+Pipe & transformation -> |uppercase
+(great for debugging objects -> |json -> prints json representation of object)
+The Angular safe navigation operator, ?, guards against null and undefined values in property paths.
+prints blank instead of "null" -> {{item?.name}}
+non-null assertion operator ( ! )
+$any() type cast function -> to silence "type" errors
+
+Binding: "regular" HTML -> string constants
+While you could push values to and pull values from HTML, it is easier to use a binding framework. 
+You simply declare bindings between binding sources, target HTML elements, and let the framework do the rest.
+  Data-binding works with properties of DOM elements, components, and directives, not HTML attributes -> use [], ()
+  (attributes -> only for static initialization, in case) 
+  -> The HTML attribute value specifies the initial value; the DOM value property is the current value.
+Binding types are
+From the source-to-view -> Interpolation, Property, Attribute-Class-Style -> {{}}, []
+From view-to-source -> event -> ()
+Two-way sequence: view-to-source-to-view -> [()]
+
+Element property	<img [src]="heroImageUrl">
+Component property	<app-hero-detail [hero]="currentHero"></app-hero-detail>
+Directive property	<div [ngClass]="{'special': isSpecial}"></div>
+
+You can't use property binding to read or pull values out of target elements. 
+Similarly, you cannot use property binding to call a method on the target element. 
+You can set values, and if the element raises events, you can listen to them with an event binding.
+
+Interpolation is a convenient alternative to property binding in many cases. 
+  When rendering data values as strings, there is no technical reason to prefer one form to the other, 
+  though readability tends to favor interpolation.
+square brackets identifies the target property <-> There's also the prefix "bind-" alternative -> <img bind-src="itemImageUrl">
+
+Angular event binding syntax consists of 
+- a target event name within parentheses on the left of an equal sign, 
+- and a quoted template statement on the right.  
+- alternatively, use the on- prefix, known as the canonical form -> <button on-click="onSave($event)">on-click Save</button>
+
+<button on-click="onSave($event)">on-click Save</button>
+If the target event is a native DOM element event, then $event is a DOM event object, with properties such as target and target.value.
+e.g. How to set & update <input> elements:
+<input [value]="currentItem.name" (input)="currentItem.name=$event.target.value" >
+(alternative: NgModel !!!)
+To update the name property, the changed text is retrieved by following the path $event.target.value.
+
+native DOM element event <-> Angular EventEmitter
+typical approach:
+user clicks button 
+-> button emitts "click" event 
+-> (click) event is bound to method (of component) 
+-> method:
+@Output() deleteRequest = new EventEmitter<Item>();
+delete() {this.deleteRequest.emit(this.item);}
+-> parent component binds to the deleteRequest event
+<app-item-detail (deleteRequest)="deleteItem($event)" [item]="currentItem"></app-item-detail>
+-> parent handles "currentItem"
+
+The two-way binding syntax is really just syntactic sugar for a property binding and an event binding. 
+Angular desugars the SizerComponent binding into this:
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
+
+Use the hash symbol (#) to declare a reference variable.
+If you declare the variable on a component, the variable refers to the component instance.
+If you declare the variable on a standard HTML tag, the variable refers to the element.
+You can use the ref- prefix alternative to #. 
+
+Share data between the parent context and child directives or components:
+A property with @Input() decorator is writable, while an @Output() property is observable.
+To watch for changes on an @Input() property, use OnChanges, one of Angular's lifecycle hooks.
+(Alternative to decorators: identify members in the inputs and outputs arrays of the directive metadata)
+(Alias names are possible, but not recommended)
+
+property with @Input() decorator - value from the component's parent
+property binding - <app-product-alerts [product]="product">
+property with @Output() decorator + EventEmitter() - value to the component's parent
+event emit - <button (click)="notify.emit()">Notify Me</button>
+event binding - <app-product-alerts (notify)="onNotify()">
+
+---------------
+DI is a coding pattern in which a class asks for dependencies rather than creating them itself.
+typical approach:
+- define service 
+- register with injector to "provide" on root level (using @Injectable() decorator)
+- Angular creates providers (e.g. "root") and injectors during the bootstrap process
+- import + inject service (via constructor)
+- request data from service
+- test !!
+- (@Optional)
+
+tricky:
+Instead, each HeroBioComponent gets its own HeroCacheService instance by listing HeroCacheService in its metadata providers array.
+
+
+BUILT-IN FEATURES
+Routing & Navigation
+Forms
+HTTP Client
+Service workers function as a network proxy. 
+
+---------------
+
+Lifecycle event sequence -> Angular calls the hook methods
+e.g. ngOnInit()
+
+@Input -> also use with getter/setter
+
+Parent-Child Interaction
+- decorators @Input, @Output, intercepts
+- local variable, @ViewChild
+- service (!!)
+
+Dynamic component loader
+Component templates are not always fixed -> factory for "HTML" part
+
+Custom elements (also called Web Components), a web standard for defining new HTML elements in a framework-agnostic way.
+currently supported by Chrome, Edge (Chromium-based), Firefox, Opera, and Safari, and available in other browsers through polyfills
+Angular elements are Angular components packaged as custom elements 
+
+---------------
+
+Routing
+Single-page apps change display of particular components, rather than getting a new page. 
+To handle the navigation from one view to the next, you use the Angular Router. 
+The Router enables navigation by interpreting a browser URL as an instruction to change the view.
+
+CLI to generate a basic Angular app with an app routing module, called AppRoutingModule
+AppModule -> imports AppRoutingModule
+AppRoutingModule -> imports Components
+Routes -> json to map path to component
+componente template -> anchor tag with routerLink attribute
+two asterisks, **, indicate a wildcard route
+redirect, e.g. path: ''
+
+routing - URL + links + browser-history + browser-back-forth
+app.module.ts
+product-details <-> ProductDetailsComponent
+routerLink directive - gives router control over anchor element
+ActivatedRoute - service
+ngOnInit() - subscribe to route parameters
+
+---------------
+
+Forms -> data-entry tasks
+Angular provides two different approaches: template-driven (easy, implicit data model) and reactive (robust). 
+Both capture user input events from the view, 
+validate the user input, 
+create a form model and data model to update, 
+and provide a way to track changes.
+
+HTTP Client
+---------------
+
+template syntax - template for "html" syntax
+directives - *ngFor, *ngIf
+structural directive - with an asterisk(*), change DOM
+interpolation syntax - render property as text - {{ }}
+property binding syntax - [ ]
+event binding syntax - bind button's click event to the share() method (in component.ts) - <button (click)="share()">
+
+---------------

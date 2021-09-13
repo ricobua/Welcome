@@ -1,3 +1,48 @@
+jet-brains -> IntelliJ (Java), WebStorm (JS)
+
+https://www.youtube.com/watch?v=xLTIDs0CDCM
+when not to use ngrx -> 0:00, 2:30, 4:10+5:07
+5:20, 6:49(5:51), 
+-> string literal types -> https://mariusschulz.com/blog/string-literal-types-in-typescript 
+7:30, 7:35(!!), 8:05, 8:25
+-> interface -> https://www.typescriptlang.org/docs/handbook/interfaces.html
+-> ... -> https://dmitripavlutin.com/how-three-dots-changed-javascript/
+9:27, 10:22 ($), 11:20
+-> rxjs -> fromEvent-pipe-map-subscibe -> https://www.learnrxjs.io/operators/creation/fromevent.html
+-> pipe -> https://rxjs-dev.firebaseapp.com/guide/operators
+12:25(!)+12:51, 13:30
+hash sign -> https://angular.io/guide/template-syntax#template-reference-variables-var
+https://www.learnrxjs.io/operators/transformation/switchmap.html
+14:46, 15:10, 15:50, 16:14-16:48
+
+18:05, 18:40
+Subject -> Observerable + Observer; Behavior -> remember current emit
+20:10-20:52(!), 20:57, 21:14, 21:38, 
+"as" syntax -> https://ultimatecourses.com/blog/angular-ngif-async-pipe
+
+
+typescript promise subscribe pipe
+https://dev.to/frederikprijck/converting-a-promise-into-an-observable-dag
+
+-- side: multiple
+setTimeout
+https://www.w3schools.com/jsref/met_win_settimeout.asp
+timer
+https://dzone.com/articles/angular-timer-auto-refresh-component
+--
+subscribe
+https://medium.com/javascript-everyday/javascript-theory-promise-vs-observable-d3087bc1239a
+problem unsubscribe
+https://medium.com/angular-in-depth/the-best-way-to-unsubscribe-rxjs-observable-in-the-angular-applications-d8f9aa42f6a0
+effects intro
+https://youtu.be/owFiLgOqw_Y?t=273
+https://redux.js.org/introduction/core-concepts
+reducer -> instructions for combining things -> e.g. accumulator
+https://en.wiktionary.org/wiki/reducer
+https://medium.com/async-la/a-short-and-sour-guide-to-reducers-b5b54d3bb018
+https://ngrx.io/guide/store/reducers
+------------------------
+
 https://www.tutorialspoint.com/typescript/typescript_quick_guide.htm
 -> namespace
 https://stackoverflow.com/questions/29524061/what-is-the-difference-between-the-three-ways-of-loading-typescript-module-depen
@@ -56,3 +101,11 @@ test()
 console.log('test')
 ------------------------
 https://dzone.com/articles/understanding-output-and-eventemitter-in-angular
+https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77
+https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service
+------------------------
+Operators -> "offer a way to manipulate values from a source, 
+returning an observable of the transformed values."
+operator "of" -> Observable -> emit + complete
+https://www.learnrxjs.io/operators/creation/of.html
+
