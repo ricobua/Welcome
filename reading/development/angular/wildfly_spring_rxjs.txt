@@ -1,0 +1,57 @@
+Stackblitz → rico github
+https://stackblitz.com/edit/angular-dkqdhm
+
+
+Type Casting
+https://www.typescripttutorial.net/typescript-tutorial/type-casting/#:~:text=JavaScript%20doesn't%20have%20a,operator%20for%20type%20castings.
+
+this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
+
+Multiple buttons
+https://stackoverflow.com/questions/46617504/right-way-to-use-multiple-buttons-in-angular-form
+
+<form (ngSubmit)="submit()" [formGroup]="form">
+    //inputs...
+    <button type="button" (click)="reset($event)">reset</button>
+    <button type="submit">submit</button>
+</form>
+
+
+
+RxJS, as used within Angular (HTTP calls, Event Emitters, and Async Pipe)
+https://blog.bitsrc.io/demystifying-rxjs-for-angular-developers-f39e74f56f64
+
+---------
+
+RestEasy in SpringBoot
+https://developer.jboss.org/en/resteasy/blog/2017/08/09/how-to-use-resteasy-in-a-spring-boot-application
+
+RestEasy
+Implements Jakarta RESTful Web Services (JAX-RS)
+
+RestEasy Tutorial
+https://www.baeldung.com/resteasy-tutorial
+Services Implementation Class
+@GET
+@Path("/getinfo")
+@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+public Movie movieByImdbId(@QueryParam("imdbId") String imdbId) {
+
+---------
+
+Deploying Spring Boot App to JBoss Wildfly
+https://dzone.com/articles/deploying-spring-boot-app-to-jboss-wildfly
+
+---------
+WildFly Admin Guide
+https://docs.wildfly.org/17/Admin_Guide.html
+https://docs.wildfly.org/17/Getting_Started_Guide.html
+https://docs.wildfly.org/17/Getting_Started_Guide.html#wildfly-directory-structure
+
+Wildfly RestEasy setup
+https://docs.jboss.org/resteasy/docs/3.0.6.Final/userguide/html_single/index.html#d4e1676
+
+------
+
+package angular with RestAPI on Wildfly
+https://stackoverflow.com/questions/34395717/deploy-angular-app-in-wildfly-together-with-the-rest-api-it-is-using
